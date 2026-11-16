@@ -1,0 +1,762 @@
+﻿id_zdarzenia;jednostka;kod_jednostki;poczatek;koniec;ubytek_tge_mw_max;typ_tge;przyczyna_pse;status_pse;id_raportu_pse;liczba_wpisow_tge;data_pierwszej_obserwacji_utc;zrodla;status_dopasowania;pse_obserwacje_15min;pse_maks_zaobserwowany_ubytek_mw
+TGE-67cbbc6d17171accb3;TAMEH Polska sp. z o. o. Elektrownia Blachownia;;2024-03-04 12:00:00;2026-12-31 23:59:00;80.0;planowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-8948b6bab0a4e4577a;Synthos Dwory 7 TG8;;2024-03-22 00:01:00;2027-03-22 23:59:00;20.0;planowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-1ce2c9a953729fa5ba;Porąbka Żar H3;;2024-10-22 00:01:00;2030-02-10 23:45:00;137.0;planowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-3f451e4d77b38d96ee;EC Żerań 2 B20;;2026-05-12 14:33:00;2026-12-15 23:59:00;488.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-0ea57086e315d480ad;Pątnów B9;PAT24S09;2026-07-03 00:00:00;2027-01-01 00:00:00;474.0;nieplanowane;;;;5;2026-11-12T14:29:33+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;672;441.0
+TGE-87a0f389dc9ec17730;Bełchatów B14;;2026-07-14 00:00:00;2026-12-11 00:00:00;781.0;planowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-02b04fd9b4135b6787;Turów B04;TUR 2-04;2026-08-01 00:00:00;2026-11-15 00:00:00;236.0;planowane;;;;2;2026-11-12T14:29:33+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;542;236.0
+TGE-0b34c8f62319628f6c;KOGENERACJA S.A. WROB1-02;;2026-08-02 00:00:00;2026-11-17 23:45:00;104.0;planowane;;;;3;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-efd6730a803271b68c;EC Siekierki WSIK;;2026-08-08 00:01:00;2026-11-04 02:00:00;157.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-11864581992efef95e;Synthos Dwory 7 TG10;;2026-08-11 13:18:00;2026-12-31 23:59:00;19.0;planowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-bfafe38e82f4cb3725;CCGT Grudziądz Sp. z o.o. Grudziądz B01;;2026-09-07 19:00:00;2027-05-10 23:59:00;563.0;planowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-874b441ee572783e4d;Bełchatów B07;;2026-09-13 03:00:00;2026-12-10 00:00:00;357.0;planowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-26d4cb52d390b378e3;Opole B2;OPL 1-02;2026-09-15 03:25:00;2026-12-15 00:00:00;358.0;planowane;;;;6;2026-11-12T14:29:33+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;672;358.0
+TGE-d3f80eecdf139afc10;Kozienice 2 B10;KOZ24S10;2026-09-19 00:01:00;2027-03-17 22:00:00;534.0;planowane;;;;2;2026-11-12T14:29:33+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;672;534.0
+TGE-57ef324c9ead523725;Skawina Tg6;;2026-09-28 04:15:00;2026-11-30 23:59:00;110.0;planowane;;;;3;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-bab5e2d2a9e4303191;Skawina Tg3;;2026-09-28 08:57:00;2026-10-31 23:59:00;110.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-58566b76f4a6e11561;Opole B1;OPL 1-01;2026-09-29 00:01:00;2026-11-01 22:00:00;357.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-9678e079bd3323e3a5;Łagisza B10;;2026-09-29 09:39:00;2027-01-01 00:00:00;430.0;planowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-ca22a76904737fea2f;Jaworzno 3 B6;JW3_2S06;2026-10-01 00:07:00;2026-12-29 00:00:00;211.0;planowane;;;;2;2026-11-12T14:29:33+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;672;211.0
+TGE-6ec3d57945c8332374;Siersza B1;;2026-10-03 00:00:00;2026-12-16 00:00:00;139.0;planowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-30891e259b43c1224f;Jaworzno 3 B1;JW3_2S01;2026-10-05 00:00:00;2026-10-31 00:00:00;210.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-8121bbbdf1e66ddeaa;Karolin B3;;2026-10-07 00:01:00;2026-12-05 00:00:00;112.0;planowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-b0309b35633af58676;Ostrołęka B B03;;2026-10-08 21:00:00;2026-11-01 22:00:00;165.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-3ede9294c141760090;Połaniec B7;;2026-10-12 00:01:00;2026-11-14 00:00:00;221.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-5bcc2f47054f1c27dd;Veolia Energia Łódź EC4 B03;;2026-10-15 04:39:00;2026-10-30 20:28:00;105.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-1873e14d97b32135d5;JSW KOKS S.A. EC Koksownia Przyjaźń G2;;2026-10-15 20:06:00;2026-11-15 00:00:00;15.0;planowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-99802f7842bdaecd3a;EW Włocławek H01;;2026-10-19 08:01:00;2026-10-30 17:00:00;28.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-8117d73373f85821ce;EW Włocławek H02;;2026-10-19 08:01:00;2026-10-30 17:00:00;28.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-1b69247c252d46887d;EC Mielec ECM;;2026-10-19 15:00:00;2027-05-01 00:00:00;4.0;planowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-70e38cde02a539e88d;Turów B06;TUR 2-06;2026-10-20 00:00:00;2026-10-31 14:00:00;236.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-1d3820028035babdf9;Opole B4;OPL 4-04;2026-10-20 00:11:00;2026-12-01 00:00:00;355.0;planowane;;;;2;2026-11-12T14:29:33+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;672;355.0
+TGE-b904b639eaa8782cd3;Opole B3;OPL 4-03;2026-10-22 16:11:00;2026-10-29 00:00:00;358.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-67d94fcb2568575e14;Kozienice 2 B11;KOZ24S11;2026-10-22 17:11:00;2026-11-03 13:00:00;981.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-56e0d60ff124fdc135;PAK-PCE PRZYRÓW FW Przyrów;;2026-10-23 08:44:00;2026-12-06 23:59:00;3.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-901355bb24b7255d57;Synthos Dwory 7 TG7;;2026-10-23 14:00:00;2026-11-06 00:00:00;28.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-b635dc27a8d0f17c94;KOGENERACJA S.A. WROB1-03;;2026-10-24 00:00:00;2026-10-30 16:00:00;104.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-5127634d8f0b94c4d4;EC Siekierki WSIB 08;;2026-10-24 00:01:00;2026-11-23 00:00:00;109.0;nieplanowane;;;;3;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-caf9bc2b4d6d5570a6;Karolin B2;;2026-10-25 16:26:00;2026-10-29 22:00:00;100.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-8a682fa22ff7d5b5d8;Żydowo H3;;2026-10-26 07:00:00;2026-10-30 08:45:00;55.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-6723dd6caf2f095547;Eolos Polska Sp. z o.o. FW Krzyżanów;;2026-10-27 20:00:00;2026-10-29 10:00:00;2.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-4398ea3b69e18aca2c;Rybnik B7;RYB 4-07;2026-10-28 00:00:00;2026-11-03 00:00:00;84.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-6cfc25cf4966639e83;Połaniec B4;;2026-10-28 00:19:00;2026-11-01 22:00:00;226.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-efa363e770f9f01d3d;Połaniec B2;;2026-10-28 04:58:00;2026-11-09 01:00:00;227.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-ead54fb85b5aaa0e27;Łaziska 3 B10;;2026-10-28 22:08:00;2026-10-31 00:00:00;211.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-b2caabc7aee03c6d52;Jaworzno 2 JWCD B7;;2026-10-29 00:00:00;2026-10-29 02:30:00;254.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-2d6f98b30fad5cca66;Opole B5;OPL 4-05;2026-10-29 00:00:00;2026-10-29 06:00:00;305.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-4d878b48593d1db32f;Opole B6;OPL 4-06;2026-10-29 00:00:00;2026-10-29 06:00:00;308.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-7ffdedbf71a9c66dfa;Turów B11;TUR 4-11;2026-10-29 00:00:00;2026-10-29 00:15:00;39.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-8f0e749d7dee307a58;Turów B02;TUR 2-02;2026-10-29 00:15:00;2026-10-29 05:00:00;125.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-db3197f9a302f8fdd3;Turów B03;TUR 2-03;2026-10-29 00:15:00;2026-10-29 05:00:00;119.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-c734ce1374ffcc3cd6;Turów B05;TUR 2-05;2026-10-29 00:30:00;2026-10-29 00:45:00;84.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-591cef493a4635de5c;EC Włocławek B1;;2026-10-29 04:00:00;2026-10-29 05:00:00;29.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-50e89ddcfc823bed97;Płock B01;;2026-10-29 04:00:00;2026-10-29 05:00:00;115.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-d5dcc6b14ef29cb5bf;Turów B05;TUR 2-05;2026-10-29 05:00:00;2026-10-29 05:15:00;113.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-8928dcb7f060232ef3;Turów B02;TUR 2-02;2026-10-29 05:45:00;2026-10-29 06:00:00;28.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-e0b6ec567e19d46015;Turów B05;TUR 2-05;2026-10-29 05:45:00;2026-10-29 06:00:00;27.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-f71bb2fee4f20ca168;Turów B11;TUR 4-11;2026-10-29 05:45:00;2026-10-29 06:00:00;39.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-6c47be4c5f3a8eba10;Porąbka Żar H2;;2026-10-29 07:35:00;2026-10-29 12:50:00;137.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-2b14c636c5aff21b7c;EC Włocławek B1;;2026-10-29 08:00:00;2026-10-29 09:00:00;29.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-92920c553d0c14a455;PAK-PCE CZŁUCHÓW FW Ględowo;;2026-10-29 08:00:00;2026-10-29 16:00:00;4.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-5c22381fd558d62295;Polenergia Farma Wiatrowa 3 Sp. z o.o. FW Dębsk;;2026-10-29 08:00:00;2026-10-29 14:00:00;121.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-73b245996ac9f4f09e;Jaworzno 2 JWCD B7;;2026-10-29 09:00:00;2026-10-29 15:00:00;194.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-8609b741a2a1943942;Płock B01;;2026-10-29 09:00:00;2026-10-29 10:00:00;115.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-e09cde929a5a1ce823;Turów B02;TUR 2-02;2026-10-29 09:45:00;2026-10-29 10:00:00;84.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-da036eb7453065e7c2;Turów B03;TUR 2-03;2026-10-29 09:45:00;2026-10-29 10:00:00;84.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-4679995652f4002623;Turów B05;TUR 2-05;2026-10-29 09:45:00;2026-10-29 10:00:00;84.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-ef830c246f10e40ab7;Połaniec B9;;2026-10-29 09:53:00;2026-10-29 12:18:00;225.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-f94708505e297771bd;Eolos Novo Sp. z o.o. FW Czarnożyły;;2026-10-29 10:21:00;2026-10-29 15:24:00;2.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-3d223bb3c2da1d63ae;JSW KOKS S.A. EC Koksownia Przyjaźń G4;;2026-10-29 10:54:00;2026-10-31 23:59:00;16.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-db97ffd71a1e5f5337;JSW KOKS S.A. EC Koksownia Przyjaźń G3;;2026-10-29 11:00:00;2026-10-31 23:59:00;6.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-c44d65b9037ea248c3;Opole B5;OPL 4-05;2026-10-29 11:00:00;2026-10-29 16:00:00;305.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-fe81cd4e9b878d2624;Opole B6;OPL 4-06;2026-10-29 11:00:00;2026-10-29 16:00:00;308.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-0cfe39385b6be7a245;Turów B11;TUR 4-11;2026-10-29 12:45:00;2026-10-29 13:45:00;12.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-073e7b760c53d170d5;Porąbka Żar H2;;2026-10-29 13:01:00;2026-10-30 12:50:00;38.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-c955958e805af393ae;Turów B05;TUR 2-05;2026-10-29 13:30:00;2026-10-29 13:45:00;27.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-4620f6c65c94ca97e7;Turów B02;TUR 2-02;2026-10-29 13:45:00;2026-10-29 14:00:00;28.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-0d15e483afd29c039e;Eolos Polska Sp. z o.o. FW Krzyżanów;;2026-10-29 14:31:00;2026-10-31 18:34:00;2.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-8e19a914773fe0c014;Opole B3;OPL 4-03;2026-10-29 16:10:00;2026-11-09 04:00:00;358.0;planowane;;;;1;;TGE + PSE pdwkseub (pomiar);tylko_TGE;16;358.0
+TGE-f3d9c5bc75b0eb177c;EC Włocławek B1;;2026-10-29 18:00:00;2026-10-29 19:00:00;39.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-1b1fc1acc03b1ae27d;EC Włocławek B1;;2026-10-29 21:00:00;2026-10-29 22:00:00;34.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-793bf16bed814906d9;Płock B01;;2026-10-29 21:00:00;2026-10-29 22:00:00;110.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-71f14b5222fa001e9e;Turów B02;TUR 2-02;2026-10-29 22:15:00;2026-10-29 22:30:00;56.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-72c9f820592ab56d9d;Turów B03;TUR 2-03;2026-10-29 22:15:00;2026-10-29 22:30:00;56.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-312a173b86e93b429a;Turów B05;TUR 2-05;2026-10-29 22:30:00;2026-10-29 22:45:00;84.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-88d25261b95ba602bb;Turów B02;TUR 2-02;2026-10-29 23:00:00;2026-10-30 00:00:00;125.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-ec349924887428335d;Turów B03;TUR 2-03;2026-10-29 23:00:00;2026-10-30 00:00:00;116.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-40ac9a34cb6b2d0e51;Opole B5;OPL 4-05;2026-10-30 00:00:00;2026-10-30 06:00:00;305.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-e9c885317773441d1d;Opole B6;OPL 4-06;2026-10-30 00:00:00;2026-10-30 06:00:00;308.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-ccec4dc339de22839e;Rybnik B8;RYB 4-08;2026-10-30 00:00:00;2026-11-03 00:00:00;8.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-6e4dee3d18980526cd;Turów B11;TUR 4-11;2026-10-30 00:00:00;2026-10-30 06:00:00;39.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-2faed72aab97cc2e0f;Karolin B4;;2026-10-30 00:01:00;2026-11-02 00:00:00;50.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-e587ccfcb43e7cdd4c;Połaniec B3;;2026-10-30 00:09:00;2026-10-30 05:30:00;226.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-4656ca959746485276;Turów B03;TUR 2-03;2026-10-30 00:45:00;2026-10-30 05:00:00;116.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-c909943e3a06623f5c;Turów B02;TUR 2-02;2026-10-30 05:45:00;2026-10-30 06:00:00;28.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-7d20f87170613b463d;Turów B05;TUR 2-05;2026-10-30 05:45:00;2026-10-30 06:00:00;27.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-21b534c34e8741fbed;EC Wrotków ECW;;2026-10-30 06:45:00;2026-10-30 07:00:00;6.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-47c4bd9afba5b33cdb;Turów B11;TUR 4-11;2026-10-30 10:00:00;2026-10-30 14:00:00;39.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-eebdcf7bfd60ee2f3f;Opole B5;OPL 4-05;2026-10-30 11:00:00;2026-10-30 16:00:00;305.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-a3f9e1eac8aed20377;Opole B6;OPL 4-06;2026-10-30 11:00:00;2026-10-30 16:00:00;308.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-d7afa68569cbb61c21;Turów B05;TUR 2-05;2026-10-30 13:45:00;2026-10-30 14:00:00;27.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-abad3671a9f1a50192;Turów B02;TUR 2-02;2026-10-30 14:45:00;2026-10-30 15:00:00;28.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-904d476b6cbeeaa680;Turów B03;TUR 2-03;2026-10-30 14:45:00;2026-10-30 23:15:00;28.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-e44ebd9783e42a6f80;Porąbka Żar H4;;2026-10-30 15:01:00;2026-10-30 16:45:00;138.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-f9d5d025a7e63786cf;Połaniec B9;;2026-10-30 20:00:00;2026-10-31 01:30:00;100.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-54341ad3a1a998f5f8;EC Włocławek B1;;2026-10-30 22:00:00;2026-10-30 23:00:00;34.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-cf1a08eca14706d580;Połaniec B5;;2026-10-30 22:00:00;2026-11-02 00:00:00;224.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-c09ee32185f220f6ed;Płock B01;;2026-10-30 22:00:00;2026-10-30 23:00:00;110.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-7cbb0f0f8ed92f86a6;Turów B02;TUR 2-02;2026-10-30 23:00:00;2026-10-30 23:15:00;28.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-efab00530b3b1d7153;Turów B05;TUR 2-05;2026-10-30 23:15:00;2026-10-30 23:30:00;55.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-42d80c226fddd07d7d;Ostrołęka B B02;;2026-10-31 00:00:00;2026-10-31 20:15:00;230.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-ec8aa7d891c313e2f9;Łaziska 3 B10;;2026-10-31 00:00:00;2026-11-02 00:00:00;211.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-edda73b8f7499b5697;Siersza B2;;2026-10-31 00:01:00;2026-10-31 17:00:00;139.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-e8e6e112e4434b78ee;Łaziska 3 B11;;2026-10-31 00:06:00;2026-11-02 00:00:00;211.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-17570926705cd25748;Synthos Dwory 7 GT1;;2026-10-31 00:30:00;2026-11-02 02:30:00;72.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-12d1b7c472b616b388;PAK-PCE CZŁUCHÓW FW Ględowo;;2026-10-31 00:39:00;2026-10-31 06:59:00;4.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-29d62a61fbb069181c;PAK-PCE BIOPALIWA I WODÓR Elektrownia Konin;;2026-10-31 03:44:00;2026-10-31 10:17:00;55.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-b00dd67f2dc14ff11c;EC Siekierki WSIB 09;;2026-10-31 04:00:00;2026-11-05 03:07:00;91.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-79b3f7b575b688e292;Turów B02;TUR 2-02;2026-10-31 05:45:00;2026-10-31 06:00:00;28.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-a243df4c218df18305;Turów B05;TUR 2-05;2026-10-31 05:45:00;2026-10-31 06:00:00;27.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-6831a9d0ee72547653;Turów B11;TUR 4-11;2026-10-31 05:45:00;2026-10-31 06:00:00;39.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-ae062583dc46487a25;PAK-PCE CZŁUCHÓW FW Ględowo;;2026-10-31 07:00:00;2026-10-31 17:00:00;73.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-fe529a906a875254df;Turów B11;TUR 4-11;2026-10-31 14:00:00;2026-10-31 15:00:00;39.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-7369f86d26c25ad99c;Turów B02;TUR 2-02;2026-10-31 14:45:00;2026-10-31 15:00:00;28.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-cbac5ca8ee379c8d04;Turów B05;TUR 2-05;2026-10-31 14:45:00;2026-10-31 15:00:00;27.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-c8ce3aa63ac354d7e1;Ostrołęka B B01;;2026-10-31 19:56:00;2026-11-04 00:00:00;230.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-b96aae6e24a84ee8b7;PAK-PCE CZŁUCHÓW FW Ględowo;;2026-10-31 20:00:00;2026-11-01 00:05:00;2.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-22bf40b91ebd16649c;Kraków Łęg KLE_1-01;;2026-11-01 00:00:00;2026-11-04 00:00:00;122.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-b66b60338e098c1d15;Turów B06;TUR 2-06;2026-11-01 00:00:00;2026-11-01 05:23:00;133.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-871d76b7b317e7ce17;Eolos Novo Sp. z o.o. FW Czarnożyły;;2026-11-01 04:21:00;2026-11-02 12:15:00;2.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-84ceee7e7d31a8e2bb;Turów B05;TUR 2-05;2026-11-01 05:45:00;2026-11-01 06:00:00;27.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-3b8f57b628f37284f7;Turów B03;TUR 2-03;2026-11-01 08:00:00;2026-11-01 18:00:00;112.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-809b06d9467ba2358d;EC Włocławek B1;;2026-11-01 13:00:00;2026-11-01 14:00:00;34.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-7cc8d7a03aa9c74cbb;Turów B11;TUR 4-11;2026-11-01 13:45:00;2026-11-01 14:00:00;39.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-4b18946df8395ba5c4;Turów B01;TUR 1-01;2026-11-01 14:00:00;2026-11-01 22:00:00;112.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-c7fe8acb6ffe4f0558;Turów B05;TUR 2-05;2026-11-01 15:15:00;2026-11-01 16:00:00;84.0;nieplanowane;;;;2;;TGE;tylko_TGE;0;
+TGE-32415945bc4dc4daee;Turów B02;TUR 2-02;2026-11-01 15:45:00;2026-11-01 16:00:00;84.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-4365d6ffda78e94d69;Eolos Polska Sp. z o.o. FW Gorzkowice;;2026-11-01 16:43:00;2026-11-02 10:18:00;2.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-f76c621c2088009d04;Opole B6;OPL 4-06;2026-11-01 16:45:00;2026-11-02 00:00:00;373.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-1b420650ca4830228d;Ostrołęka B B02;;2026-11-01 16:51:00;2026-11-01 23:00:00;25.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-e478b42cc9d215d197;Jaworzno 3 B1;JW3_2S01;2026-11-01 20:25:00;2026-11-02 06:00:00;210.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-12aa4daf5dd6657df8;EC Włocławek B1;;2026-11-01 21:00:00;2026-11-01 22:00:00;29.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-4b089ae83a46c42ff5;Płock B01;;2026-11-01 21:00:00;2026-11-01 22:00:00;95.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-6e7bc5dfa1999a4450;Turów B02;TUR 2-02;2026-11-01 22:00:00;2026-11-02 00:00:00;56.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-f813282bc56066aecd;Turów B05;TUR 2-05;2026-11-01 22:00:00;2026-11-01 22:15:00;27.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-e879a77fe279a56849;Turów B11;TUR 4-11;2026-11-01 22:00:00;2026-11-01 22:15:00;39.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-c6349b1a2b2fe97f69;Turów B02;TUR 2-02;2026-11-02 00:45:00;2026-11-02 05:00:00;125.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-245151796e9b5e94a9;Turów B11;TUR 4-11;2026-11-02 00:45:00;2026-11-02 05:45:00;84.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-3b54b835c8b8b4731e;Turów B02;TUR 2-02;2026-11-02 05:45:00;2026-11-02 06:00:00;28.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-44b83aceff2eb33a8f;Turów B05;TUR 2-05;2026-11-02 05:45:00;2026-11-02 06:00:00;27.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-7965093319f34939d8;Żydowo H1;;2026-11-02 07:00:00;2026-11-06 08:45:00;55.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-631ad317d2b880f5c3;PAK-PCE CZŁUCHÓW FW Ględowo;;2026-11-02 08:00:00;2026-11-02 16:00:00;2.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-d92379d2834dd1c0d3;Jaworzno 2 JWCD B7;;2026-11-02 08:40:00;2026-11-02 10:45:00;245.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-66ab05981282612e93;Turów B05;TUR 2-05;2026-11-02 10:00:00;2026-11-02 14:00:00;133.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-312edfda3794bd02e8;Opole B6;OPL 4-06;2026-11-02 11:00:00;2026-11-02 11:30:00;308.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-8679e4a354ed06baa2;Turów B11;TUR 4-11;2026-11-02 14:00:00;2026-11-02 15:00:00;39.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-d274193f923b4bb552;Turów B02;TUR 2-02;2026-11-02 14:45:00;2026-11-02 15:00:00;28.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-cb4aa42e4d292d0f55;Turów B05;TUR 2-05;2026-11-02 14:45:00;2026-11-02 15:00:00;27.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-c571e6b2bc7c0efa8c;Turów B02;TUR 2-02;2026-11-02 22:00:00;2026-11-02 22:15:00;28.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-bf21077a5ce2162ae0;Opole B6;OPL 4-06;2026-11-03 00:00:00;2026-11-03 06:00:00;308.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-53ce2af70759c9fb59;Turów B06;TUR 2-06;2026-11-03 00:00:00;2026-11-03 22:00:00;236.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-6fe2975abf7aabaf55;Turów B11;TUR 4-11;2026-11-03 00:15:00;2026-11-03 05:00:00;177.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-f3fa9df1a916a8c406;Płock B01;;2026-11-03 05:00:00;2026-11-03 06:00:00;100.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-420918a182860abba9;Turów B11;TUR 4-11;2026-11-03 05:30:00;2026-11-03 05:45:00;39.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-6da08d72c6a92be2de;Turów B02;TUR 2-02;2026-11-03 05:45:00;2026-11-03 06:00:00;28.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-7aaa6ec1e83ceefbea;Turów B05;TUR 2-05;2026-11-03 05:45:00;2026-11-03 06:00:00;27.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-d6feb8bc88c3bbce7d;Opole B5;OPL 4-05;2026-11-03 06:00:00;2026-11-03 11:00:00;88.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-d958586a3c393e3470;PAK-PCE CZŁUCHÓW FW Ględowo;;2026-11-03 08:00:00;2026-11-03 16:00:00;2.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-95c0769cc7fd1d32fa;Porąbka Żar H1;;2026-11-03 08:00:00;2026-11-03 11:00:00;138.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-2824d4742051bc3ef9;Płock B01;;2026-11-03 09:00:00;2026-11-03 10:00:00;105.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-bccf40801b497caf58;Eolos Polska Sp. z o.o. FW Krzyżanów;;2026-11-03 10:00:00;2026-11-03 16:41:00;4.0;planowane;;;;2;;TGE;tylko_TGE;0;
+TGE-c12e0c821459c5550b;Jaworzno 2 JWCD B7;;2026-11-03 10:00:00;2026-11-03 12:00:00;470.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-2c0c609860627d8b82;Opole B6;OPL 4-06;2026-11-03 11:00:00;2026-11-03 16:00:00;308.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-4454205ca718db86b7;Płock B01;;2026-11-03 11:00:00;2026-11-03 12:00:00;115.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-4ae3fe673fec70da2a;Turów B05;TUR 2-05;2026-11-03 12:30:00;2026-11-03 12:45:00;27.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-0eb7ffd29671f7b5ce;Turów B11;TUR 4-11;2026-11-03 12:30:00;2026-11-03 12:45:00;39.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-632fe69ff93826d5d8;Dychów H3;;2026-11-03 13:00:00;2026-11-03 19:00:00;30.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-03cdd3908134088e38;Turów B02;TUR 2-02;2026-11-03 14:15:00;2026-11-03 14:30:00;28.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-3f73572c949c46c990;Połaniec B9;;2026-11-03 15:30:00;2026-11-03 18:15:00;34.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-f640137145b75bcb06;Opole B5;OPL 4-05;2026-11-03 16:00:00;2026-11-03 23:00:00;88.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-012e4ea3db6182916f;Dychów H3;;2026-11-03 20:30:00;2026-11-03 22:00:00;17.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-48baedaf48182aa648;EC Włocławek B1;;2026-11-03 23:00:00;2026-11-04 00:00:00;24.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-9e6de94e55ef0320dd;Opole B6;OPL 4-06;2026-11-04 00:00:00;2026-11-04 06:00:00;308.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-295953a2775704bc1e;Ostrołęka B B03;;2026-11-04 00:00:00;2026-11-05 22:00:00;165.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-540d76c4c4b9262f82;Jaworzno 3 B4;JW3_2S04;2026-11-04 00:01:00;2026-11-06 15:00:00;211.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-02e3cec2066dd938c6;Ostrołęka B B01;;2026-11-04 00:01:00;2026-11-09 00:00:00;230.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-be2a35815e4e8f999a;Jaworzno 3 B2;JW3_2S02;2026-11-04 00:09:00;2026-11-06 09:00:00;210.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-adc22167141b4ff542;Kozienice 2 B09;KOZ24S09;2026-11-04 00:20:00;2026-11-08 19:00:00;534.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-c93b74cedb75636b57;Skawina Tg5;;2026-11-04 01:14:00;2026-11-30 23:59:00;20.0;planowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-c56f9277689a3fa073;Kraków Łęg KLE_1-03;;2026-11-04 03:11:00;2026-11-04 23:45:00;102.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-b9408577ee840fe007;Jaworzno 2 JWCD B7;;2026-11-04 04:30:00;2026-11-04 04:45:00;357.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-a9cb53e4064393c9dc;Turów B11;TUR 4-11;2026-11-04 05:30:00;2026-11-04 06:00:00;39.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-3849c36c62b5febdd7;Turów B05;TUR 2-05;2026-11-04 05:45:00;2026-11-04 07:00:00;27.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-558722091ab8d77080;Opole B5;OPL 4-05;2026-11-04 06:00:00;2026-11-04 11:00:00;88.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-b22f84d017a64a537a;Ostrołęka B B02;;2026-11-04 06:20:00;2026-11-04 23:45:00;20.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-fb0b5d87047d455c31;Jaworzno 2 JWCD B7;;2026-11-04 06:45:00;2026-11-04 07:00:00;167.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-82b784c283f0e2e931;Turów B02;TUR 2-02;2026-11-04 06:45:00;2026-11-04 07:00:00;28.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-eba9a027894d56e62b;Solina H3;;2026-11-04 07:01:00;2026-11-04 20:15:00;31.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-24b32c2ba644072837;PAK-PCE PRZYRÓW FW Przyrów;;2026-11-04 08:30:00;2026-11-04 15:00:00;3.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-92cf9daaf7f4aa45ce;Eolos Polska Sp. z o.o. FW Gorzkowice;;2026-11-04 08:55:00;2026-11-04 11:59:00;2.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-27b3f19fff4d9b2eb7;Eolos Polska Sp. z o.o. FW Krzyżanów;;2026-11-04 09:24:00;2026-11-04 14:04:00;2.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-404a781a8dfbaa8400;Eolos Novo Sp. z o.o. FW Czarnożyły;;2026-11-04 10:31:00;2026-11-04 12:24:00;2.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-11a5b21432f23d1041;Turów B05;TUR 2-05;2026-11-04 12:30:00;2026-11-04 12:45:00;27.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-3552efbc3379045ac7;Turów B11;TUR 4-11;2026-11-04 12:30:00;2026-11-04 12:45:00;39.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-f369f714ed69ca731c;EC Włocławek B1;;2026-11-04 15:00:00;2026-11-04 16:00:00;29.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-2b409c0990e5bc6455;Opole B5;OPL 4-05;2026-11-04 16:00:00;2026-11-04 23:00:00;88.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-4bcaa57e264214deaa;Opole B6;OPL 4-06;2026-11-04 16:00:00;2026-11-04 23:00:00;88.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-7204e66fbc2b6de9d9;PAK-PCE KAZIMIERZ BISKUPI FW Kazimierz Biskupi;;2026-11-04 16:00:00;2026-11-04 17:22:00;3.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-e782945e9b2080f40f;Turów B06;TUR 2-06;2026-11-04 18:00:00;2026-11-04 20:00:00;19.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-66cebbd3a38c2e3f19;Płock B01;;2026-11-04 19:00:00;2026-11-04 20:00:00;105.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-e9847add3c1fdbba95;Turów B02;TUR 2-02;2026-11-04 22:15:00;2026-11-04 22:30:00;93.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-587ab1312374015134;Turów B06;TUR 2-06;2026-11-04 22:45:00;2026-11-05 00:00:00;133.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-aee83b4189cd21f6f5;Kozienice 1 B8;KOZ12S08;2026-11-04 23:00:00;2026-11-05 01:45:00;74.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-cbc681a1e7c5b2fa03;Kraków Łęg KLE_1-03;;2026-11-05 00:00:00;2026-11-08 00:00:00;102.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-f09f50fc7ae55efa81;Turów B01;TUR 1-01;2026-11-05 00:00:00;2026-11-05 06:15:00;125.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-65a9593e5aa493a174;Turów B02;TUR 2-02;2026-11-05 00:00:00;2026-11-05 06:00:00;125.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-6eb19588a7c32414cc;Ostrołęka B B02;;2026-11-05 00:15:00;2026-11-05 04:45:00;30.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-ffbea3496d506a160c;EC Włocławek B1;;2026-11-05 05:00:00;2026-11-05 06:00:00;24.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-722929a4b2ba5fbd65;Płock B01;;2026-11-05 05:00:00;2026-11-05 06:00:00;95.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-4f1fc9d2dd3b18e898;Opole B5;OPL 4-05;2026-11-05 06:00:00;2026-11-05 11:00:00;88.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-7e38f94f99d3a4d51c;Opole B6;OPL 4-06;2026-11-05 06:00:00;2026-11-05 11:00:00;88.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-b8f98ee0aa8e5b45fc;Turów B05;TUR 2-05;2026-11-05 06:00:00;2026-11-05 06:15:00;104.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-0372b164a56196f5d8;Turów B06;TUR 2-06;2026-11-05 06:15:00;2026-11-05 06:30:00;75.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-339ea14419adf7139c;Turów B11;TUR 4-11;2026-11-05 06:15:00;2026-11-05 06:30:00;107.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-03031e2682944d2591;Turów B02;TUR 2-02;2026-11-05 06:30:00;2026-11-05 06:45:00;56.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-d8677157907bcf65b8;Turów B03;TUR 2-03;2026-11-05 06:45:00;2026-11-05 07:00:00;56.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-9165f885fda2b16a62;Turów B05;TUR 2-05;2026-11-05 06:45:00;2026-11-05 07:00:00;19.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-43487e43ef8daa8de6;PAK-PCE PRZYRÓW FW Przyrów;;2026-11-05 08:00:00;2026-11-05 16:45:00;3.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-025ddef1d725b8adae;Turów B02;TUR 2-02;2026-11-05 08:00:00;2026-11-05 08:15:00;28.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-f9b8da30d70c394ce8;Turów B05;TUR 2-05;2026-11-05 08:15:00;2026-11-05 08:30:00;55.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-3895667bdeaab319a0;Turów B01;TUR 1-01;2026-11-05 08:30:00;2026-11-05 08:45:00;121.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-d576e8590b58a94519;Turów B11;TUR 4-11;2026-11-05 08:30:00;2026-11-05 08:45:00;177.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-276f85006028fa5912;Eolos Novo Sp. z o.o. FW Czarnożyły;;2026-11-05 09:00:00;2026-11-05 15:20:00;2.0;planowane;;;;2;;TGE;tylko_TGE;0;
+TGE-1f5f3ec1ccec537240;PAK-PCE MIŁOSŁAW FW Pałczyn;;2026-11-05 09:00:00;2026-11-05 20:00:00;2.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-3e9a0f886b6c5f4e45;Eolos Polska Sp. z o.o. FW Krzyżanów;;2026-11-05 10:00:00;2026-11-05 13:58:00;10.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-6e5e8276c8aae51139;PAK-PCE KAZIMIERZ BISKUPI FW Kazimierz Biskupi;;2026-11-05 10:00:00;2026-11-05 14:00:00;3.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-f192ad2ed7afd6dfcb;Jaworzno 2 JWCD B7;;2026-11-05 11:00:00;2026-11-05 12:45:00;440.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-fd82fb01c942966029;Eolos Polska Sp. z o.o. FW Krzyżanów;;2026-11-05 13:59:00;2026-11-05 16:52:00;2.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-e4ca854bc277b93fe5;Turów B11;TUR 4-11;2026-11-05 14:45:00;2026-11-05 15:00:00;107.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-a92fff1d0a93411108;Turów B05;TUR 2-05;2026-11-05 15:00:00;2026-11-05 15:15:00;104.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-fef9f3ab1913c1a61a;Karolin B2;;2026-11-05 15:01:00;2026-11-09 18:00:00;100.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-0aa00dff382afd84f2;Turów B01;TUR 1-01;2026-11-05 15:15:00;2026-11-05 15:30:00;98.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-df18f23ac046ce3a87;Ostrołęka B B02;;2026-11-05 15:30:00;2026-11-05 23:45:00;20.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-c55f6d2d5dbdf1f015;Turów B02;TUR 2-02;2026-11-05 15:45:00;2026-11-05 16:00:00;13.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-93bab990e9c705d613;Turów B05;TUR 2-05;2026-11-05 15:45:00;2026-11-05 16:00:00;19.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-068c3146c42c6c2791;Turów B06;TUR 2-06;2026-11-05 15:45:00;2026-11-05 16:00:00;19.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-b21e7efecdccf24fac;Opole B5;OPL 4-05;2026-11-05 16:00:00;2026-11-05 18:30:00;88.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-76d2f9210e85f90851;Opole B6;OPL 4-06;2026-11-05 16:00:00;2026-11-05 23:00:00;88.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-1ccfb2cadd1814dd23;Turów B03;TUR 2-03;2026-11-05 16:00:00;2026-11-05 22:00:00;28.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-81623048c6a5cec6cd;Jaworzno 2 JWCD B7;;2026-11-05 16:15:00;2026-11-05 16:45:00;245.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-0dfc0749670cf2e322;Eolos Novo Sp. z o.o. FW Czarnożyły;;2026-11-05 18:43:00;2026-11-06 12:28:00;2.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-0569cdb13887ae9109;Turów B05;TUR 2-05;2026-11-05 22:00:00;2026-11-05 22:15:00;27.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-bcbfa0c3de193e4881;Żarnowiec H1;;2026-11-05 22:01:00;2026-11-09 22:00:00;179.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-162edda318dc66b9b2;Jaworzno 2 JWCD B7;;2026-11-05 22:15:00;2026-11-06 05:00:00;420.0;nieplanowane;;;;3;;TGE;tylko_TGE;0;
+TGE-d3a688e783679f20a6;Turów B01;TUR 1-01;2026-11-05 22:15:00;2026-11-05 22:30:00;93.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-e4c74b1eb1a3bc8b3e;Turów B06;TUR 2-06;2026-11-05 22:15:00;2026-11-05 22:30:00;55.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-c6561e832a466db545;Synthos Dwory 7 GT1;;2026-11-05 22:30:00;2026-11-09 11:00:00;72.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-3b5d7e65c8c7c7de4d;Turów B02;TUR 2-02;2026-11-05 22:45:00;2026-11-05 23:30:00;112.0;nieplanowane;;;;2;;TGE;tylko_TGE;0;
+TGE-a52d30daa9043b7484;Turów B03;TUR 2-03;2026-11-06 00:00:00;2026-11-06 06:30:00;112.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-eedf03ebb87e024258;Turów B11;TUR 4-11;2026-11-06 00:00:00;2026-11-06 06:00:00;247.0;nieplanowane;;;;2;;TGE;tylko_TGE;0;
+TGE-cff1d134b7d229141f;EC Włocławek B1;;2026-11-06 03:00:00;2026-11-06 04:00:00;19.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-7251b172461856a3d3;EC Włocławek B1;;2026-11-06 05:00:00;2026-11-06 06:00:00;19.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-8ef3ab64a03258f722;Opole B5;OPL 4-05;2026-11-06 06:00:00;2026-11-06 11:00:00;88.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-5c9ee97e1d2399a2c9;Opole B6;OPL 4-06;2026-11-06 06:00:00;2026-11-06 11:00:00;88.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-00eef5f59a86132ae6;Turów B02;TUR 2-02;2026-11-06 06:45:00;2026-11-06 07:00:00;28.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-0af2f1ceb935d283eb;Turów B05;TUR 2-05;2026-11-06 06:45:00;2026-11-06 07:00:00;19.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-0d5c980ed2e9c01c49;Turów B03;TUR 2-03;2026-11-06 07:00:00;2026-11-06 08:00:00;28.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-134d0f55ef2e42a513;Turów B11;TUR 4-11;2026-11-06 07:00:00;2026-11-06 08:30:00;8.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-4e9927e2cdc138debe;Dychów H1;;2026-11-06 08:00:00;2026-11-06 16:00:00;30.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-d9673c212393df3e34;Dychów H2;;2026-11-06 08:00:00;2026-11-06 16:00:00;30.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-e518aadbdb46972f7b;Dychów H3;;2026-11-06 08:00:00;2026-11-06 16:00:00;30.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-676098ae95b374a160;PAK-PCE PRZYRÓW FW Przyrów;;2026-11-06 08:00:00;2026-11-06 15:30:00;3.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-7e4d7768ff3b15a6c3;Turów B02;TUR 2-02;2026-11-06 08:00:00;2026-11-06 08:45:00;84.0;nieplanowane;;;;2;;TGE;tylko_TGE;0;
+TGE-0b2f2922d87c19ed8d;Turów B03;TUR 2-03;2026-11-06 08:30:00;2026-11-06 14:30:00;112.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-82868ac49d76cce927;Turów B05;TUR 2-05;2026-11-06 09:00:00;2026-11-06 14:00:00;133.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-ca9a2610ee020de2b1;Turów B11;TUR 4-11;2026-11-06 09:15:00;2026-11-06 14:00:00;247.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-c7d7ae8d8e9e68b4df;PAK-PCE KAZIMIERZ BISKUPI FW Kazimierz Biskupi;;2026-11-06 10:00:00;2026-11-06 14:00:00;3.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-90e2c8907e02d32bd8;Eolos Polska Sp. z o.o. FW Krzyżanów;;2026-11-06 10:15:00;2026-11-06 12:30:00;2.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-99c877fa7472bc779e;Jaworzno 3 B5;JW3_2S05;2026-11-06 12:10:00;2026-11-07 00:00:00;206.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-a5d4ad9ec923831c95;PAK-PCE KAZIMIERZ BISKUPI FW Kazimierz Biskupi;;2026-11-06 14:25:00;2026-11-06 15:38:00;3.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-3c687305242b449353;Turów B02;TUR 2-02;2026-11-06 14:45:00;2026-11-06 15:00:00;13.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-5bcb1be313e96e7a76;Turów B05;TUR 2-05;2026-11-06 14:45:00;2026-11-06 15:00:00;19.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-548be808aed3eb3337;Turów B06;TUR 2-06;2026-11-06 14:45:00;2026-11-06 15:00:00;19.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-15434b6c388ae85050;Bełchatów B08;;2026-11-06 15:30:00;2026-11-06 21:00:00;100.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-d19c608fc9be058d05;Opole B5;OPL 4-05;2026-11-06 16:00:00;2026-11-06 23:00:00;88.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-1a9eee0761b26beee6;Opole B6;OPL 4-06;2026-11-06 16:00:00;2026-11-06 23:00:00;88.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-3b632c83fa104762ec;PAK-PCE CZŁUCHÓW FW Ględowo;;2026-11-06 16:25:00;2026-11-06 23:38:00;2.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-3dfedfc0b426e2d389;EC Włocławek B1;;2026-11-06 19:00:00;2026-11-06 20:00:00;29.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-558446706afcba6c28;Turów B02;TUR 2-02;2026-11-06 21:00:00;2026-11-06 21:15:00;28.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-dee883cdde7b0e4e61;Płock B01;;2026-11-06 22:00:00;2026-11-06 23:00:00;105.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-55dcf7c496fad7453b;Eolos Novo Sp. z o.o. FW Czarnożyły;;2026-11-06 23:14:00;2026-11-07 09:25:00;2.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-f53b6683319d87af08;Opole B6;OPL 4-06;2026-11-07 00:00:00;2026-11-07 07:00:00;373.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-d0313c52455c343809;Turów B01;TUR 1-01;2026-11-07 00:00:00;2026-11-07 14:15:00;125.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-1b1504c0808acbc386;Łaziska 3 B11;;2026-11-07 00:00:00;2026-11-09 00:00:00;211.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-514810678e3a9b7eb9;Ostrołęka B B03;;2026-11-07 00:01:00;2026-11-11 23:00:00;165.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-66cf9a7f57daf31513;Łaziska 3 B09;;2026-11-07 00:06:00;2026-11-09 00:00:00;215.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-09142a84fb957d680f;Siersza B2;;2026-11-07 00:09:00;2026-11-09 00:00:00;139.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-8004cb03d24e531fb5;Jaworzno 3 B1;JW3_2S01;2026-11-07 00:15:00;2026-11-10 00:00:00;210.0;nieplanowane;;;;1;;TGE + PSE pdwkseub (pomiar);tylko_TGE;96;210.0
+TGE-35c734a7a7ecc47467;Kozienice 1 B7;KOZ12S07;2026-11-07 00:21:00;2026-11-09 00:00:00;203.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-f5987635872233c1a1;Połaniec B4;;2026-11-07 00:22:00;2026-11-07 17:45:00;226.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-d90ab0deb2b0ebaecc;Połaniec B6;;2026-11-07 00:22:00;2026-11-12 00:00:00;226.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-3edd878a70f50f956a;Bełchatów B08;;2026-11-07 01:00:00;2026-11-08 15:00:00;100.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-f4f61366537fb03f82;Bełchatów B09;;2026-11-07 01:00:00;2026-11-08 00:00:00;100.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-eaf2b49c853572d9bf;Bełchatów B10;;2026-11-07 01:00:00;2026-11-08 15:00:00;100.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-aa9be993c7dc98a40c;Bełchatów B11;;2026-11-07 01:00:00;2026-11-08 15:00:00;100.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-5ca6e6bcde641dd3a1;Bełchatów B12;;2026-11-07 01:00:00;2026-11-08 15:00:00;100.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-7ece70f04e07e3b519;EC Włocławek B1;;2026-11-07 01:00:00;2026-11-07 02:00:00;29.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-5e8456cd60f17599ba;Płock B01;;2026-11-07 01:00:00;2026-11-07 02:00:00;100.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-460fd1b269412eeaa1;Płock B01;;2026-11-07 03:00:00;2026-11-07 04:00:00;105.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-e22e46ebe8899fa2d8;EC Włocławek B1;;2026-11-07 05:00:00;2026-11-07 06:00:00;29.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-5d21f02144d06266c5;Turów B06;TUR 2-06;2026-11-07 05:15:00;2026-11-07 06:00:00;75.0;nieplanowane;;;;2;;TGE;tylko_TGE;0;
+TGE-0d1474cf5d67b34a23;Turów B11;TUR 4-11;2026-11-07 05:45:00;2026-11-07 06:00:00;39.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-adec488484c78dde00;Jaworzno 3 B5;JW3_2S05;2026-11-07 06:00:00;2026-11-09 07:00:00;206.0;planowane;;;;1;;TGE + PSE pdwkseub (pomiar);tylko_TGE;28;206.0
+TGE-788f52e33d8f36604c;Płock B01;;2026-11-07 06:00:00;2026-11-07 07:00:00;105.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-bd78ef4c0f34e51871;Turów B05;TUR 2-05;2026-11-07 06:45:00;2026-11-07 08:00:00;146.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-dce653cef29964990b;EC Włocławek B1;;2026-11-07 08:00:00;2026-11-07 09:00:00;29.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-c7e59c4ad76e42b6e8;Opole B5;OPL 4-05;2026-11-07 08:00:00;2026-11-07 16:00:00;369.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-8f883dedbb56414ff8;Opole B6;OPL 4-06;2026-11-07 08:00:00;2026-11-07 16:00:00;373.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-90a9b38f4b34156055;Turów B11;TUR 4-11;2026-11-07 08:45:00;2026-11-08 00:00:00;247.0;nieplanowane;;;;2;;TGE;tylko_TGE;0;
+TGE-49a4b0882eac644d35;Kozienice 2 B11;KOZ24S11;2026-11-07 09:00:00;2026-11-07 13:00:00;381.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-fb1cd585ae44703af8;Turów B06;TUR 2-06;2026-11-07 09:00:00;2026-11-07 09:45:00;104.0;nieplanowane;;;;2;;TGE;tylko_TGE;0;
+TGE-6e37775b06130880d5;Płock B01;;2026-11-07 10:00:00;2026-11-07 11:00:00;105.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-73d61f85399c5574db;JSW KOKS S.A. EC Koksownia Przyjaźń G4;;2026-11-07 10:45:00;2026-11-07 16:05:00;71.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-77e787352270fd5245;Jaworzno 2 JWCD B7;;2026-11-07 11:00:00;2026-11-07 12:45:00;456.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-977d724007c4b57f2b;PAK-PCE CZŁUCHÓW FW Ględowo;;2026-11-07 11:27:00;2026-11-07 13:25:00;2.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-66a7a60335a78d9f79;Eolos Novo Sp. z o.o. FW Czarnożyły;;2026-11-07 11:45:00;2026-11-07 14:15:00;2.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-9734ec76814f786b8a;EC Włocławek B1;;2026-11-07 13:00:00;2026-11-07 14:00:00;29.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-71e109b5603f7c29be;Turów B06;TUR 2-06;2026-11-07 14:15:00;2026-11-07 15:00:00;75.0;nieplanowane;;;;2;;TGE;tylko_TGE;0;
+TGE-4b3ccc8fb98fb50de0;Turów B03;TUR 2-03;2026-11-07 14:30:00;2026-11-08 13:30:00;112.0;nieplanowane;;;;4;;TGE;tylko_TGE;0;
+TGE-3fbcf95393ad77410c;Turów B02;TUR 2-02;2026-11-07 14:45:00;2026-11-07 15:00:00;13.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-ad122a280e2459b247;Turów B05;TUR 2-05;2026-11-07 15:15:00;2026-11-07 16:00:00;206.0;planowane;;;;2;;TGE;tylko_TGE;0;
+TGE-8b67bca794a2a9e0af;Turów B05;TUR 2-05;2026-11-07 16:30:00;2026-11-07 17:45:00;133.0;nieplanowane;;;;3;;TGE;tylko_TGE;0;
+TGE-07698faa5ebae6f80b;EC Włocławek B1;;2026-11-07 17:00:00;2026-11-07 18:00:00;29.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-3533d8c16803ad37e4;Ostrołęka B B02;;2026-11-07 18:05:00;2026-11-07 23:00:00;20.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-7904e4587a15b9b631;Płock B01;;2026-11-07 20:00:00;2026-11-07 21:00:00;100.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-08da1d4be4b96cbbd9;EC Włocławek B1;;2026-11-07 21:00:00;2026-11-07 22:00:00;29.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-7c686dad2c9ad2e3fe;Turów B05;TUR 2-05;2026-11-07 22:45:00;2026-11-07 23:00:00;27.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-83724593b4f8b6c171;Turów B06;TUR 2-06;2026-11-07 22:45:00;2026-11-07 23:30:00;75.0;nieplanowane;;;;2;;TGE;tylko_TGE;0;
+TGE-5ee3cef53f88346e97;Turów B01;TUR 1-01;2026-11-07 23:00:00;2026-11-08 23:00:00;125.0;nieplanowane;;;;5;;TGE;tylko_TGE;0;
+TGE-0fbecfe754bad13dd6;Turów B02;TUR 2-02;2026-11-07 23:15:00;2026-11-07 23:30:00;84.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-284d956a08d1185305;Turów B05;TUR 2-05;2026-11-07 23:30:00;2026-11-08 13:30:00;133.0;nieplanowane;;;;2;;TGE;tylko_TGE;0;
+TGE-431c3fa96d41f04f82;Opole B5;OPL 4-05;2026-11-08 00:00:00;2026-11-08 14:00:00;369.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-d11d55f4bf0fd22b9c;Opole B6;OPL 4-06;2026-11-08 00:00:00;2026-11-08 14:00:00;373.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-1cc16bb3c49cbec1af;Turów B06;TUR 2-06;2026-11-08 00:00:00;2026-11-08 14:30:00;133.0;nieplanowane;;;;3;;TGE;tylko_TGE;0;
+TGE-06157ba209de7502f4;Połaniec B3;;2026-11-08 00:01:00;2026-11-08 23:45:00;226.0;nieplanowane;;;;2;;TGE;tylko_TGE;0;
+TGE-bb0bc40ec57b160bcc;Kozienice 1 B3;KOZ12S03;2026-11-08 00:18:00;2026-11-09 00:00:00;206.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-bdaec8a47126c333bb;EC Włocławek B1;;2026-11-08 01:00:00;2026-11-08 02:00:00;24.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-e6da0cc704313ecbec;Płock B01;;2026-11-08 01:00:00;2026-11-08 02:00:00;90.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-4a6d9472373ae1f38a;EC Włocławek B1;;2026-11-08 03:00:00;2026-11-08 04:00:00;24.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-c8b517e632e7b595b9;Eolos Polska Sp. z o.o. FW Krzyżanów;;2026-11-08 04:39:00;2026-11-09 09:38:00;2.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-96df7e4e8fadbf1170;Płock B01;;2026-11-08 05:00:00;2026-11-08 06:00:00;85.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-6f17300a4a1bb801b2;EC Włocławek B1;;2026-11-08 06:00:00;2026-11-08 07:00:00;24.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-cf80130b206e7a4f27;EC Wrotków ECW;;2026-11-08 07:30:00;2026-11-08 07:45:00;115.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-faee30adfb475de32b;Płock B01;;2026-11-08 09:00:00;2026-11-08 10:00:00;90.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-9b20e681eaa0b02702;Jaworzno 2 JWCD B7;;2026-11-08 09:10:00;2026-11-08 09:45:00;235.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-9a385280dbe43c2775;EC Włocławek B1;;2026-11-08 10:00:00;2026-11-08 11:00:00;24.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-0ea70c0b9cb4241c68;Jaworzno 2 JWCD B7;;2026-11-08 11:00:00;2026-11-08 12:45:00;456.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-1650464d67cbc1fce1;EC Włocławek B1;;2026-11-08 12:00:00;2026-11-08 13:00:00;29.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-98532105b343dd20c6;Płock B01;;2026-11-08 12:00:00;2026-11-08 13:00:00;100.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-97892aaa1a72a4caa3;Kozienice 2 B11;KOZ24S11;2026-11-08 12:37:00;2026-11-08 15:00:00;981.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-14ed5feeab304f3302;Turów B02;TUR 2-02;2026-11-08 13:30:00;2026-11-08 14:15:00;112.0;nieplanowane;;;;2;;TGE;tylko_TGE;0;
+TGE-1e85fe5aad0878fcc2;EC Włocławek B1;;2026-11-08 14:00:00;2026-11-08 15:00:00;29.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-ae66444ff9b603d910;Turów B03;TUR 2-03;2026-11-08 14:00:00;2026-11-08 23:30:00;84.0;nieplanowane;;;;2;;TGE;tylko_TGE;0;
+TGE-68b9ced8f6778cd7ec;Turów B05;TUR 2-05;2026-11-08 14:00:00;2026-11-08 14:15:00;46.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-9c17b35327dde25b24;EC Wrotków ECW;;2026-11-08 16:45:00;2026-11-08 17:00:00;124.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-a442f83767d2756803;EC Włocławek B1;;2026-11-08 17:00:00;2026-11-08 18:00:00;24.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-4e5ce3342e2dc848fd;EC Włocławek B1;;2026-11-08 21:00:00;2026-11-08 22:00:00;24.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-9dae2bc66a5858a0c3;Opole B5;OPL 4-05;2026-11-08 21:00:00;2026-11-09 00:00:00;369.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-b7e355e2b6ffcaef59;Eolos Polska Sp. z o.o. FW Gorzkowice;;2026-11-08 21:58:00;2026-11-09 10:28:00;2.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-65f5529b4afe334e7f;Płock B01;;2026-11-08 22:00:00;2026-11-08 23:00:00;90.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-73436c9faccf434e80;Turów B02;TUR 2-02;2026-11-08 23:00:00;2026-11-08 23:15:00;28.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-08bdb5cddfce6bd57d;Turów B05;TUR 2-05;2026-11-08 23:00:00;2026-11-08 23:15:00;27.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-2159816369c9046320;Turów B06;TUR 2-06;2026-11-08 23:15:00;2026-11-09 00:00:00;113.0;nieplanowane;;;;2;;TGE;tylko_TGE;0;
+TGE-536013a2f6d2d4cf76;Turów B01;TUR 1-01;2026-11-08 23:30:00;2026-11-09 00:00:00;121.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-e001a1a19cdcd2b3fa;Turów B02;TUR 2-02;2026-11-08 23:45:00;2026-11-09 00:00:00;112.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-1b407f2d172836962c;Turów B05;TUR 2-05;2026-11-08 23:45:00;2026-11-09 00:00:00;113.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-4de6265c95caac2065;EC Włocławek B1;;2026-11-09 00:00:00;2026-11-09 01:00:00;24.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-94d886507360ed477b;Siersza B2;;2026-11-09 00:00:00;2026-11-11 00:00:00;139.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-76521cb6f8c0347f3d;Płock B01;;2026-11-09 01:00:00;2026-11-09 02:00:00;90.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-f81b3dd6321363cb99;Płock B01;;2026-11-09 03:00:00;2026-11-09 04:00:00;90.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-ff8f4a68d118122c7a;EC Włocławek B1;;2026-11-09 05:00:00;2026-11-09 06:00:00;24.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-3765ccd95bfcec27d6;Turów B03;TUR 2-03;2026-11-09 06:00:00;2026-11-09 06:15:00;93.0;nieplanowane;;;;1;;TGE + PSE pdwkseub (pomiar);tylko_TGE;1;93.0
+TGE-e2bcc66975c5fee661;Turów B02;TUR 2-02;2026-11-09 06:30:00;2026-11-09 06:45:00;65.0;nieplanowane;;;;1;;TGE + PSE pdwkseub (pomiar);tylko_TGE;1;65.0
+TGE-6a6bbbc9567e722873;Turów B03;TUR 2-03;2026-11-09 06:45:00;2026-11-09 08:00:00;28.0;nieplanowane;;;;1;;TGE + PSE pdwkseub (pomiar);tylko_TGE;5;28.0
+TGE-984e16e80ffdfee4de;Turów B06;TUR 2-06;2026-11-09 06:45:00;2026-11-09 07:00:00;19.0;nieplanowane;;;;1;;TGE + PSE pdwkseub (pomiar);tylko_TGE;1;19.0
+TGE-8e195e7db63088f83e;EC Włocławek B1;;2026-11-09 07:00:00;2026-11-09 08:00:00;24.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-053df283a62e2575c0;Płock B01;;2026-11-09 07:00:00;2026-11-09 08:00:00;90.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-487357971b885d461d;Turów B01;TUR 1-01;2026-11-09 07:00:00;2026-11-09 07:15:00;93.0;nieplanowane;;;;1;;TGE + PSE pdwkseub (pomiar);tylko_TGE;1;93.0
+TGE-231fa7ad48b9d4af18;EC Wrotków ECW;;2026-11-09 08:00:00;2026-11-30 00:00:00;6.0;planowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-181a9ecf145ade025d;PAK-PCE CZŁUCHÓW FW Ględowo;;2026-11-09 08:00:00;2026-11-09 16:00:00;2.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-be1f0a12792632510b;Turów B02;TUR 2-02;2026-11-09 08:00:00;2026-11-09 10:45:00;84.0;nieplanowane;;;;2;;TGE + PSE pdwkseub (pomiar);tylko_TGE;11;84.0
+TGE-3d82c35396473e1d84;Turów B05;TUR 2-05;2026-11-09 08:15:00;2026-11-09 08:30:00;27.0;nieplanowane;;;;1;;TGE + PSE pdwkseub (pomiar);tylko_TGE;1;27.0
+TGE-088f1dde6d017c74b2;Turów B06;TUR 2-06;2026-11-09 08:15:00;2026-11-09 08:30:00;27.0;nieplanowane;;;;1;;TGE + PSE pdwkseub (pomiar);tylko_TGE;1;27.0
+TGE-db9fd6671c95f499bf;Turów B03;TUR 2-03;2026-11-09 08:30:00;2026-11-09 10:45:00;112.0;nieplanowane;;;;1;;TGE + PSE pdwkseub (pomiar);tylko_TGE;9;112.0
+TGE-6b57ced2e4cbc73e63;"E&amp;G Sp. z o. o. PV Kleczew";;2026-11-09 09:00:00;2026-11-09 15:30:00;12.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-8fdb5a484a640d264f;EC Włocławek B1;;2026-11-09 09:00:00;2026-11-09 10:00:00;24.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-ca30cf5a2596828f60;Płock B01;;2026-11-09 09:00:00;2026-11-09 10:00:00;100.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-6be26269f0412b4774;Turów B05;TUR 2-05;2026-11-09 09:00:00;2026-11-09 11:15:00;113.0;nieplanowane;;;;2;;TGE + PSE pdwkseub (pomiar);tylko_TGE;9;133.0
+TGE-113b03e75eb1fa54ac;Jaworzno 3 B4;JW3_2S04;2026-11-09 09:24:00;2026-11-13 00:00:00;211.0;nieplanowane;RA;AK;PSE-17b8b9fc9d5cc4f7a5;2;2026-11-12T14:29:33+00:00;TGE + PSE unav-pk5l + PSE pdwkseub (pomiar);dopasowane_z_duzym_prawdopodobienstwem;347;211.0
+TGE-8e510e873dc774b134;PAK-PCE KAZIMIERZ BISKUPI FW Kazimierz Biskupi;;2026-11-09 10:00:00;2026-11-09 15:00:00;3.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-d89ccd876f64b8429a;Turów B01;TUR 1-01;2026-11-09 10:45:00;2026-11-09 11:00:00;121.0;nieplanowane;;;;1;;TGE + PSE pdwkseub (pomiar);tylko_TGE;1;121.0
+TGE-495db6e7993ab23d4d;Turów B06;TUR 2-06;2026-11-09 10:45:00;2026-11-09 11:30:00;75.0;nieplanowane;;;;2;;TGE + PSE pdwkseub (pomiar);tylko_TGE;3;75.0
+TGE-f55ff540cb7594adc1;EC Włocławek B1;;2026-11-09 11:00:00;2026-11-09 12:00:00;29.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-6520e214ffe68ee048;Opole B5;OPL 4-05;2026-11-09 11:00:00;2026-11-09 14:00:00;305.0;nieplanowane;;;;1;;TGE + PSE pdwkseub (pomiar);tylko_TGE;12;305.0
+TGE-07a64759e4fcb74f18;Synthos Dwory 7 GT1;;2026-11-09 11:30:00;2026-11-09 14:30:00;72.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-8d2b3761367eca8025;Turów B02;TUR 2-02;2026-11-09 11:45:00;2026-11-09 12:00:00;56.0;nieplanowane;;;;1;;TGE + PSE pdwkseub (pomiar);tylko_TGE;1;56.0
+TGE-88d2ddef153da329de;Turów B05;TUR 2-05;2026-11-09 11:45:00;2026-11-09 12:00:00;19.0;nieplanowane;;;;1;;TGE + PSE pdwkseub (pomiar);tylko_TGE;1;19.0
+TGE-8c8109ce7def8602a6;Kozienice 2 B11;KOZ24S11;2026-11-09 12:00:00;2026-11-09 15:00:00;481.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-ab0c7924cb757bc9c1;Eolos Novo Sp. z o.o. FW Czarnożyły;;2026-11-09 12:10:00;2026-11-09 15:03:00;2.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-2b327bf20563bef38b;EC Włocławek B1;;2026-11-09 13:00:00;2026-11-09 14:00:00;29.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-4d11aa1f096f247aa2;Płock B01;;2026-11-09 13:00:00;2026-11-09 14:00:00;115.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-27c64b62facc04a2b1;Opole B6;OPL 4-06;2026-11-09 14:00:00;2026-11-09 23:00:00;88.0;nieplanowane;;;;1;;TGE + PSE pdwkseub (pomiar);tylko_TGE;36;88.0
+TGE-e42a84ce7b2d788fa2;EC Włocławek B1;;2026-11-09 15:00:00;2026-11-09 16:00:00;29.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-d4d0a659d8758e41c3;Płock B01;;2026-11-09 18:00:00;2026-11-09 19:00:00;110.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-c2c86bbc6b41edd1cc;PGE Gryfino Dolna Odra Sp. z o.o. Gryfino blok 10;EGF_4S10;2026-11-09 18:30:00;2026-11-10 00:00:00;10.0;nieplanowane;;;;1;;TGE + PSE pdwkseub (pomiar);tylko_TGE;22;10.0
+TGE-f5da788dcb73ae23f9;EC Włocławek B1;;2026-11-09 20:00:00;2026-11-09 21:00:00;24.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-3b23dfea688fc0cf55;KOGENERACJA S.A. CZN_1S01;;2026-11-09 20:08:00;2026-11-11 18:00:00;85.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+PSE-34143e4184b983be61;Kozienice 1;KOZ12S05;2026-11-09 21:28:00;2026-11-13 13:00:00;;;RA;AK;PSE-34143e4184b983be61;0;;PSE unav-pk5l + PSE pdwkseub (pomiar);tylko_PSE_unav;351;213.0
+PSE-462f4f9e4c1f3b0c54;Kozienice 1;KOZ12S05;2026-11-09 21:28:00;2026-11-13 18:00:00;;;RA;AK;PSE-462f4f9e4c1f3b0c54;0;;PSE unav-pk5l + PSE pdwkseub (pomiar);tylko_PSE_unav;351;213.0
+TGE-fadf2623a4e1eb914a;Kozienice 1 B5;KOZ12S05;2026-11-09 21:28:00;2026-11-13 18:00:00;213.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;351;213.0
+TGE-f0c4cc011167c2ffaf;EC Białystok BIA_1-03;;2026-11-09 21:53:00;2026-11-11 23:45:00;52.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+PSE-cabb95af5443255d77;Opole;OPL 4-03;2026-11-09 22:00:00;2026-11-10 15:00:00;;;WE;AN;PSE-cabb95af5443255d77;0;;PSE unav-pk5l + PSE pdwkseub (pomiar);tylko_PSE_unav;28;180.0
+TGE-d75160be55c1b7dc7b;Płock B01;;2026-11-09 22:00:00;2026-11-09 23:00:00;100.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-46d77b934db1887553;Opole B3;OPL 4-03;2026-11-09 23:00:00;2026-11-10 06:00:00;180.0;nieplanowane;;;;1;;TGE + PSE pdwkseub (pomiar);tylko_TGE;28;180.0
+TGE-2df0032019b560ddd7;EC Włocławek B1;;2026-11-10 00:00:00;2026-11-10 01:00:00;24.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-63ede5a7dfb08f92ed;Jaworzno 3 B1;JW3_2S01;2026-11-10 00:00:00;2026-11-10 08:30:00;210.0;planowane;WE;AK;PSE-6415c94d531c11f36e;1;;TGE + PSE unav-pk5l + PSE pdwkseub (pomiar);dopasowane_z_duzym_prawdopodobienstwem;34;210.0
+TGE-18cd9f62adf46315d7;Opole B5;OPL 4-05;2026-11-10 00:00:00;2026-11-10 06:00:00;305.0;nieplanowane;;;;1;;TGE + PSE pdwkseub (pomiar);tylko_TGE;24;305.0
+TGE-4e9a5b0b97db94f1d3;Płock B01;;2026-11-10 00:00:00;2026-11-10 01:00:00;100.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-e9d568ea6141ca5317;Rybnik B6;RYB 2-06;2026-11-10 00:00:00;2026-11-18 00:00:00;84.0;nieplanowane;;;;3;2026-11-12T14:29:33+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;576;84.0
+TGE-991641c311952759b9;Rybnik B8;RYB 4-08;2026-11-10 00:00:00;2026-11-10 06:00:00;83.0;nieplanowane;;;;1;;TGE + PSE pdwkseub (pomiar);tylko_TGE;24;83.0
+TGE-1c60b688a26889c0bf;Turów B01;TUR 1-01;2026-11-10 00:00:00;2026-11-10 09:15:00;38.0;nieplanowane;;;;1;;TGE + PSE pdwkseub (pomiar);tylko_TGE;37;38.0
+TGE-0c3c756b7e14a9adf0;Turów B11;TUR 4-11;2026-11-10 00:00:00;2026-11-12 00:00:00;444.0;planowane;RB;AK;PSE-7a6bbb4db8570008a7;2;2026-11-12T14:29:33+00:00;TGE + PSE unav-pk5l + PSE pdwkseub (pomiar);dopasowane_z_duzym_prawdopodobienstwem;192;444.0
+PSE-8c6954c5ea1be184f3;Łaziska 3;LZA31S10;2026-11-10 00:00:00;2026-11-16 00:00:00;;;WE;AK;PSE-8c6954c5ea1be184f3;0;;PSE unav-pk5l + PSE pdwkseub (pomiar);tylko_PSE_unav;515;211.0
+TGE-f1f33af48d95598aaf;Płock B01;;2026-11-10 03:00:00;2026-11-10 04:00:00;100.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-d4cee901ff59e2f278;EC Włocławek B1;;2026-11-10 05:00:00;2026-11-10 06:00:00;24.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-867f90ca4da48b1f1a;Opole B6;OPL 4-06;2026-11-10 06:00:00;2026-11-10 23:00:00;88.0;nieplanowane;;;;1;;TGE + PSE pdwkseub (pomiar);tylko_TGE;68;88.0
+TGE-12cbff5eea44a88504;Płock B01;;2026-11-10 06:00:00;2026-11-10 07:00:00;100.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-c92cd70fb0f58e198e;Żarnowiec H1;;2026-11-10 06:01:00;2026-11-10 08:00:00;179.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-b687aaebf92ab9d5a5;EC Włocławek B1;;2026-11-10 07:00:00;2026-11-10 08:00:00;24.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-afda37a23834df7470;Ostrołęka B B01;;2026-11-10 07:15:00;2026-11-10 10:15:00;30.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-3979c5746851a20766;EC Włocławek B1;;2026-11-10 09:00:00;2026-11-10 10:00:00;29.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-90d40e2f60cb895a87;Turów B01;TUR 1-01;2026-11-10 09:45:00;2026-11-10 10:00:00;121.0;nieplanowane;;;;1;;TGE + PSE pdwkseub (pomiar);tylko_TGE;1;121.0
+TGE-db3ca1659f6d8bb63d;Płock B01;;2026-11-10 10:00:00;2026-11-10 11:00:00;110.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-bce02abb1985fe5bdf;EC Włocławek B1;;2026-11-10 12:00:00;2026-11-10 13:00:00;34.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-1a8a94912003aba777;PAK-PCE CZŁUCHÓW FW Ględowo;;2026-11-10 12:05:00;2026-11-10 13:00:00;4.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-7e1687a365b8c1bc78;Turów B01;TUR 1-01;2026-11-10 13:15:00;2026-11-10 13:30:00;121.0;nieplanowane;;;;1;;TGE + PSE pdwkseub (pomiar);tylko_TGE;1;121.0
+PSE-263fff9c011300d1cd;Łaziska 3;LZA31S09;2026-11-10 13:20:00;2026-11-10 14:00:00;;;RA;AK;PSE-263fff9c011300d1cd;0;;PSE unav-pk5l;tylko_PSE_unav;0;
+TGE-f0ffaa9c4aefc29165;Łaziska 3 B09;;2026-11-10 13:20:00;2026-11-10 14:00:00;215.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-e80f7e19def442386c;EC Włocławek B1;;2026-11-10 14:00:00;2026-11-10 15:00:00;34.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-341fcc3d291d7a5515;Turów B01;TUR 1-01;2026-11-10 14:00:00;2026-11-11 00:00:00;38.0;nieplanowane;;;;1;;TGE + PSE pdwkseub (pomiar);tylko_TGE;40;38.0
+TGE-46824e023dfeb6d7ca;Eolos Novo Sp. z o.o. FW Czarnożyły;;2026-11-10 14:28:00;2026-11-10 14:59:00;2.0;planowane;;;;1;;TGE;tylko_TGE;0;
+TGE-af9428f53dcd44df22;Płock B01;;2026-11-10 15:00:00;2026-11-10 16:00:00;120.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-b4b4ce140505c435c2;EC Włocławek B1;;2026-11-10 16:00:00;2026-11-10 17:00:00;29.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-0c4f4f674569de27f1;Płock B01;;2026-11-10 18:00:00;2026-11-10 19:00:00;115.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-958a70da0c0095b06d;Eolos Polska Sp. z o.o. FW Krzyżanów;;2026-11-10 18:38:00;2026-11-12 17:00:00;2.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-af31f4e218bca7b8d4;Eolos Novo Sp. z o.o. FW Czarnożyły;;2026-11-10 19:34:00;2026-11-12 08:00:00;2.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-e983ad241bb4d24093;EC Włocławek B1;;2026-11-10 20:00:00;2026-11-10 21:00:00;29.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-8d77bb2afd89ec4836;Płock B01;;2026-11-10 22:00:00;2026-11-10 23:00:00;115.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-ef410c2476b073ae8f;Rybnik B8;RYB 4-08;2026-11-10 22:00:00;2026-11-12 06:00:00;83.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;128;83.0
+TGE-678dd294cb1034f657;EC Włocławek B1;;2026-11-10 23:00:00;2026-11-11 00:00:00;29.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+PSE-797d8566fdddb60b2c;Elektrownia Gryfino;EGF_4S09;2026-11-11 00:00:00;2026-11-12 00:00:00;;;RB;AK;PSE-797d8566fdddb60b2c;0;;PSE unav-pk5l + PSE pdwkseub (pomiar);tylko_PSE_unav;96;670.0
+TGE-4fb38833e10155e2a4;Jaworzno 3 B5;JW3_2S05;2026-11-11 00:00:00;2026-11-12 15:00:00;206.0;planowane;RB;AK;PSE-dae6bb46c4b42ed7b6;2;2026-11-12T14:29:33+00:00;TGE + PSE unav-pk5l + PSE pdwkseub (pomiar);dopasowane_z_duzym_prawdopodobienstwem;156;206.0
+PSE-ce61940c4c30d4a9ce;Opole;OPL 4-05;2026-11-11 00:00:00;2026-11-15 16:00:00;;;WE;AK;PSE-ce61940c4c30d4a9ce;0;;PSE unav-pk5l + PSE pdwkseub (pomiar);tylko_PSE_unav;448;829.0
+TGE-acd6c6e7aa613151ee;Opole B1;OPL 1-01;2026-11-11 00:00:00;2026-11-11 21:00:00;357.0;planowane;WE;AK;PSE-026e84f28307fa556e;1;;TGE + PSE unav-pk5l + PSE pdwkseub (pomiar);dopasowane_z_duzym_prawdopodobienstwem;84;357.0
+TGE-ecbbf0d88fa7095664;Opole B3;OPL 4-03;2026-11-11 00:00:00;2026-11-11 16:00:00;190.0;nieplanowane;;;;1;;TGE + PSE pdwkseub (pomiar);tylko_TGE;64;190.0
+TGE-069dbdf095f90b6993;Opole B5;OPL 4-05;2026-11-11 00:00:00;2026-11-16 00:00:00;829.0;planowane;WE;AK;PSE-47d2520503309c4c71;3;2026-11-12T14:29:33+00:00;TGE + PSE unav-pk5l + PSE pdwkseub (pomiar);dopasowane_z_duzym_prawdopodobienstwem;480;829.0
+TGE-7005b7f4e7ded68e02;Ostrołęka B B02;;2026-11-11 00:00:00;2026-11-22 00:00:00;230.0;planowane;;;;3;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+PSE-e2e6e6c9089003af6a;Rybnik;RYB 4-07;2026-11-11 00:00:00;2026-11-17 00:00:00;;;WE;AK;PSE-e2e6e6c9089003af6a;0;;PSE unav-pk5l + PSE pdwkseub (pomiar);tylko_PSE_unav;480;209.0
+TGE-4a8dc1ca120858fafb;Rybnik B7;RYB 4-07;2026-11-11 00:00:00;2026-11-18 00:00:00;209.0;planowane;WE;AK;PSE-cf676206b7989fbc91;3;2026-11-12T14:29:33+00:00;TGE + PSE unav-pk5l + PSE pdwkseub (pomiar);dopasowane_z_duzym_prawdopodobienstwem;480;209.0
+PSE-b2ac0c160680a70e74;Łaziska 3;LZA31S10;2026-11-11 00:07:00;2026-11-14 00:00:00;;;WE;AK;PSE-b2ac0c160680a70e74;0;;PSE unav-pk5l + PSE pdwkseub (pomiar);tylko_PSE_unav;288;211.0
+TGE-75a3f0bfa5492224dc;Łaziska 3 B10;;2026-11-11 00:07:00;2026-11-16 00:00:00;211.0;planowane;;;;4;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+PSE-4cf11896fa52ada1a8;Połaniec;POL_2S02;2026-11-11 00:16:00;2026-11-23 00:00:00;;;WE;AK;PSE-4cf11896fa52ada1a8;0;;PSE unav-pk5l + PSE pdwkseub (pomiar);tylko_PSE_unav;479;227.0
+PSE-cef5f8d5772d047b5c;Połaniec;POL_2S02;2026-11-11 00:16:00;2026-11-16 00:00:00;;;WE;AK;PSE-cef5f8d5772d047b5c;0;;PSE unav-pk5l + PSE pdwkseub (pomiar);tylko_PSE_unav;479;227.0
+TGE-1ab0749de3cda07de5;Połaniec B2;;2026-11-11 00:16:00;2026-11-23 00:00:00;227.0;nieplanowane;;;;3;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+PSE-27847a4c75d516a9a9;Ostrołęka B;OSB_2S02;2026-11-11 00:17:00;2026-11-16 00:00:00;;;WE;AK;PSE-27847a4c75d516a9a9;0;;PSE unav-pk5l + PSE pdwkseub (pomiar);tylko_PSE_unav;479;217.0
+PSE-d3df228c102b927d0e;Ostrołęka B;OSB_2S02;2026-11-11 00:17:00;2026-11-22 00:00:00;;;WE;AK;PSE-d3df228c102b927d0e;0;;PSE unav-pk5l + PSE pdwkseub (pomiar);tylko_PSE_unav;479;217.0
+PSE-596d521029bf7aaf5e;Połaniec;POL_4S05;2026-11-11 00:19:00;2026-11-12 00:00:00;;;WE;AK;PSE-596d521029bf7aaf5e;0;;PSE unav-pk5l + PSE pdwkseub (pomiar);tylko_PSE_unav;95;224.0
+TGE-8ea13e8aa56af69e84;Połaniec B5;;2026-11-11 00:19:00;2026-11-12 00:00:00;224.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-95c80d96a125204fb2;Bełchatów B02;;2026-11-11 01:00:00;2026-11-12 00:00:00;120.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-2d551c4bdaf6d87d42;Bełchatów B03;;2026-11-11 01:00:00;2026-11-12 00:00:00;120.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-b9a2592631bb74be18;Bełchatów B06;;2026-11-11 01:00:00;2026-11-12 00:00:00;140.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-af9c00492014c71225;Bełchatów B08;;2026-11-11 01:00:00;2026-11-12 00:00:00;140.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-c34a3ecc40b8c80bad;Bełchatów B10;;2026-11-11 01:00:00;2026-11-12 00:00:00;140.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-68ac9f07f1d0ceaffc;Bełchatów B11;;2026-11-11 01:00:00;2026-11-12 00:00:00;140.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-0b2d2319a410312d3f;Bełchatów B12;;2026-11-11 01:00:00;2026-11-12 00:00:00;140.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-888ec1976ffec8aa1d;EC Włocławek B1;;2026-11-11 01:00:00;2026-11-11 02:00:00;24.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-5445bb3973f72b67d9;Kozienice 2 B11;KOZ24S11;2026-11-11 01:00:00;2026-11-11 02:30:00;500.0;nieplanowane;;;;1;;TGE + PSE pdwkseub (pomiar);tylko_TGE;3;500.0
+TGE-cee4dfa3111e96d508;Płock B01;;2026-11-11 01:00:00;2026-11-11 02:00:00;105.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-3120db5f9414d61ccc;EC Włocławek B1;;2026-11-11 04:00:00;2026-11-11 05:00:00;24.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-c1078570624e2e06a4;Płock B01;;2026-11-11 04:00:00;2026-11-11 05:00:00;105.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-c20e57f0bdfeb98b6c;EC Włocławek B1;;2026-11-11 06:00:00;2026-11-11 07:00:00;29.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-9884a18693c410cfae;Płock B01;;2026-11-11 07:00:00;2026-11-11 08:00:00;105.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-f77c91ca504394c3ca;QWP Linowo Sp. z o.o. QWP Linowo;;2026-11-11 08:00:00;2026-11-16 16:00:00;2.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-e824c25a018ca19e60;EC Włocławek B1;;2026-11-11 10:00:00;2026-11-11 11:00:00;34.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-d7e6ce79cebebca309;Płock B01;;2026-11-11 10:00:00;2026-11-11 11:00:00;110.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-a759a06c6b8eda2f46;Jaworzno 2 JWCD B7;;2026-11-11 13:00:00;2026-11-11 14:30:00;255.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-69190986901c161121;Płock B01;;2026-11-11 13:00:00;2026-11-11 14:00:00;115.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-ff9532295614f78db6;EC Włocławek B1;;2026-11-11 14:00:00;2026-11-11 15:00:00;34.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-25c182de4f5d1dad5f;Opole B6;OPL 4-06;2026-11-11 16:00:00;2026-11-11 23:00:00;88.0;nieplanowane;;;;1;;TGE + PSE pdwkseub (pomiar);tylko_TGE;28;88.0
+TGE-26902bb84e30636ff7;Płock B01;;2026-11-11 16:00:00;2026-11-11 17:00:00;115.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-8db28584449ec3bf84;EC Włocławek B1;;2026-11-11 17:00:00;2026-11-11 18:00:00;34.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-b5db13ccc51b31dd7a;Bełchatów B04;;2026-11-11 18:00:00;2026-11-12 00:00:00;85.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-fbacdc73976c994dda;Bełchatów B05;;2026-11-11 18:00:00;2026-11-12 00:00:00;45.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-009bd9de518859a469;Płock B01;;2026-11-11 18:00:00;2026-11-11 19:00:00;110.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-045feeb9dd80ba5e7b;EC Włocławek B1;;2026-11-11 22:00:00;2026-11-11 23:00:00;29.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-de172606f8b9d8cb01;Płock B01;;2026-11-11 22:00:00;2026-11-11 23:00:00;110.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-3016f16d08f20c0dfd;EC Włocławek B1;;2026-11-12 00:00:00;2026-11-12 02:00:00;29.0;nieplanowane;;;;3;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-d12e40d153e7e4201d;Opole B3;OPL 4-03;2026-11-12 00:00:00;2026-11-12 06:00:00;190.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;24;190.0
+TGE-1eced980d57785be09;Opole B6;OPL 4-06;2026-11-12 00:00:00;2026-11-12 11:00:00;308.0;nieplanowane;;;;3;2026-11-12T14:29:33+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;44;308.0
+TGE-84ea72ec351f3b5b83;PGE Gryfino Dolna Odra Sp. z o.o. Gryfino blok 10;EGF_4S10;2026-11-12 00:00:00;2026-11-14 00:00:00;10.0;nieplanowane;;;;3;2026-11-12T14:29:33+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;192;10.0
+TGE-153fe82bdb0d983d82;PGE Gryfino Dolna Odra Sp. z o.o. Gryfino blok 9;EGF_4S09;2026-11-12 00:00:00;2026-11-13 00:00:00;670.0;nieplanowane;RA;AK;PSE-0d6dedb36fb441b88a;1;;TGE + PSE unav-pk5l + PSE pdwkseub (pomiar);dopasowane_z_duzym_prawdopodobienstwem;96;670.0
+TGE-65ea436907b4cd3cd2;Płock B01;;2026-11-12 00:00:00;2026-11-12 02:00:00;110.0;nieplanowane;;;;3;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-5c98edd111d3aa0931;Turów B01;TUR 1-01;2026-11-12 00:00:00;2026-11-12 01:52:00;125.0;nieplanowane;;;;5;2026-11-12T14:29:33+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;8;125.0
+TGE-3b45b0c64aac3c16f0;Turów B02;TUR 2-02;2026-11-12 00:00:00;2026-11-12 12:00:00;125.0;nieplanowane;;;;6;2026-11-12T14:29:33+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;48;125.0
+TGE-8364a071d06911cc47;Turów B03;TUR 2-03;2026-11-12 00:00:00;2026-11-12 06:00:00;112.0;nieplanowane;;;;7;2026-11-12T14:29:33+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;24;112.0
+TGE-94df680d36f8f62d54;Turów B05;TUR 2-05;2026-11-12 00:00:00;2026-11-12 00:15:00;27.0;nieplanowane;;;;1;;TGE + PSE pdwkseub (pomiar);tylko_TGE;1;27.0
+TGE-c362b94ec8ad339adb;Turów B06;TUR 2-06;2026-11-12 00:00:00;2026-11-12 00:15:00;27.0;nieplanowane;;;;1;;TGE + PSE pdwkseub (pomiar);tylko_TGE;1;27.0
+TGE-5d2c4e008d48391f53;Turów B05;TUR 2-05;2026-11-12 01:00:00;2026-11-12 05:00:00;133.0;nieplanowane;;;;1;;TGE + PSE pdwkseub (pomiar);tylko_TGE;16;133.0
+TGE-b2dff006e70d096d94;Turów B06;TUR 2-06;2026-11-12 01:00:00;2026-11-12 05:00:00;133.0;nieplanowane;;;;1;2026-11-12T14:29:33+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;16;133.0
+PSE-f1ebf8d3cc7fe6ba27;Turów;TUR 1-01;2026-11-12 01:52:00;2026-11-12 08:00:00;;;RA;AK;PSE-f1ebf8d3cc7fe6ba27;0;;PSE unav-pk5l + PSE pdwkseub (pomiar);tylko_PSE_unav;25;226.0
+TGE-23fa4eaed78d94d279;EC Włocławek B1;;2026-11-12 03:00:00;2026-11-12 05:00:00;29.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-92b6a76b9153da6516;Jaworzno 2 JWCD B7;;2026-11-12 03:00:00;2026-11-12 04:00:00;452.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-f688c03b01a7c6eae0;Płock B01;;2026-11-12 03:00:00;2026-11-12 05:00:00;110.0;nieplanowane;;;;2;2026-11-12T15:20:21+00:00;TGE;tylko_TGE;0;
+TGE-2739bcbcff2e30b6e2;Opole B1;OPL 1-01;2026-11-12 05:45:00;2026-11-12 06:15:00;167.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;1;167.0
+TGE-159132a3c8fc257664;Turów B05;TUR 2-05;2026-11-12 05:45:00;2026-11-12 06:00:00;19.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;1;19.0
+TGE-a4f9419122d9272782;Płock B01;;2026-11-12 06:00:00;2026-11-12 07:00:00;110.0;nieplanowane;;;;2;2026-11-12T15:20:21+00:00;TGE;tylko_TGE;0;
+TGE-bc98cc9825f3618454;Turów B06;TUR 2-06;2026-11-12 06:00:00;2026-11-12 13:15:00;10.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;29;10.0
+TGE-6b5e91528176547242;EC Włocławek B1;;2026-11-12 07:00:00;2026-11-12 09:00:00;39.0;nieplanowane;;;;3;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-f0390a2e233eb3b9eb;Kraków Łęg KLE_1-02;;2026-11-12 07:00:00;2026-11-18 20:00:00;120.0;planowane;;;;3;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-e844c75ec724ebd88e;PAK-PCE CZŁUCHÓW FW Ględowo;;2026-11-12 08:00:00;2026-11-12 16:00:00;7.0;planowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-36459baad3bd5f63e6;Płock B01;;2026-11-12 09:00:00;2026-11-12 10:00:00;115.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-b2417eab06a800d4ff;EC Włocławek B1;;2026-11-12 10:00:00;2026-11-12 11:00:00;39.0;nieplanowane;;;;1;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-3c44c60909e6fcf07f;Rybnik B8;RYB 4-08;2026-11-12 10:00:00;2026-11-18 00:00:00;83.0;nieplanowane;;;;3;2026-11-12T14:29:33+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;344;83.0
+TGE-ba2ca1837842e6a013;Opole B1;OPL 1-01;2026-11-12 11:00:00;2026-11-12 16:00:00;77.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;20;77.0
+TGE-a2806cbca47606d7f1;Płock B01;;2026-11-12 11:00:00;2026-11-12 13:00:00;130.0;nieplanowane;;;;3;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-58a6186bda77f4c601;EC Włocławek B1;;2026-11-12 12:00:00;2026-11-12 14:00:00;39.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-f7ef0887bb81f956f0;Eolos Novo Sp. z o.o. FW Czarnożyły;;2026-11-12 12:00:00;2026-11-12 15:02:00;2.0;planowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-b853bc6887a3230a1c;Turów B11;TUR 4-11;2026-11-12 13:45:00;2026-11-12 17:45:00;223.0;nieplanowane;;;;3;2026-11-12T14:29:33+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;16;223.0
+TGE-c2bc2298df59d54955;PAK-PCE KAZIMIERZ BISKUPI FW Kazimierz Biskupi;;2026-11-12 14:00:00;2026-11-12 15:00:00;3.0;planowane;;;;1;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-0be3563bacfe14f642;EC Włocławek B1;;2026-11-12 15:00:00;2026-11-12 19:00:00;39.0;nieplanowane;;;;5;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-11a49114f38a540c87;PAK-PCE KAZIMIERZ BISKUPI FW Kazimierz Biskupi;;2026-11-12 15:00:00;2026-11-12 18:00:00;3.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-94fc1a1493f6e3752f;Opole B6;OPL 4-06;2026-11-12 16:00:00;2026-11-12 23:00:00;88.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;28;88.0
+TGE-eda052ef72d4c40737;Płock B01;;2026-11-12 17:00:00;2026-11-12 19:00:00;130.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-cb6e41d93f64fb8e98;EC Włocławek B1;;2026-11-12 21:00:00;2026-11-12 23:00:00;29.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-19ae39a808c81a41e2;Płock B01;;2026-11-12 21:00:00;2026-11-12 22:00:00;130.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-777eb27ecfe57ff0f3;Opole B1;OPL 1-01;2026-11-12 23:00:00;2026-11-13 00:00:00;189.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;4;189.0
+TGE-f14b98cfb5db033357;Opole B3;OPL 4-03;2026-11-12 23:00:00;2026-11-13 00:00:00;190.0;nieplanowane;;;;1;2026-11-12T15:20:21+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;4;190.0
+TGE-6cf46659860cefe727;Płock B01;;2026-11-12 23:00:00;2026-11-13 00:00:00;125.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+PSE-05b17ee12ff585361f;EC Stalowa Wola;STW42S12;2026-11-13 00:00:00;2026-11-17 00:00:00;;;RA;AK;PSE-05b17ee12ff585361f;0;;PSE unav-pk5l + PSE pdwkseub (pomiar);tylko_PSE_unav;288;444.0
+TGE-da08379f42f7297894;EC Stalowa Wola Stalowa Wola BGP;;2026-11-13 00:00:00;2026-11-17 00:00:00;450.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-7daf6eff492a2f9ecb;EC Włocławek B1;;2026-11-13 00:00:00;2026-11-13 04:00:00;29.0;nieplanowane;;;;4;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+PSE-497bc7ac26026763ff;Elektrownia Gryfino;EGF_4S09;2026-11-13 00:00:00;2026-11-16 00:00:00;;;RB;AK;PSE-497bc7ac26026763ff;0;;PSE unav-pk5l + PSE pdwkseub (pomiar);tylko_PSE_unav;288;670.0
+PSE-9bcd34a75dcffe25cf;Jaworzno 3;JW3_1S03;2026-11-13 00:00:00;2026-11-23 00:00:00;;;RB;AK;PSE-9bcd34a75dcffe25cf;0;;PSE unav-pk5l + PSE pdwkseub (pomiar);tylko_PSE_unav;288;210.0
+TGE-6dccf76520e5c24187;Jaworzno 3 B3;JW3_1S03;2026-11-13 00:00:00;2026-11-23 00:00:00;210.0;planowane;;;;3;2026-11-12T14:29:33+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;288;210.0
+TGE-b16d668949c2638cc8;Jaworzno 3 B4;JW3_2S04;2026-11-13 00:00:00;2026-11-23 00:00:00;211.0;planowane;RB;AK;PSE-80983a0afa17e58f01;2;2026-11-12T14:29:33+00:00;TGE + PSE unav-pk5l + PSE pdwkseub (pomiar);dopasowane_z_duzym_prawdopodobienstwem;288;211.0
+PSE-67e31cff8dcdc84ce3;Opole;OPL 4-03;2026-11-13 00:00:00;2026-11-17 00:00:00;;;WE;AK;PSE-67e31cff8dcdc84ce3;0;;PSE unav-pk5l + PSE pdwkseub (pomiar);tylko_PSE_unav;288;358.0
+PSE-8feb12dc9ea7721fab;Opole;OPL 1-01;2026-11-13 00:00:00;2026-11-19 00:00:00;;;WE;AK;PSE-8feb12dc9ea7721fab;0;;PSE unav-pk5l + PSE pdwkseub (pomiar);tylko_PSE_unav;234;189.0
+TGE-2d50bef5a8ad863643;Opole B3;OPL 4-03;2026-11-13 00:00:00;2026-12-01 00:00:00;358.0;planowane;;;;3;2026-11-12T14:29:33+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;288;358.0
+PSE-037598082f54902258;Ostrołęka B;OSB_1S03;2026-11-13 00:00:00;2026-11-23 00:00:00;;;WE;AK;PSE-037598082f54902258;0;;PSE unav-pk5l + PSE pdwkseub (pomiar);tylko_PSE_unav;280;154.0
+TGE-4ee3ba863c682c15a9;PGE Gryfino Dolna Odra Sp. z o.o. Gryfino blok 9;EGF_4S09;2026-11-13 00:00:00;2026-11-14 00:00:00;670.0;planowane;RB;AK;PSE-a4783b3541a69a9841;2;2026-11-12T14:29:33+00:00;TGE + PSE unav-pk5l + PSE pdwkseub (pomiar);dopasowane_z_duzym_prawdopodobienstwem;96;670.0
+PSE-2657b3d4a22e95eb14;Połaniec;POL_4S06;2026-11-13 00:00:00;2026-11-23 00:00:00;;;WE;AK;PSE-2657b3d4a22e95eb14;0;;PSE unav-pk5l + PSE pdwkseub (pomiar);tylko_PSE_unav;288;226.0
+PSE-7c99606054bc73782a;Połaniec;POL_2S04;2026-11-13 00:00:00;2026-11-16 00:00:00;;;WE;AK;PSE-7c99606054bc73782a;0;;PSE unav-pk5l + PSE pdwkseub (pomiar);tylko_PSE_unav;288;226.0
+PSE-c802aca7bed4c9c48b;Połaniec;POL_4S06;2026-11-13 00:00:00;2026-11-16 00:00:00;;;WE;AK;PSE-c802aca7bed4c9c48b;0;;PSE unav-pk5l + PSE pdwkseub (pomiar);tylko_PSE_unav;288;226.0
+PSE-ee5d63c4642f66f0e7;Połaniec;POL_4S05;2026-11-13 00:00:00;2026-11-16 00:00:00;;;WE;AN;PSE-ee5d63c4642f66f0e7;0;;PSE unav-pk5l + PSE pdwkseub (pomiar);tylko_PSE_unav;41;40.0
+TGE-a4b8aef290ccfbf621;Połaniec B4;;2026-11-13 00:00:00;2026-11-23 00:00:00;226.0;nieplanowane;;;;3;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-b5bf068d6f6c2b2b81;Połaniec B6;;2026-11-13 00:00:00;2026-11-23 00:00:00;226.0;nieplanowane;;;;3;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-c55f5d275d42f5c500;Turów B01;TUR 1-01;2026-11-13 00:00:00;2026-11-14 00:00:00;138.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;96;138.0
+TGE-f6fcd27b1b50f9c737;Turów B02;TUR 2-02;2026-11-13 00:00:00;2026-11-13 01:00:00;112.0;nieplanowane;;;;4;2026-11-12T14:29:33+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;4;112.0
+TGE-001696f6a44d04e667;Turów B03;TUR 2-03;2026-11-13 00:00:00;2026-11-13 00:30:00;84.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;2;84.0
+TGE-287e3af571e663a84b;Turów B05;TUR 2-05;2026-11-13 00:00:00;2026-11-13 01:00:00;113.0;nieplanowane;;;;4;2026-11-12T14:29:33+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;4;113.0
+TGE-d77d7812a94a5d6d0f;Turów B06;TUR 2-06;2026-11-13 00:00:00;2026-11-13 05:45:00;133.0;nieplanowane;;;;7;2026-11-12T14:29:33+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;23;133.0
+TGE-877bda45baf5195d6a;Turów B11;TUR 4-11;2026-11-13 00:00:00;2026-11-13 00:45:00;131.0;nieplanowane;;;;4;2026-11-12T14:29:33+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;3;131.0
+TGE-b1cc1d7e020ae4c9e2;JSW KOKS S.A. EC Koksownia Przyjaźń G4;;2026-11-13 00:01:00;2026-11-19 07:00:00;71.0;planowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+PSE-97290b54388eb850ac;Jaworzno 3;JW3_1S03;2026-11-13 00:12:00;2026-11-23 00:00:00;;;RB;AK;PSE-97290b54388eb850ac;0;;PSE unav-pk5l + PSE pdwkseub (pomiar);tylko_PSE_unav;288;210.0
+PSE-a45c25582d7857510d;EC Stalowa Wola;STW42S12;2026-11-13 00:18:00;2026-11-17 00:00:00;;;RA;AK;PSE-a45c25582d7857510d;0;;PSE unav-pk5l + PSE pdwkseub (pomiar);tylko_PSE_unav;287;444.0
+PSE-a77fef9a17f5dcaa29;Opole;OPL 4-03;2026-11-13 00:21:00;2026-11-17 00:00:00;;;WE;AK;PSE-a77fef9a17f5dcaa29;0;;PSE unav-pk5l + PSE pdwkseub (pomiar);tylko_PSE_unav;287;358.0
+PSE-2299241f7af9190a3f;Połaniec;POL_2S04;2026-11-13 00:23:00;2026-11-23 00:00:00;;;WE;AK;PSE-2299241f7af9190a3f;0;;PSE unav-pk5l + PSE pdwkseub (pomiar);tylko_PSE_unav;287;226.0
+TGE-a78cd38a6fe07b2ede;Synthos Dwory 7 GT1;;2026-11-13 00:30:00;2026-11-17 05:00:00;72.0;planowane;;;;3;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+PSE-eb14aaafe0d2077087;Ostrołęka B;OSB_1S03;2026-11-13 02:00:00;2026-11-23 00:00:00;;;WE;AK;PSE-eb14aaafe0d2077087;0;;PSE unav-pk5l + PSE pdwkseub (pomiar);tylko_PSE_unav;280;154.0
+TGE-bb9377c90c7bc0a861;Ostrołęka B B03;;2026-11-13 02:00:00;2026-11-23 00:00:00;165.0;planowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-62e50db0e730665165;Jaworzno 2 JWCD B7;;2026-11-13 03:00:00;2026-11-13 04:45:00;457.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-fe714cb0bf0aaed0b7;Płock B01;;2026-11-13 03:00:00;2026-11-13 06:00:00;125.0;nieplanowane;;;;3;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-c0eb2098e5f9c1bc58;Synthos Dwory 7 TG7;;2026-11-13 04:00:00;2026-11-13 14:30:00;28.0;planowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-961c2cdf8e88da6c2c;Turów B05;TUR 2-05;2026-11-13 05:00:00;2026-11-13 06:00:00;104.0;nieplanowane;;;;3;2026-11-12T14:29:33+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;4;104.0
+TGE-8841dc9cd4c0f32b1b;Turów B11;TUR 4-11;2026-11-13 05:15:00;2026-11-13 07:00:00;247.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;7;247.0
+TGE-32589b84c09ee4b9e1;EC Włocławek B1;;2026-11-13 06:00:00;2026-11-13 07:00:00;29.0;nieplanowane;;;;2;2026-11-12T15:20:21+00:00;TGE;tylko_TGE;0;
+TGE-a4a092f2693e34077d;Opole B6;OPL 4-06;2026-11-13 06:00:00;2026-11-13 11:00:00;88.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;20;88.0
+TGE-6f36109b4a5825d358;Płock B01;;2026-11-13 07:00:00;2026-11-13 09:00:00;125.0;nieplanowane;;;;2;2026-11-12T14:43:48+00:00;TGE;tylko_TGE;0;
+TGE-24ddb046bc7ac512fd;Turów B05;TUR 2-05;2026-11-13 07:45:00;2026-11-13 08:45:00;27.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;4;27.0
+TGE-547df8b59097cf5265;Eolos Novo Sp. z o.o. FW Czarnożyły;;2026-11-13 08:30:00;2026-11-13 14:00:00;2.0;nieplanowane;;;;1;;TGE;tylko_TGE;0;
+TGE-5486ca49deae396b85;EC Włocławek B1;;2026-11-13 09:00:00;2026-11-13 10:00:00;29.0;nieplanowane;;;;1;2026-11-12T15:20:21+00:00;TGE;tylko_TGE;0;
+TGE-6944ec21cd91838997;Opole B1;OPL 1-01;2026-11-13 09:00:00;2026-11-13 11:00:00;49.0;planowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-dbe8757ddfc949f37c;Płock B01;;2026-11-13 10:00:00;2026-11-13 11:00:00;125.0;nieplanowane;;;;1;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-ff1e0ffa9981abaa57;Opole B3;OPL 4-03;2026-11-13 11:00:00;2026-11-13 11:15:00;73.0;nieplanowane;;;;1;2026-11-12T15:20:21+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;1;358.0
+TGE-08e96728c911521f8e;Opole B3;OPL 4-03;2026-11-13 11:45:00;2026-11-13 12:00:00;154.0;nieplanowane;;;;1;2026-11-12T15:20:21+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;1;358.0
+TGE-eba76657ef7a9cc7e1;EC Włocławek B1;;2026-11-13 12:00:00;2026-11-13 13:00:00;34.0;nieplanowane;;;;1;2026-11-12T15:20:21+00:00;TGE;tylko_TGE;0;
+TGE-5a681f57328552e203;Opole B1;OPL 1-01;2026-11-13 12:30:00;2026-11-13 16:00:00;189.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;14;189.0
+TGE-2e34d76799b25c7d57;EC Włocławek B1;;2026-11-13 14:00:00;2026-11-13 17:00:00;34.0;nieplanowane;;;;3;2026-11-12T15:20:21+00:00;TGE;tylko_TGE;0;
+TGE-0a498825ea443b4fe4;Turów B11;TUR 4-11;2026-11-13 14:00:00;2026-11-13 18:00:00;131.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;16;131.0
+TGE-a20ac8aca41fc1c1ef;Turów B05;TUR 2-05;2026-11-13 14:15:00;2026-11-13 14:45:00;103.0;nieplanowane;;;;1;2026-11-12T14:29:33+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;2;103.0
+TGE-ae70cc15aa5637ff20;Turów B06;TUR 2-06;2026-11-13 14:45:00;2026-11-13 18:00:00;74.0;nieplanowane;;;;3;2026-11-12T14:29:33+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;13;74.0
+TGE-3c0e9b8198f6d838fa;PAK-PCE KAZIMIERZ BISKUPI FW Kazimierz Biskupi;;2026-11-13 15:00:00;2026-11-16 08:00:00;3.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+PSE-001ce61ee0776a9992;Porąbka Żar;PZR 2-04;2026-11-13 15:00:00;2026-11-13 17:15:00;;;WE;AK;PSE-001ce61ee0776a9992;0;;PSE unav-pk5l;tylko_PSE_unav;0;
+TGE-d5bbfaf981e17395cc;Porąbka Żar H4;;2026-11-13 15:00:00;2026-11-13 17:15:00;138.0;planowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-01a281447bbf2ceca2;Płock B01;;2026-11-13 15:00:00;2026-11-13 17:00:00;130.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-48a8b56d08c93c0214;Opole B6;OPL 4-06;2026-11-13 16:00:00;2026-11-13 23:00:00;88.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;28;88.0
+TGE-80c61eaf4d0dd24b8e;PAK-PCE CZŁUCHÓW FW Ględowo;;2026-11-13 16:00:00;2026-11-13 20:00:00;4.0;planowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-6efb7c531bbb5aa72c;Turów B02;TUR 2-02;2026-11-13 17:00:00;2026-11-13 18:00:00;112.0;nieplanowane;;;;3;2026-11-12T14:29:33+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;4;112.0
+TGE-a059c2a1689864e2e4;Turów B03;TUR 2-03;2026-11-13 17:30:00;2026-11-13 17:45:00;84.0;nieplanowane;;;;1;;TGE + PSE pdwkseub (pomiar);tylko_TGE;1;84.0
+TGE-cf31d01bde45f4d44c;Turów B05;TUR 2-05;2026-11-13 17:30:00;2026-11-13 18:00:00;55.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;2;55.0
+TGE-7a9976fd112ec4a131;EC Włocławek B1;;2026-11-13 18:00:00;2026-11-13 20:00:00;34.0;nieplanowane;;;;2;2026-11-12T15:20:21+00:00;TGE;tylko_TGE;0;
+TGE-368cbff74e9278ef08;Płock B01;;2026-11-13 18:00:00;2026-11-13 19:00:00;120.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-0d777e4c95c7de953a;Turów B11;TUR 4-11;2026-11-13 19:45:00;2026-11-14 00:00:00;223.0;nieplanowane;;;;3;2026-11-12T14:29:33+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;17;223.0
+TGE-f19c4427e99b6fb40c;Płock B01;;2026-11-13 20:00:00;2026-11-13 22:00:00;120.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-0f3581829e982e85f1;EC Włocławek B1;;2026-11-13 21:00:00;2026-11-14 00:00:00;34.0;nieplanowane;;;;4;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-24c624422b1a8d2e6b;Turów B02;TUR 2-02;2026-11-13 22:45:00;2026-11-14 00:00:00;125.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;5;125.0
+TGE-fc4fb3fe75cf87a096;Turów B03;TUR 2-03;2026-11-13 22:45:00;2026-11-14 00:00:00;112.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;5;112.0
+TGE-6301e8e9b9b315aa21;Turów B06;TUR 2-06;2026-11-13 22:45:00;2026-11-14 00:00:00;103.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;5;103.0
+TGE-7bfcc1151c527bda7b;Opole B1;OPL 1-01;2026-11-13 23:00:00;2026-11-14 16:00:00;189.0;nieplanowane;;;;3;2026-11-12T14:29:33+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;68;189.0
+TGE-a43ea3cb13fa0ea579;Opole B3;OPL 4-03;2026-11-13 23:00:00;2026-11-14 00:00:00;190.0;nieplanowane;;;;1;2026-11-12T15:20:21+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;4;358.0
+TGE-d8db3c2b97345b9555;Turów B05;TUR 2-05;2026-11-13 23:00:00;2026-11-14 00:00:00;132.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;4;132.0
+TGE-81524ced0dd5576752;Turów B01;TUR 1-01;2026-11-14 00:00:00;2026-11-29 00:00:00;226.0;planowane;;;;2;2026-11-12T14:29:33+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;192;226.0
+PSE-d072612c7acffa6dd0;Łaziska 3;LZA32S12;2026-11-14 00:00:00;2026-12-07 00:00:00;;;RB;AK;PSE-d072612c7acffa6dd0;0;;PSE unav-pk5l + PSE pdwkseub (pomiar);tylko_PSE_unav;192;211.0
+PSE-e601b471cbddd77152;Łaziska 3;LZA31S10;2026-11-14 00:00:00;2026-11-16 00:00:00;;;RB;AK;PSE-e601b471cbddd77152;0;;PSE unav-pk5l + PSE pdwkseub (pomiar);tylko_PSE_unav;192;211.0
+TGE-a114c48ddf981c1f27;Łaziska 3 B12;;2026-11-14 00:00:00;2026-12-07 00:00:00;211.0;planowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+PSE-9086073abd56a75246;Turów;TUR 1-01;2026-11-14 00:01:00;2026-11-28 10:00:00;;;RS;AN;PSE-9086073abd56a75246;0;;PSE unav-pk5l + PSE pdwkseub (pomiar);tylko_PSE_unav;192;226.0
+PSE-ee87ee130001d1f501;Bełchatów;BEL 4-10;2026-11-14 00:06:00;2026-11-15 06:00:00;;;RB;AK;PSE-ee87ee130001d1f501;0;;PSE unav-pk5l + PSE pdwkseub (pomiar);tylko_PSE_unav;120;361.0
+PSE-4c58bde848dffd18ff;Turów;TUR 1-01;2026-11-14 00:32:00;2026-11-29 00:00:00;;;RS;AK;PSE-4c58bde848dffd18ff;0;;PSE unav-pk5l + PSE pdwkseub (pomiar);tylko_PSE_unav;190;226.0
+PSE-702b900d867cc67ac8;Dychów;DCHA1-02;2026-11-14 05:00:00;2026-11-14 19:40:00;;;WE;AK;PSE-702b900d867cc67ac8;0;;PSE unav-pk5l;tylko_PSE_unav;0;
+TGE-ca6f7706b6e1dac3f5;Dychów H1;;2026-11-14 05:00:00;2026-11-14 21:00:00;30.0;planowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-3048d8b95cefd241c1;Dychów H2;;2026-11-14 05:00:00;2026-11-14 21:00:00;30.0;planowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-7afff581ac75d30df1;Dychów H3;;2026-11-14 05:00:00;2026-11-14 21:00:00;30.0;planowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+PSE-7a4d71f19b4527c509;Elektrownia Gryfino;EGF_4S10;2026-11-14 07:15:00;2026-11-14 09:55:00;;;RA;AK;PSE-7a4d71f19b4527c509;0;;PSE unav-pk5l + PSE pdwkseub (pomiar);tylko_PSE_unav;11;670.0
+TGE-34b0731b5132f90b8c;PAK-PCE CZŁUCHÓW FW Ględowo;;2026-11-14 08:00:00;2026-11-14 20:00:00;4.0;planowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+PSE-bee09de7d83af65fa6;Połaniec;POL_4S07;2026-11-14 11:11:00;2026-11-18 19:00:00;;;RA;AK;PSE-bee09de7d83af65fa6;0;;PSE unav-pk5l + PSE pdwkseub (pomiar);tylko_PSE_unav;146;221.0
+TGE-17aa67c63815a0cf67;Połaniec B7;;2026-11-14 11:11:00;2026-11-18 19:00:00;221.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-cc13df8c9c920e1c85;Opole B6;OPL 4-06;2026-11-14 16:00:00;2026-11-14 23:00:00;88.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;28;373.0
+PSE-1d2374f82b5a967319;Połaniec;POL_4S05;2026-11-14 22:00:00;2026-11-23 00:00:00;;;WE;AN;PSE-1d2374f82b5a967319;0;;PSE unav-pk5l;tylko_PSE_unav;0;
+TGE-5851563291ad8f6922;Opole B1;OPL 1-01;2026-11-14 23:00:00;2026-11-16 06:00:00;189.0;nieplanowane;;;;6;2026-11-12T14:29:33+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;100;189.0
+TGE-17b9d453c46d86b90b;Opole B3;OPL 4-03;2026-11-14 23:00:00;2026-11-15 00:00:00;190.0;nieplanowane;;;;1;2026-11-12T15:20:21+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;4;358.0
+PSE-1ab42b97df1098fdcc;Bełchatów;BEL 2-04;2026-11-15 00:00:00;2026-11-16 00:00:00;;;WE;AN;PSE-1ab42b97df1098fdcc;0;;PSE unav-pk5l;tylko_PSE_unav;0;
+PSE-09499241d3228b92f9;Turów;TUR 2-05;2026-11-15 00:09:00;2026-11-15 11:45:00;;;WE;AK;PSE-09499241d3228b92f9;0;;PSE unav-pk5l + PSE pdwkseub (pomiar);tylko_PSE_unav;47;236.0
+TGE-63d4b698a7b31a0f11;Eolos Novo Sp. z o.o. FW Czarnożyły;;2026-11-15 05:17:00;2026-11-16 08:30:00;2.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-9119d18a0beb72a4f2;PAK-PCE CZŁUCHÓW FW Ględowo;;2026-11-15 08:00:00;2026-11-15 20:00:00;4.0;planowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-2eecb3d1ca7a958e81;Opole B6;OPL 4-06;2026-11-15 16:00:00;2026-11-15 23:00:00;88.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;28;373.0
+TGE-6071803da177edbc00;Eolos Polska Sp. z o.o. FW Krzyżanów;;2026-11-15 20:50:00;2026-11-16 11:25:00;2.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-916792a437943c1abb;Turów B05;TUR 2-05;2026-11-15 22:30:00;2026-11-16 00:00:00;132.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE + PSE pdwkseub (pomiar);tylko_TGE;6;132.0
+TGE-fa9d3255df81e9bfe6;EC Włocławek B1;;2026-11-16 00:00:00;2026-11-16 01:00:00;34.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+PSE-ddb31fc1024816dec5;Opole;OPL 1-02;2026-11-16 00:00:00;2026-12-01 00:00:00;;;WE;AK;PSE-ddb31fc1024816dec5;0;;PSE unav-pk5l;tylko_PSE_unav;0;
+TGE-756b698f133b331a66;Opole B3;OPL 4-03;2026-11-16 00:00:00;2026-11-16 06:00:00;190.0;nieplanowane;;;;1;2026-11-12T15:20:21+00:00;TGE;tylko_TGE;0;
+TGE-41763bd89eed1c90ff;Opole B5;OPL 4-05;2026-11-16 00:00:00;2026-11-16 23:00:00;305.0;nieplanowane;;;;6;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-1a79315caf82933779;Opole B6;OPL 4-06;2026-11-16 00:00:00;2026-11-16 11:00:00;373.0;nieplanowane;;;;3;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-feb16b912468fc20b7;PGE Gryfino Dolna Odra Sp. z o.o. Gryfino blok 9;EGF_4S09;2026-11-16 00:00:00;2026-11-18 00:00:00;670.0;nieplanowane;RA;AK;PSE-f643f6d7440d71291f;1;2026-11-16T12:54:49+00:00;TGE + PSE unav-pk5l;dopasowane_z_duzym_prawdopodobienstwem;0;
+TGE-2846a735e055fd9291;Płock B01;;2026-11-16 00:00:00;2026-11-16 01:00:00;115.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-0efd181988b1cc62f2;STIGMA Sp. z o.o. PV Zwartowo;;2026-11-16 00:00:00;2026-11-22 23:59:00;204.0;planowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-d5cde28bbbe263119e;Turów B11;TUR 4-11;2026-11-16 00:00:00;2026-11-16 05:00:00;177.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-1ce803715773e5e4a8;Jaworzno 2 JWCD B7;;2026-11-16 02:00:00;2026-11-16 03:45:00;457.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-0678bd0e1f93ff280a;Turów B05;TUR 2-05;2026-11-16 05:15:00;2026-11-16 05:30:00;85.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-bbae3dcacfa3e8876a;Turów B06;TUR 2-06;2026-11-16 05:30:00;2026-11-16 05:45:00;56.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-60756d515092e99986;Płock B01;;2026-11-16 06:00:00;2026-11-16 07:00:00;115.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-2de390c4f33ed51eb5;Połaniec B5;;2026-11-16 07:15:00;2026-11-16 15:00:00;30.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-ee026cc06ab53f720f;Turów B06;TUR 2-06;2026-11-16 07:45:00;2026-11-16 08:00:00;27.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-1fc58b257f880d8ba3;EC Włocławek B1;;2026-11-16 08:00:00;2026-11-16 09:00:00;34.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-bdecc6d3e260ced303;PAK-PCE MIŁOSŁAW FW Pałczyn;;2026-11-16 09:00:00;2026-11-16 20:00:00;2.0;planowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-a344e54654cd0dbcec;PAK-PCE PRZYRÓW FW Przyrów;;2026-11-16 09:30:00;2026-11-16 12:00:00;3.0;planowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-f39c36ff83e36899cb;Opole B1;OPL 1-01;2026-11-16 11:00:00;2026-11-16 16:00:00;189.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-d74b41d732f227930f;Porąbka Żar H2;;2026-11-16 11:00:00;2026-11-18 08:00:00;18.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-c632a82e3b45878420;Eolos Novo Sp. z o.o. FW Czarnożyły;;2026-11-16 11:18:00;2026-11-16 16:00:00;2.0;planowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-d99e3c772cbbe4e5b0;PAK-PCE KAZIMIERZ BISKUPI FW Kazimierz Biskupi;;2026-11-16 14:00:00;2026-11-16 16:00:00;3.0;planowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-b8df980e5f4cdd89c1;Turów B05;TUR 2-05;2026-11-16 14:45:00;2026-11-16 15:00:00;27.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-07d09b206886c15ad9;EC Włocławek B1;;2026-11-16 15:00:00;2026-11-16 16:00:00;39.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-41b9769e91e2fe50e3;Turów B11;TUR 4-11;2026-11-16 15:00:00;2026-11-16 15:15:00;39.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-64e431797192725d65;Turów B06;TUR 2-06;2026-11-16 15:15:00;2026-11-16 15:30:00;27.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-91506421440ca17cf7;Opole B6;OPL 4-06;2026-11-16 16:00:00;2026-11-16 23:00:00;88.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-87566acebb44d19fa0;PAK-PCE CZŁUCHÓW FW Ględowo;;2026-11-16 16:00:00;2026-11-16 20:00:00;4.0;planowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-342bbb6cfd469bfa7f;Turów B11;TUR 4-11;2026-11-16 16:45:00;2026-11-16 17:45:00;39.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-c9c3a3d1bd44263dcb;Turów B02;TUR 2-02;2026-11-16 17:45:00;2026-11-16 18:00:00;28.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-74252f0ce3527e5e45;Opole B1;OPL 1-01;2026-11-16 18:00:00;2026-11-19 00:00:00;357.0;planowane;WE;AK;PSE-a3548a9711e1ed3fe1;1;2026-11-16T12:54:49+00:00;TGE + PSE unav-pk5l;dopasowane_z_duzym_prawdopodobienstwem;0;
+TGE-66080a0448482a28ed;EC Włocławek B1;;2026-11-16 19:00:00;2026-11-16 20:00:00;39.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+PSE-c257fcd90de3e38c1d;Opole;OPL 1-01;2026-11-16 20:00:00;2026-11-19 00:00:00;;;WE;AK;PSE-c257fcd90de3e38c1d;0;;PSE unav-pk5l;tylko_PSE_unav;0;
+TGE-fe183d6dcc82899e24;Płock B01;;2026-11-16 20:00:00;2026-11-16 21:00:00;130.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-f08c17069c1a33a980;Turów B05;TUR 2-05;2026-11-16 20:45:00;2026-11-16 21:00:00;27.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-b17d04c028cb856ac8;Turów B06;TUR 2-06;2026-11-16 20:45:00;2026-11-16 21:00:00;27.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-77a54ac34f27710cb9;Opole B1;OPL 1-01;2026-11-16 23:00:00;2026-11-17 00:00:00;189.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-6e3089e6f9eaef63d7;EC Włocławek B1;;2026-11-17 00:00:00;2026-11-17 01:00:00;39.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+PSE-d204199eb8a1761c36;Opole;OPL 4-03;2026-11-17 00:00:00;2026-11-18 00:00:00;;;WE;AK;PSE-d204199eb8a1761c36;0;;PSE unav-pk5l;tylko_PSE_unav;0;
+TGE-428d9239d888e61754;Opole B5;OPL 4-05;2026-11-17 00:00:00;2026-11-17 06:30:00;373.0;nieplanowane;;;;3;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-f76c0af9ad93217041;Opole B6;OPL 4-06;2026-11-17 00:00:00;2026-11-17 06:00:00;308.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-d3bade61ef0e63d116;PGE Gryfino Dolna Odra Sp. z o.o. Gryfino blok 10;EGF_4S10;2026-11-17 00:00:00;2026-11-18 00:00:00;10.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-05d17e0868c2c8da85;Płock B01;;2026-11-17 00:00:00;2026-11-17 01:00:00;130.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-d7612f46e64ae9b430;Turów B02;TUR 2-02;2026-11-17 00:00:00;2026-11-17 14:30:00;125.0;nieplanowane;;;;2;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-7a00db3b7208d2f1f0;Turów B04;TUR 2-04;2026-11-17 00:00:00;2026-11-18 00:00:00;145.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-2c38d125263db4acc3;Turów B05;TUR 2-05;2026-11-17 00:00:00;2026-11-17 04:30:00;133.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-47ed1ec0ee2173f08d;Turów B06;TUR 2-06;2026-11-17 00:00:00;2026-11-17 04:30:00;133.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-aaa91ff82285aeebd0;Turów B11;TUR 4-11;2026-11-17 00:00:00;2026-11-17 00:15:00;107.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-17679b7bcd5bcc18a9;Jaworzno 2 JWCD B7;;2026-11-17 01:00:00;2026-11-17 02:45:00;457.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-8e7bada59fed131922;Płock B01;;2026-11-17 04:00:00;2026-11-17 05:00:00;135.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-e1e05d2800cd65946b;Turów B05;TUR 2-05;2026-11-17 06:00:00;2026-11-17 06:15:00;19.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-d2f1bb46727dfa1cda;Turów B06;TUR 2-06;2026-11-17 06:00:00;2026-11-17 06:15:00;19.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-aa810f4d046116d647;Opole B5;OPL 4-05;2026-11-17 06:45:00;2026-11-17 08:30:00;496.0;planowane;;;;4;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-df51f9009d57585a7b;Turów B05;TUR 2-05;2026-11-17 08:30:00;2026-11-17 08:45:00;27.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-1ef6ac32c2370a946b;Turów B06;TUR 2-06;2026-11-17 08:45:00;2026-11-17 09:00:00;55.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-9f251857e92fb5406b;Turów B11;TUR 4-11;2026-11-17 08:45:00;2026-11-17 09:00:00;75.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-909f6975f7e0032f33;Płock B01;;2026-11-17 09:00:00;2026-11-17 10:00:00;130.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-2757bdc01ec422c714;EC Włocławek B1;;2026-11-17 10:00:00;2026-11-17 11:00:00;39.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-8a141eb9b992c50618;PAK-PCE PRZYRÓW FW Przyrów;;2026-11-17 10:00:00;2026-11-17 10:30:00;3.0;planowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-092dea3b7960bcf47f;Opole B5;OPL 4-05;2026-11-17 11:00:00;2026-11-17 16:00:00;305.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-af792dd14bd283933d;Opole B6;OPL 4-06;2026-11-17 11:00:00;2026-11-17 16:00:00;308.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-dc5a2cb6c967e43451;PAK-PCE KAZIMIERZ BISKUPI FW Kazimierz Biskupi;;2026-11-17 11:00:00;2026-11-17 13:00:00;3.0;planowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-bb6c2c7285ca865c69;Płock B01;;2026-11-17 12:00:00;2026-11-17 13:00:00;135.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-579e25398252d3486a;Płock B01;;2026-11-17 14:00:00;2026-11-17 15:00:00;135.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-c19d411f8e60122ffa;Turów B05;TUR 2-05;2026-11-17 14:15:00;2026-11-17 14:30:00;55.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-d7f8e1ca90bc6f3fe5;Turów B06;TUR 2-06;2026-11-17 14:15:00;2026-11-17 14:30:00;55.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-3a9e49b5d54a63d0e4;Turów B03;TUR 2-03;2026-11-17 14:45:00;2026-11-17 15:00:00;56.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-1ae83256eba212ed77;Opole B5;OPL 4-05;2026-11-17 15:15:00;2026-11-17 15:30:00;579.0;planowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-d19e334e6713726b95;PAK-PCE CZŁUCHÓW FW Ględowo;;2026-11-17 16:00:00;2026-11-17 20:00:00;4.0;planowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-5d3e17cc501bf7eb8a;Opole B5;OPL 4-05;2026-11-17 17:00:00;2026-11-17 18:00:00;229.0;planowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-0caa8b93d941c1a774;Opole B5;OPL 4-05;2026-11-17 18:00:00;2026-11-18 00:00:00;305.0;nieplanowane;;;;3;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-5098fce963ea997b50;Płock B01;;2026-11-17 19:00:00;2026-11-17 20:00:00;140.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-7114539390dca9a13f;Turów B02;TUR 2-02;2026-11-17 22:00:00;2026-11-17 22:15:00;28.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-73b6017d9adaa43bf7;Turów B05;TUR 2-05;2026-11-17 22:00:00;2026-11-17 22:15:00;27.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-8f6b5e735656f97131;Turów B06;TUR 2-06;2026-11-17 22:00:00;2026-11-17 22:15:00;27.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-18d30860f61aa14ad0;Turów B03;TUR 2-03;2026-11-17 22:30:00;2026-11-17 22:45:00;84.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-d7683ebf67e84d61ab;Turów B02;TUR 2-02;2026-11-17 22:45:00;2026-11-18 00:00:00;112.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-b87fa0a73aa94eb6a0;Turów B05;TUR 2-05;2026-11-17 22:45:00;2026-11-18 00:00:00;113.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-534b16f53a23a2b6a2;Turów B06;TUR 2-06;2026-11-17 22:45:00;2026-11-18 00:00:00;113.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-05f91fbba88524eca7;EC Włocławek B1;;2026-11-17 23:00:00;2026-11-18 00:00:00;39.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-f449ef60ed3ee37bf0;Opole B6;OPL 4-06;2026-11-17 23:00:00;2026-11-18 06:00:00;308.0;nieplanowane;;;;3;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-5780f1c1076caea6c3;Płock B01;;2026-11-17 23:00:00;2026-11-18 00:00:00;145.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-88969c71baa7492cd1;Turów B11;TUR 4-11;2026-11-17 23:00:00;2026-11-18 00:00:00;177.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-13865cacde45097c9d;Opole B5;OPL 4-05;2026-11-18 06:00:00;2026-11-18 16:00:00;305.0;nieplanowane;;;;3;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-4491305e6da0077223;Solina H3;;2026-11-18 06:01:00;2026-11-18 22:15:00;31.0;planowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-0807400d95bbc36e09;PAK-PCE CZŁUCHÓW FW Ględowo;;2026-11-18 08:00:00;2026-11-18 16:00:00;2.0;planowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-102f452733acefa260;PAK-PCE MIŁOSŁAW FW Pałczyn;;2026-11-18 09:00:00;2026-11-18 20:00:00;2.0;planowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-7cb13c29163840b377;Opole B6;OPL 4-06;2026-11-18 11:00:00;2026-11-18 16:00:00;308.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-1de991ee640ddfd6db;PGE Gryfino Dolna Odra Sp. z o.o. Gryfino blok 9;EGF_4S09;2026-11-18 16:00:00;2026-11-18 22:00:00;70.0;planowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-636929b71b6eb31616;Opole B5;OPL 4-05;2026-11-18 23:00:00;2026-11-19 06:00:00;305.0;nieplanowane;;;;3;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-03f34868edeefa5265;Opole B6;OPL 4-06;2026-11-18 23:00:00;2026-11-19 00:00:00;308.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-fd93493e058955b0ad;PAK-PCE CZŁUCHÓW FW Ględowo;;2026-11-19 08:00:00;2026-11-19 16:00:00;2.0;planowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-0051501961d0a6528b;PAK-PCE MIŁOSŁAW FW Pałczyn;;2026-11-19 09:00:00;2026-11-19 20:00:00;2.0;planowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-946c86202401448ca4;Opole B5;OPL 4-05;2026-11-19 11:00:00;2026-11-19 16:00:00;305.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-c032f509d5774333af;Opole B6;OPL 4-06;2026-11-19 11:00:00;2026-11-19 16:00:00;308.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-8c5ad7cc246230bd72;Ostrołęka B B01;;2026-11-19 14:00:00;2026-11-19 20:00:00;50.0;planowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-e9f19102cca31966f9;PGE Gryfino Dolna Odra Sp. z o.o. Gryfino blok 10;EGF_4S10;2026-11-19 16:00:00;2026-11-19 22:00:00;70.0;planowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-64b26a21d0b5536f89;Żarnowiec H2;;2026-11-19 22:01:00;2026-11-22 22:00:00;178.0;planowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-4b6877518cd657d68b;Opole B5;OPL 4-05;2026-11-19 23:00:00;2026-11-20 06:00:00;305.0;nieplanowane;;;;3;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-3f7dcd34327b9027f4;Opole B6;OPL 4-06;2026-11-19 23:00:00;2026-11-20 06:00:00;308.0;nieplanowane;;;;3;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-6b58162977a7b8c67d;PAK-PCE CZŁUCHÓW FW Ględowo;;2026-11-20 08:00:00;2026-11-20 16:00:00;2.0;planowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-7385763bade21c4512;PAK-PCE MIŁOSŁAW FW Pałczyn;;2026-11-20 09:00:00;2026-11-20 20:00:00;2.0;planowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-9169b263faebd4b02a;Opole B5;OPL 4-05;2026-11-20 11:00:00;2026-11-20 16:00:00;305.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-61a89ed01b18d61f8d;Opole B6;OPL 4-06;2026-11-20 11:00:00;2026-11-20 16:00:00;308.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-2fb53bac6e08110bde;Opole B5;OPL 4-05;2026-11-20 23:00:00;2026-11-21 00:00:00;305.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-a5878412e55c96ebe1;Opole B6;OPL 4-06;2026-11-20 23:00:00;2026-11-21 00:00:00;308.0;nieplanowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-9cc1ce10e362c9ea6f;EC Włocławek B1;;2026-11-21 00:00:00;2026-11-26 09:00:00;479.0;nieplanowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-0a9ef2ba6346487e67;Opole B1;OPL 1-01;2026-11-21 00:00:00;2026-12-01 00:00:00;357.0;planowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-15205e2aefb767050b;Żydowo H2;;2026-11-21 07:00:00;2026-11-21 17:00:00;55.0;planowane;;;;1;2026-11-16T12:54:49+00:00;TGE;tylko_TGE;0;
+TGE-22b553574c2a78d629;Opole B6;OPL 4-06;2026-12-22 00:00:00;2027-02-13 00:00:00;833.0;planowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-65d0bf42367b1394e1;Porąbka Żar H1;;2026-12-22 00:01:00;2026-12-31 23:45:00;138.0;planowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-5c3aa0848ece1f5be9;Porąbka Żar H1;;2027-01-01 00:01:00;2027-12-31 23:45:00;138.0;planowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-755603f4ab38799bcb;Porąbka Żar H2;;2027-01-01 00:01:00;2027-06-21 23:45:00;138.0;planowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-479d6ab53b863b6373;Turów B05;TUR 2-05;2027-01-09 00:00:00;2027-04-07 00:00:00;236.0;planowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
+TGE-b6bd93e775d63d8aae;Turów B06;TUR 2-06;2027-01-09 00:00:00;2027-04-07 00:00:00;236.0;planowane;;;;2;2026-11-12T14:29:33+00:00;TGE;tylko_TGE;0;
