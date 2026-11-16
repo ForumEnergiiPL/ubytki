@@ -1,0 +1,79 @@
+
+name: Codzienna aktualizacja ubytkow PSE i TGE
+
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '37 18 * * *'
+      timezone: 'Europe/Warsaw'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ubytki-codzienna-aktualizacja
+  cancel-in-progress: false
+
+jobs:
+  aktualizacja:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+
+    steps:
+      - name: Pobierz repozytorium
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Zainstaluj Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Biblioteki
+        run: python -m pip install -r requirements.txt
+
+      - name: Pobierz nowe dane PSE i TGE
+        id: pobieranie
+        continue-on-error: true
+        run: python kody/pobierz_dane.py
+
+      - name: Scal zdarzenia bez podwojnego liczenia
+        id: scalanie
+        continue-on-error: true
+        run: python kody/scal_zdarzenia.py
+
+      - name: Aktualizuj analityke dzienna i historie analiz
+        id: analizy
+        continue-on-error: true
+        run: python kody/analityka.py
+
+      - name: Zapisz zaktualizowane pliki w repozytorium
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add -A
+
+          if ! git diff --cached --quiet; then
+            git commit -m "Automatyczna aktualizacja PSE i TGE"
+            git push
+          else
+            echo "Nie ma zmian do zapisania"
+          fi
+
+      - name: Oznacz problemy w pobieraniu lub analizach
+        if: always()
+        env:
+          POBIERANIE: ${{ steps.pobieranie.outcome }}
+          SCALANIE: ${{ steps.scalanie.outcome }}
+          ANALIZY: ${{ steps.analizy.outcome }}
+        run: |
+          echo "Pobieranie: $POBIERANIE; scalanie: $SCALANIE; analizy: $ANALIZY"
+
+          if [ "$POBIERANIE" != success ] || [ "$SCALANIE" != success ] || [ "$ANALIZY" != success ]; then
+            echo "Co najmniej jeden etap zawiodl; czesciowo pobrane dane zostaly zapisane."
+            exit 1
+          fi
