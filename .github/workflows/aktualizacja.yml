@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: '37 18 * * *'
+    - cron: '37 9 * * *'
       timezone: 'Europe/Warsaw'
 
 permissions:
@@ -31,25 +31,27 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Biblioteki
-        run: python -m pip install -r requirements.txt
+      - name: Zainstaluj biblioteki
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install "pandas>=2.2,<3" "requests>=2.32,<3" "beautifulsoup4>=4.12,<5"
 
       - name: Pobierz nowe dane PSE i TGE
         id: pobieranie
         continue-on-error: true
         run: python kody/pobierz_dane.py
 
-      - name: Scal zdarzenia bez podwojnego liczenia
+      - name: Scal zdarzenia i usun duplikaty
         id: scalanie
         continue-on-error: true
         run: python kody/scal_zdarzenia.py
 
-      - name: Aktualizuj analityke dzienna i historie analiz
-        id: analizy
+      - name: Aktualizuj analityke dzienna i historyczna
+        id: analityka
         continue-on-error: true
         run: python kody/analityka.py
 
-      - name: Zapisz zaktualizowane pliki w repozytorium
+      - name: Zapisz zmiany w repozytorium
         if: always()
         run: |
           git config user.name "github-actions[bot]"
@@ -59,21 +61,24 @@ jobs:
 
           if ! git diff --cached --quiet; then
             git commit -m "Automatyczna aktualizacja PSE i TGE"
-            git push
+            git pull --rebase origin main
+            git push origin HEAD:main
           else
-            echo "Nie ma zmian do zapisania"
+            echo "Brak nowych danych"
           fi
 
-      - name: Oznacz problemy w pobieraniu lub analizach
+      - name: Sprawdz status aktualizacji
         if: always()
         env:
           POBIERANIE: ${{ steps.pobieranie.outcome }}
           SCALANIE: ${{ steps.scalanie.outcome }}
-          ANALIZY: ${{ steps.analizy.outcome }}
+          ANALITYKA: ${{ steps.analityka.outcome }}
         run: |
-          echo "Pobieranie: $POBIERANIE; scalanie: $SCALANIE; analizy: $ANALIZY"
+          echo "Pobieranie: $POBIERANIE"
+          echo "Scalanie: $SCALANIE"
+          echo "Analityka: $ANALITYKA"
 
-          if [ "$POBIERANIE" != success ] || [ "$SCALANIE" != success ] || [ "$ANALIZY" != success ]; then
-            echo "Co najmniej jeden etap zawiodl; czesciowo pobrane dane zostaly zapisane."
+          if [ "$POBIERANIE" != "success" ] || [ "$SCALANIE" != "success" ] || [ "$ANALITYKA" != "success" ]; then
+            echo "Wystapil blad w jednym z etapow"
             exit 1
           fi
