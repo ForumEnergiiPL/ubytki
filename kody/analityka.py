@@ -1,14 +1,11 @@
 
-"""Dzienna analityka PSE/TGE i historia analiz."""
-
-from __future__ import annotations
-
-import json
-from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
+from datetime import date, datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
+import json
 
 import pandas as pd
+
 
 ROOT = Path(__file__).resolve().parents[1]
 TZ = ZoneInfo("Europe/Warsaw")
@@ -26,82 +23,76 @@ def read(name):
         dtype=str,
         keep_default_na=False,
         encoding="utf-8-sig",
-        low_memory=False
+        low_memory=False,
     )
 
 
 def save(name, df):
-    if df is None or len(df.columns) == 0:
-        raise ValueError(
-            f"Brak danych/kolumn: {name}; "
-            "nie nadpisuje istniejacego pliku"
-        )
+    if df.empty and len(df.columns) == 0:
+        print(f"Brak danych do zapisu: {name}")
+        return
 
     path = ROOT / name
-    tmp = path.with_name(path.name + ".tmp")
+    temp = path.with_name(path.name + ".tmp")
 
     df.to_csv(
-        tmp,
+        temp,
         sep=";",
         index=False,
         encoding="utf-8-sig",
-        na_rep=""
     )
 
-    tmp.replace(path)
+    temp.replace(path)
 
     print(
         f"ANALITYKA {name}: {len(df)} wierszy",
-        flush=True
+        flush=True,
     )
 
 
-def n(v):
-    try:
-        return float(
-            str(v).replace(",", ".")
-        )
-    except (ValueError, TypeError):
-        return float("nan")
+def number(value):
+    return pd.to_numeric(
+        str(value).replace(",", "."),
+        errors="coerce",
+    )
 
 
-def sum_fields(r, cols):
+def sum_fields(row, columns):
     values = [
-        n(r.get(c, ""))
-        for c in cols
+        number(row.get(c, ""))
+        for c in columns
     ]
 
-    return (
-        float(sum(values))
-        if all(pd.notna(v) for v in values)
-        else float("nan")
-    )
+    if not all(pd.notna(v) for v in values):
+        return float("nan")
+
+    return float(sum(values))
 
 
-def loc_time(v):
+def local_time(value):
     try:
-        dt = pd.to_datetime(
-            str(v),
+        ts = pd.to_datetime(
+            value,
             errors="coerce",
-            format="mixed"
+            format="mixed",
         )
 
-        if pd.isna(dt):
+        if pd.isna(ts):
             return pd.NaT
 
-        if dt.tzinfo:
+        if ts.tzinfo is not None:
             return (
-                dt.tz_convert(TZ)
+                ts.tz_convert(TZ)
                 .tz_localize(None)
             )
 
-        return dt
+        return ts
 
-    except (ValueError, TypeError):
+    except (TypeError, ValueError):
         return pd.NaT
 
 
-def load_tge(df):
+def prepare_tge(df):
     if df.empty:
         return df
 
@@ -110,59 +101,53 @@ def load_tge(df):
         "typ",
         "poczatek",
         "koniec",
-        "ubytek"
+        "ubytek",
     }
 
-    if not required.issubset(df):
+    if not required.issubset(df.columns):
         raise ValueError(
-            f"TGE: brakuje kolumn "
-            f"{required - set(df.columns)}"
+            "TGE: brak wymaganych kolumn"
         )
 
     df = df.copy()
 
     df["_start"] = pd.to_datetime(
-        df.poczatek,
+        df["poczatek"],
+        errors="coerce",
         format="mixed",
-        errors="coerce"
     )
 
     df["_end"] = pd.to_datetime(
-        df.koniec,
+        df["koniec"],
+        errors="coerce",
         format="mixed",
-        errors="coerce"
     )
 
     df["_mw"] = pd.to_numeric(
-        df.ubytek.str.replace(
+        df["ubytek"].str.replace(
             ",", ".", regex=False
         ),
-        errors="coerce"
+        errors="coerce",
     )
 
     return df.dropna(
-        subset=[
-            "_start",
-            "_end",
-            "_mw"
-        ]
+        subset=["_start", "_end", "_mw"]
     )
 
 
-def power_at(df, moment):
+def tge_power_at(df, moment):
     if df.empty:
         return {
             "suma": 0.0,
             "planowane": 0.0,
             "nieplanowane": 0.0,
-            "inne": 0.0,
-            "bloki": 0
+            "jednostki": 0,
         }
 
     active = df[
-        (df._start <= moment)
+        (df["_start"] <= moment)
         &
-        (df._end > moment)
+        (df["_end"] > moment)
     ].copy()
 
     if active.empty:
@@ -170,74 +155,76 @@ def power_at(df, moment):
             "suma": 0.0,
             "planowane": 0.0,
             "nieplanowane": 0.0,
-            "inne": 0.0,
-            "bloki": 0
+            "jednostki": 0,
         }
 
     active = active.sort_values(
         "_mw",
-        ascending=False
+        ascending=False,
     ).drop_duplicates("jednostka")
 
     kinds = (
-        active.typ
-        .str.casefold()
+        active["typ"]
+        .str.lower()
         .str.strip()
     )
 
-    plan = float(
+    planned = float(
         active.loc[
             kinds == "planowane",
-            "_mw"
+            "_mw",
         ].sum()
     )
 
-    unplan = float(
+    unplanned = float(
         active.loc[
             kinds == "nieplanowane",
-            "_mw"
+            "_mw",
         ].sum()
     )
 
     other = float(
         active.loc[
-            ~kinds.isin([
-                "planowane",
-                "nieplanowane"
-            ]),
-            "_mw"
+            ~kinds.isin(["planowane", "nieplanowane"]),
+            "_mw",
         ].sum()
     )
 
     return {
-        "suma": plan + unplan + other,
-        "planowane": plan,
-        "nieplanowane": unplan,
-        "inne": other,
-        "bloki": len(active)
+        "suma": planned + unplanned + other,
+        "planowane": planned,
+        "nieplanowane": unplanned,
+        "jednostki": len(active),
     }
 
 
-def coverage_days():
-    views = read(
-        "tge_widoki.csv"
-    )
-
+def tge_coverage():
+    views = read("tge_widoki.csv")
     covered = set()
 
-    if "widok_od" not in views:
+    if not {
+        "widok_od",
+        "widok_do",
+    }.issubset(views.columns):
         return covered
 
-    for v in views["widok_od"]:
+    for row in views.to_dict("records"):
         try:
-            d = date.fromisoformat(
-                str(v)[:10]
+            first = date.fromisoformat(
+                str(row["widok_od"])[:10]
             )
 
-            covered.update(
-                d + timedelta(days=i)
-                for i in range(14)
+            last = date.fromisoformat(
+                str(row["widok_do"])[:10]
             )
+
+            if first <= last <= first + timedelta(days=13):
+                covered.update(
+                    first + timedelta(days=i)
+                    for i in range(
+                        (last - first).days + 1
+                    )
+                )
 
         except ValueError:
             continue
@@ -246,259 +233,234 @@ def coverage_days():
 
 
 def load_snapshots():
+    folder = ROOT / "tge_migawki"
     result = {}
 
-    folder = ROOT / "tge_migawki"
+    if not folder.exists():
+        return result
 
-    for p in (
-        sorted(folder.glob("????-??.csv"))
-        if folder.exists()
-        else []
+    for path in sorted(
+        folder.glob("????-??.csv")
     ):
-        x = read(
-            str(p.relative_to(ROOT))
+        df = read(
+            str(path.relative_to(ROOT))
         )
 
-        if "data_obserwacji" not in x:
+        if "data_obserwacji" not in df:
             continue
 
-        for d, group in x.groupby(
+        for day, group in df.groupby(
             "data_obserwacji"
         ):
-            result[str(d)] = load_tge(group)
+            result[str(day)] = prepare_tge(group)
 
     return result
 
 
-def latest_unique_events():
-    u = read(
-        "zdarzenia_unikalne.csv"
-    )
+def get_events():
+    df = read("zdarzenia_unikalne.csv")
 
-    if u.empty:
-        return u
+    if df.empty:
+        return df
 
-    if not {
+    required = {
         "id_zdarzenia",
         "poczatek",
-        "koniec"
-    }.issubset(u):
-        raise ValueError(
-            "zdarzenia_unikalne.csv "
-            "bez niezbednych kolumn"
-        )
+        "koniec",
+    }
 
-    u = u.drop_duplicates(
+    if not required.issubset(df.columns):
+        return pd.DataFrame()
+
+    df = df.drop_duplicates(
         "id_zdarzenia",
-        keep="last"
+        keep="last",
     ).copy()
 
-    u["_start"] = pd.to_datetime(
-        u.poczatek,
+    df["_start"] = pd.to_datetime(
+        df["poczatek"],
         errors="coerce",
-        format="mixed"
+        format="mixed",
     )
 
-    u["_end"] = pd.to_datetime(
-        u.koniec,
+    df["_end"] = pd.to_datetime(
+        df["koniec"],
         errors="coerce",
-        format="mixed"
+        format="mixed",
     )
 
-    return u.dropna(
+    return df.dropna(
         subset=["_start", "_end"]
     )
 
 
 def daily_analysis():
-    pse = read(
-        "pse_bilans.csv"
-    )
+    pse = read("pse_bilans.csv")
 
-    if (
-        pse.empty
-        or not {
-            "business_date",
-            "peak",
-            "peak_hour",
-            "ub_sum"
-        }.issubset(pse)
-    ):
-        print(
-            "Brak poprawnego pse_bilans.csv. "
-            "Zachowuje dotychczasowa analityke dzienna."
-        )
+    required = {
+        "business_date",
+        "peak",
+        "peak_hour",
+        "ub_sum",
+    }
 
+    if pse.empty or not required.issubset(pse.columns):
+        print("Brak poprawnego bilansu PSE")
         return pd.DataFrame()
 
     if "publication_ts_utc" in pse:
         pse = pse.sort_values(
             "publication_ts_utc",
-            kind="stable"
+            kind="stable",
         )
 
     pse = pse.drop_duplicates(
         ["business_date", "peak"],
-        keep="last"
+        keep="last",
     )
 
-    tge = load_tge(
+    tge = prepare_tge(
         read("tge_ubytki.csv")
     )
 
-    covered = coverage_days()
+    covered = tge_coverage()
     snapshots = load_snapshots()
-    events = latest_unique_events()
+    events = get_events()
 
     rows = []
 
-    for r in pse.to_dict("records"):
-        d = str(
-            r.get("business_date", "")
+    for row in pse.to_dict("records"):
+        day = str(
+            row["business_date"]
         )[:10]
 
         try:
-            day = date.fromisoformat(d)
+            day_date = date.fromisoformat(day)
         except ValueError:
             continue
 
         peak = str(
-            r.get("peak", "")
+            row.get("peak", "")
         ).upper().strip()
 
         raw = str(
-            r.get("peak_hour", "")
+            row.get("peak_hour", "")
         )
 
-        moment = loc_time(
-            (d + " " + raw)
+        timestamp = (
+            day + " " + raw
             if len(raw) <= 8
             else raw
         )
 
-        status = (
-            "OK_MIGAWKA"
-            if d in snapshots
-            else (
-                "RETRO_WIDOK"
-                if day in covered
-                else "BRAK_WIDOKU"
-            )
-        )
+        moment = local_time(timestamp)
 
-        if (
-            pd.isna(moment)
-            or (
-                pd.notna(moment)
-                and moment.date() != day
-            )
-        ):
+        if pd.isna(moment) or moment.date() != day_date:
             status = "BRAK_POPRAWNEJ_GODZINY"
 
-        source = (
-            snapshots[d]
-            if d in snapshots
-            else tge
-        )
+        elif day in snapshots:
+            status = "OK_MIGAWKA"
 
-        tpower = (
-            power_at(source, moment)
-            if status in (
-                "OK_MIGAWKA",
-                "RETRO_WIDOK"
+        elif day_date in covered:
+            status = "RETRO_WIDOK"
+
+        else:
+            status = "BRAK_DANYCH_TGE"
+
+        power = None
+
+        if status in [
+            "OK_MIGAWKA",
+            "RETRO_WIDOK",
+        ]:
+            source = snapshots.get(day, tge)
+            power = tge_power_at(
+                source,
+                moment,
             )
-            else None
-        )
 
         rem = sum_fields(
-            r,
+            row,
             [
-                "rk_jg", "rk_prb",
-                "rs_jg", "rs_prb",
-                "rb_jg", "rb_prb"
-            ]
+                "rk_jg",
+                "rk_prb",
+                "rs_jg",
+                "rs_prb",
+                "rb_jg",
+                "rb_prb",
+            ],
         )
 
         aw = sum_fields(
-            r,
-            ["ra_jg", "ra_prb"]
+            row,
+            ["ra_jg", "ra_prb"],
         )
 
-        overall = n(
-            r.get("ub_sum", "")
+        total = number(
+            row.get("ub_sum", "")
+        )
+
+        tge_total = (
+            power["suma"]
+            if power is not None
+            else float("nan")
         )
 
         rows.append({
-            "data": d,
+            "data": day,
             "szczyt": peak,
             "czas_szczytu": (
                 str(moment)
                 if pd.notna(moment)
                 else ""
             ),
-            "pse_ubytki_ogolem_mw": overall,
+            "pse_ubytki_ogolem_mw": total,
             "pse_remonty_mw": rem,
             "pse_awarie_mw": aw,
             "pse_remonty_i_awarie_mw": rem + aw,
-            "pse_ograniczenia_eksploatacyjne_mw":
-                sum_fields(
-                    r,
-                    ["we_jg", "we_prb"]
-                ),
-            "tge_ubytek_mw": (
-                tpower["suma"]
-                if tpower is not None
-                else float("nan")
-            ),
+            "tge_ubytek_mw": tge_total,
             "tge_planowane_mw": (
-                tpower["planowane"]
-                if tpower is not None
+                power["planowane"]
+                if power is not None
                 else float("nan")
             ),
             "tge_nieplanowane_mw": (
-                tpower["nieplanowane"]
-                if tpower is not None
+                power["nieplanowane"]
+                if power is not None
                 else float("nan")
             ),
-            "tge_liczba_blokow": (
-                tpower["bloki"]
-                if tpower is not None
+            "tge_liczba_jednostek": (
+                power["jednostki"]
+                if power is not None
                 else float("nan")
             ),
-            "pse_minus_tge_mw": (
-                overall - tpower["suma"]
-                if tpower is not None
-                else float("nan")
-            ),
-            "pse_remonty_awarie_minus_tge_mw": (
-                rem + aw - tpower["suma"]
-                if tpower is not None
-                else float("nan")
-            ),
-            "status_tge": status
+            "pse_minus_tge_mw": total - tge_total,
+            "status_tge": status,
         })
 
-    per_peak = pd.DataFrame(
-        rows
-    ).sort_values([
-        "data",
-        "szczyt"
-    ])
+    if not rows:
+        return pd.DataFrame()
+
+    comparison = pd.DataFrame(rows)
+
+    comparison = comparison.sort_values(
+        ["data", "szczyt"]
+    )
 
     save(
         "porownanie_pse_tge.csv",
-        per_peak
+        comparison,
     )
 
-    daily = []
+    daily_rows = []
 
-    for day, grp in per_peak.groupby("data"):
+    for day, group in comparison.groupby("data"):
         record = {"data": day}
 
-        for r in grp.to_dict("records"):
-            peak = r["szczyt"]
+        for row in group.to_dict("records"):
+            peak = row["szczyt"]
 
-            for col in (
+            for col in [
                 "czas_szczytu",
                 "pse_ubytki_ogolem_mw",
                 "pse_remonty_mw",
@@ -507,129 +469,83 @@ def daily_analysis():
                 "tge_ubytek_mw",
                 "tge_planowane_mw",
                 "tge_nieplanowane_mw",
-                "tge_liczba_blokow",
+                "tge_liczba_jednostek",
                 "pse_minus_tge_mw",
-                "status_tge"
-            ):
-                record[col + "_" + peak] = r[col]
+                "status_tge",
+            ]:
+                record[f"{col}_{peak}"] = row[col]
 
         if not events.empty:
-            today_starts = events[
-                events._start.dt.strftime(
+            started = events[
+                events["_start"].dt.strftime(
                     "%Y-%m-%d"
                 ) == day
             ]
 
             record[
                 "kandydaci_zdarzen_rozpoczetych"
-            ] = len(today_starts)
+            ] = len(started)
 
             record["w_tym_z_tge"] = (
                 int(
-                    today_starts.zrodla
-                    .str.contains(
-                        "TGE",
-                        na=False
-                    ).sum()
+                    started["zrodla"]
+                    .str.contains("TGE", na=False)
+                    .sum()
                 )
-                if "zrodla" in today_starts
+                if "zrodla" in started.columns
                 else 0
             )
 
-        daily.append(record)
+        daily_rows.append(record)
 
-    output = pd.DataFrame(
-        daily
-    ).sort_values(
-        "data"
-    ).reset_index(drop=True)
+    daily = pd.DataFrame(
+        daily_rows
+    ).sort_values("data")
 
     save(
         "analityka_dzienna.csv",
-        output
+        daily,
     )
 
-    return output
+    return daily
 
 
-def observation_history(daily):
-    today = datetime.now(
-        TZ
-    ).date()
+def history_analysis(daily):
+    today = datetime.now(TZ).date()
+    today_str = today.isoformat()
 
-    run_status = {}
+    state_file = ROOT / "stan_aktualizacji.json"
+    run_state = {}
 
-    state = ROOT / "stan_aktualizacji.json"
-
-    if state.exists():
+    if state_file.exists():
         try:
-            run_status = json.loads(
-                state.read_text(
+            run_state = json.loads(
+                state_file.read_text(
                     encoding="utf-8"
                 )
             )
-        except ValueError:
+        except (ValueError, OSError):
             pass
 
-    events = latest_unique_events()
-    tge = read(
-        "tge_ubytki.csv"
-    )
+    events = get_events()
+    tge = read("tge_ubytki.csv")
+    views = read("tge_widoki.csv")
 
-    snapfile = (
-        ROOT
-        / "tge_migawki"
-        / f"{today:%Y-%m}.csv"
-    )
+    snapshot_ok = False
 
-    snaps = (
-        read(
-            str(snapfile.relative_to(ROOT))
+    if {
+        "widok_od",
+        "widok_do",
+    }.issubset(views.columns):
+        snapshot_ok = bool(
+            (
+                (views["widok_od"] == today_str)
+                &
+                (views["widok_do"] == today_str)
+            ).any()
         )
-        if snapfile.exists()
-        else pd.DataFrame()
-    )
 
-    snapshot_today = bool(
-        not snaps.empty
-        and "data_obserwacji" in snaps
-        and (
-            snaps["data_obserwacji"]
-            == today.isoformat()
-        ).any()
-    )
-
-    current_time = pd.Timestamp(
-        datetime.now(TZ).replace(
-            tzinfo=None
-        )
-    )
-
-    active = (
-        events[
-            (events._start <= current_time)
-            &
-            (events._end > current_time)
-        ]
-        if not events.empty
-        else pd.DataFrame()
-    )
-
-    active_tge = (
-        active[
-            active.zrodla.str.contains(
-                "TGE",
-                na=False
-            )
-        ]
-        if (
-            not active.empty
-            and "zrodla" in active
-        )
-        else pd.DataFrame()
-    )
-
-    new_tge_versions = 0
+    new_versions = 0
 
     if (
         not tge.empty
@@ -638,124 +554,130 @@ def observation_history(daily):
         dates = pd.to_datetime(
             tge["pierwszy_odczyt_utc"],
             utc=True,
-            errors="coerce"
+            errors="coerce",
         )
 
-        new_tge_versions = int(
+        new_versions = int(
             (
                 dates.dt.tz_convert(TZ)
                 .dt.strftime("%Y-%m-%d")
-                == today.isoformat()
+                == today_str
             ).sum()
         )
 
-    prior = read(
-        "historia_analityki.csv"
-    )
+    active_count = ""
 
-    last_day = (
+    if not events.empty and snapshot_ok:
+        moment = pd.Timestamp(
+            datetime.now(TZ).replace(
+                tzinfo=None
+            )
+        )
+
+        active = events[
+            (events["_start"] <= moment)
+            &
+            (events["_end"] > moment)
+        ]
+
+        if "zrodla" in active.columns:
+            active_count = int(
+                active["zrodla"]
+                .str.contains(
+                    "TGE",
+                    na=False,
+                ).sum()
+            )
+
+    latest = (
         daily.sort_values("data").iloc[-1]
         if not daily.empty
         else None
     )
 
     report = {
-        "data_aktualizacji": today.isoformat(),
-        "moment_odczytu_utc": (
-            datetime.now(
-                timezone.utc
-            ).isoformat(timespec="seconds")
-        ),
-        "status_pobierania": run_status.get(
+        "data_aktualizacji": today_str,
+        "moment_odczytu_utc": datetime.now(
+            timezone.utc
+        ).isoformat(timespec="seconds"),
+        "status_pobierania": run_state.get(
             "status",
-            "BRAK_INFORMACJI"
+            "BRAK_INFORMACJI",
         ),
-        "bledy_pobierania": run_status.get(
+        "bledy_pobierania": run_state.get(
             "liczba_bledow",
-            ""
+            "",
         ),
-        "tge_pelna_migawka_dzis": (
-            "TAK"
-            if snapshot_today
-            else "NIE"
+        "tge_pobrane_dzis": (
+            "TAK" if snapshot_ok else "NIE"
         ),
-        "tge_liczba_roznych_wersji_lacznie":
-            len(tge),
-        "tge_nowe_wersje_zarejestrowane_dzis":
-            new_tge_versions,
-        "zdarzenia_kandydaci_lacznie":
-            len(events),
-        "zdarzenia_tge_aktywne_teraz_kandydaci":
-            (
-                len(active_tge)
-                if snapshot_today
-                else ""
-            ),
+        "tge_wersje_lacznie": len(tge),
+        "tge_nowe_wersje_dzis": new_versions,
+        "zdarzenia_kandydaci_lacznie": len(events),
+        "tge_zdarzenia_aktywne_teraz": active_count,
         "ostatni_dzien_bilansu_pse": (
-            last_day["data"]
-            if last_day is not None
+            latest["data"]
+            if latest is not None
             else ""
         ),
         "pse_sr_ubytki_mw": (
-            last_day.get(
-                "pse_ubytki_ogolem_mw_SR",
-                ""
+            latest.get(
+                "pse_ubytki_ogolem_mw_SR", ""
             )
-            if last_day is not None
+            if latest is not None
             else ""
         ),
         "pse_sw_ubytki_mw": (
-            last_day.get(
-                "pse_ubytki_ogolem_mw_SW",
-                ""
+            latest.get(
+                "pse_ubytki_ogolem_mw_SW", ""
             )
-            if last_day is not None
+            if latest is not None
             else ""
         ),
         "tge_sr_ubytki_mw": (
-            last_day.get(
-                "tge_ubytek_mw_SR",
-                ""
+            latest.get(
+                "tge_ubytek_mw_SR", ""
             )
-            if last_day is not None
+            if latest is not None
             else ""
         ),
         "tge_sw_ubytki_mw": (
-            last_day.get(
-                "tge_ubytek_mw_SW",
-                ""
+            latest.get(
+                "tge_ubytek_mw_SW", ""
             )
-            if last_day is not None
+            if latest is not None
             else ""
-        )
+        ),
     }
+
+    old = read("historia_analityki.csv")
 
     updated = pd.concat(
         [
-            prior,
-            pd.DataFrame([report])
+            old,
+            pd.DataFrame([report]),
         ],
-        ignore_index=True
+        ignore_index=True,
     )
 
     updated = updated.drop_duplicates(
         "data_aktualizacji",
-        keep="last"
+        keep="last",
     )
 
     updated = updated.sort_values(
         "data_aktualizacji"
-    ).reset_index(drop=True)
+    )
 
     save(
         "historia_analityki.csv",
-        updated
+        updated,
     )
 
 
 def main():
     daily = daily_analysis()
-    observation_history(daily)
+    history_analysis(daily)
 
 
 if __name__ == "__main__":
