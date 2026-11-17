@@ -3,6 +3,7 @@ name: TGE - codzienna aktualizacja
 
 on:
   workflow_dispatch:
+
   schedule:
     - cron: '17 8 * * *'
       timezone: 'Europe/Warsaw'
@@ -20,34 +21,88 @@ jobs:
     timeout-minutes: 15
 
     steps:
+
+      # 1. Pobierz repozytorium
       - name: Pobierz repozytorium
         uses: actions/checkout@v4
 
+      # 2. Python
       - name: Zainstaluj Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
 
+      # 3. Biblioteki
       - name: Zainstaluj biblioteki
         run: |
-          python -m pip install "requests>=2.32,<3" "beautifulsoup4>=4.12,<5" tzdata
+          python -m pip install --upgrade pip
+          python -m pip install \
+            "requests>=2.32,<3" \
+            "beautifulsoup4>=4.12,<5" \
+            tzdata
 
-      - name: Pokaz informacje o sieci
+      # 4. Diagnostyka DNS
+      - name: Sprawdz DNS TGE
         run: |
-          python -c "import socket; print('Adresy TGE:', socket.getaddrinfo('gpi.tge.pl', 443, type=socket.SOCK_STREAM))"
+          python - <<'PY'
+          import socket
 
-      - name: Pobierz TGE
+          try:
+              adresy = socket.getaddrinfo(
+                  "gpi.tge.pl",
+                  443,
+                  type=socket.SOCK_STREAM
+              )
+
+              for adres in adresy:
+                  protokol = (
+                      "IPv4"
+                      if adres[0] == socket.AF_INET
+                      else "IPv6"
+                  )
+
+                  print(
+                      protokol,
+                      adres[4][0]
+                  )
+
+          except Exception as e:
+              print("BLAD DNS:", e)
+          PY
+
+      # 5. Test polaczenia HTTPS przez IPv4
+      - name: Sprawdz polaczenie HTTPS TGE
+        run: |
+          echo "Test TGE przez IPv4"
+
+          curl -4 -sS \
+            --connect-timeout 8 \
+            --max-time 15 \
+            -o /dev/null \
+            -w "HTTP: %{http_code}, czas: %{time_total}s\n" \
+            https://gpi.tge.pl/pl/zestawienie-ubytkow || true
+
+          echo "Koniec testu polaczenia"
+
+      # 6. Wlasciwe pobieranie danych TGE
+      - name: Pobierz dane TGE
         id: pobieranie
         continue-on-error: true
-        run: python kody/pobierz_tge.py
+        run: |
+          python kody/pobierz_tge.py
 
-      - name: Zapisz zmiany do repozytorium
+      # 7. Zapisz nowe dane do repozytorium
+      - name: Zapisz dane TGE
         if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          for file in tge_ubytki.csv tge_widoki.csv stan_tge.json; do
+          for file in \
+            tge_ubytki.csv \
+            tge_widoki.csv \
+            stan_tge.json
+          do
             if [ -f "$file" ]; then
               git add -- "$file"
             fi
@@ -58,22 +113,27 @@ jobs:
           fi
 
           if ! git diff --cached --quiet; then
-            git commit -m "TGE: aktualizacja danych"
+            git commit -m "TGE: codzienna aktualizacja"
+
             git pull --rebase origin "${GITHUB_REF_NAME}"
+
             git push origin "HEAD:${GITHUB_REF_NAME}"
+
+            echo "Zapisano zmiany w repozytorium"
           else
-            echo "Brak zmian"
+            echo "Brak zmian do zapisania"
           fi
 
+      # 8. Status aktualizacji
       - name: Sprawdz wynik pobierania
         if: always()
         env:
           WYNIK: ${{ steps.pobieranie.outcome }}
         run: |
-          echo "Wynik pobierania: $WYNIK"
+          echo "Status pobierania: $WYNIK"
 
           if [ "$WYNIK" != "success" ]; then
-            echo "Blad pobierania TGE"
+            echo "BLAD: Nie udalo sie pobrac TGE"
             exit 1
           fi
 
