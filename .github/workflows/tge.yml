@@ -1,5 +1,5 @@
 
-name: TGE - codzienna aktualizacja
+name: TGE - 3 proby z roznych runnerow
 
 on:
   workflow_dispatch:
@@ -16,95 +16,54 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  tge:
-    runs-on: macos-latest
-    timeout-minutes: 15
+
+  # ============================================
+  # PROBA 1 - UBUNTU
+  # ============================================
+
+  linux:
+    name: Proba 1 - Ubuntu
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+
+    outputs:
+      ok: ${{ steps.zapis.outputs.ok }}
 
     steps:
+      - uses: actions/checkout@v4
 
-      # 1. Pobierz repozytorium
-      - name: Pobierz repozytorium
-        uses: actions/checkout@v4
-
-      # 2. Python
-      - name: Zainstaluj Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
 
-      # 3. Biblioteki
-      - name: Zainstaluj biblioteki
+      - name: Biblioteki
         run: |
-          python -m pip install --upgrade pip
           python -m pip install \
-            "requests>=2.32,<3" \
-            "beautifulsoup4>=4.12,<5" \
+            'requests>=2.32,<3' \
+            'beautifulsoup4>=4.12,<5' \
             tzdata
 
-      # 4. Diagnostyka DNS
-      - name: Sprawdz DNS TGE
-        run: |
-          python - <<'PY'
-          import socket
-
-          try:
-              adresy = socket.getaddrinfo(
-                  "gpi.tge.pl",
-                  443,
-                  type=socket.SOCK_STREAM
-              )
-
-              for adres in adresy:
-                  protokol = (
-                      "IPv4"
-                      if adres[0] == socket.AF_INET
-                      else "IPv6"
-                  )
-
-                  print(
-                      protokol,
-                      adres[4][0]
-                  )
-
-          except Exception as e:
-              print("BLAD DNS:", e)
-          PY
-
-      # 5. Test polaczenia HTTPS przez IPv4
-      - name: Sprawdz polaczenie HTTPS TGE
-        run: |
-          echo "Test TGE przez IPv4"
-
-          curl -4 -sS \
-            --connect-timeout 8 \
-            --max-time 15 \
-            -o /dev/null \
-            -w "HTTP: %{http_code}, czas: %{time_total}s\n" \
-            https://gpi.tge.pl/pl/zestawienie-ubytkow || true
-
-          echo "Koniec testu polaczenia"
-
-      # 6. Wlasciwe pobieranie danych TGE
-      - name: Pobierz dane TGE
+      - name: Pobierz TGE
         id: pobieranie
-        continue-on-error: true
+        env:
+          TGE_URL: https://gpi.tge.pl/pl/zestawienie-ubytkow
         run: |
-          python kody/pobierz_tge.py
+          if python kody/pobierz_tge.py; then
+            echo 'ok=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'ok=false' >> "$GITHUB_OUTPUT"
+          fi
 
-      # 7. Zapisz nowe dane do repozytorium
-      - name: Zapisz dane TGE
-        if: always()
+      - name: Zapisz CSV po sukcesie
+        id: zapis
+        if: steps.pobieranie.outputs.ok == 'true'
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
 
-          for file in \
-            tge_ubytki.csv \
-            tge_widoki.csv \
-            stan_tge.json
-          do
-            if [ -f "$file" ]; then
-              git add -- "$file"
+          for f in tge_ubytki.csv tge_widoki.csv stan_tge.json; do
+            if [ -f "$f" ]; then
+              git add -- "$f"
             fi
           done
 
@@ -113,28 +72,201 @@ jobs:
           fi
 
           if ! git diff --cached --quiet; then
-            git commit -m "TGE: codzienna aktualizacja"
-
-            git pull --rebase origin "${GITHUB_REF_NAME}"
-
+            git commit -m 'TGE: aktualizacja (Ubuntu)'
+            git fetch origin "${GITHUB_REF_NAME}"
+            git rebase "origin/${GITHUB_REF_NAME}"
             git push origin "HEAD:${GITHUB_REF_NAME}"
-
-            echo "Zapisano zmiany w repozytorium"
-          else
-            echo "Brak zmian do zapisania"
           fi
 
-      # 8. Status aktualizacji
-      - name: Sprawdz wynik pobierania
-        if: always()
-        env:
-          WYNIK: ${{ steps.pobieranie.outcome }}
+          echo 'ok=true' >> "$GITHUB_OUTPUT"
+
+  # ============================================
+  # PROBA 2 - MACOS
+  # ============================================
+
+  macos:
+    name: Proba 2 - macOS
+    needs: linux
+
+    if: ${{ always() && needs.linux.outputs.ok != 'true' }}
+
+    runs-on: macos-latest
+    timeout-minutes: 12
+
+    outputs:
+      ok: ${{ steps.zapis.outputs.ok }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Biblioteki
         run: |
-          echo "Status pobierania: $WYNIK"
+          python -m pip install \
+            'requests>=2.32,<3' \
+            'beautifulsoup4>=4.12,<5' \
+            tzdata
 
-          if [ "$WYNIK" != "success" ]; then
-            echo "BLAD: Nie udalo sie pobrac TGE"
-            exit 1
+      - name: Krotka przerwa przed druga proba
+        run: sleep 20
+
+      - name: Pobierz TGE
+        id: pobieranie
+        env:
+          TGE_URL: https://gpi.tge.pl/zestawienie-ubytkow
+        run: |
+          if python kody/pobierz_tge.py; then
+            echo 'ok=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'ok=false' >> "$GITHUB_OUTPUT"
           fi
 
-          echo "TGE zaktualizowane poprawnie"
+      - name: Zapisz CSV po sukcesie
+        id: zapis
+        if: steps.pobieranie.outputs.ok == 'true'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
+          for f in tge_ubytki.csv tge_widoki.csv stan_tge.json; do
+            if [ -f "$f" ]; then
+              git add -- "$f"
+            fi
+          done
+
+          if [ -d tge_migawki ]; then
+            git add -A -- tge_migawki
+          fi
+
+          if ! git diff --cached --quiet; then
+            git commit -m 'TGE: aktualizacja (macOS)'
+            git fetch origin "${GITHUB_REF_NAME}"
+            git rebase "origin/${GITHUB_REF_NAME}"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          fi
+
+          echo 'ok=true' >> "$GITHUB_OUTPUT"
+
+  # ============================================
+  # PROBA 3 - WINDOWS
+  # ============================================
+
+  windows:
+    name: Proba 3 - Windows
+
+    needs: [linux, macos]
+
+    if: ${{ always() && needs.linux.outputs.ok != 'true' && needs.macos.outputs.ok != 'true' }}
+
+    runs-on: windows-latest
+    timeout-minutes: 12
+
+    defaults:
+      run:
+        shell: bash
+
+    outputs:
+      ok: ${{ steps.zapis.outputs.ok }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Biblioteki
+        run: |
+          python -m pip install \
+            'requests>=2.32,<3' \
+            'beautifulsoup4>=4.12,<5' \
+            tzdata
+
+      - name: Krotka przerwa przed trzecia proba
+        run: sleep 20
+
+      - name: Pobierz TGE
+        id: pobieranie
+        env:
+          TGE_URL: https://gpi.tge.pl/pl/zestawienie-ubytkow
+        run: |
+          if python kody/pobierz_tge.py; then
+            echo 'ok=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'ok=false' >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Zapisz dane lub status bledu
+        id: zapis
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
+          if [ -f stan_tge.json ]; then
+            git add -- stan_tge.json
+          fi
+
+          if [ '${{ steps.pobieranie.outputs.ok }}' = 'true' ]; then
+
+            for f in tge_ubytki.csv tge_widoki.csv; do
+              if [ -f "$f" ]; then
+                git add -- "$f"
+              fi
+            done
+
+            if [ -d tge_migawki ]; then
+              git add -A -- tge_migawki
+            fi
+
+          fi
+
+          if ! git diff --cached --quiet; then
+            git commit -m 'TGE: wynik proby (Windows)'
+            git fetch origin "${GITHUB_REF_NAME}"
+            git rebase "origin/${GITHUB_REF_NAME}"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          fi
+
+          if [ '${{ steps.pobieranie.outputs.ok }}' = 'true' ]; then
+            echo 'ok=true' >> "$GITHUB_OUTPUT"
+          fi
+
+  # ============================================
+  # PODSUMOWANIE
+  # ============================================
+
+  wynik:
+    name: Wynik koncowy
+
+    needs: [linux, macos, windows]
+    if: ${{ always() }}
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Podsumuj 3 proby
+        env:
+          UBUNTU: ${{ needs.linux.outputs.ok }}
+          MACOS: ${{ needs.macos.outputs.ok }}
+          WINDOWS: ${{ needs.windows.outputs.ok }}
+
+        run: |
+          echo "Ubuntu: $UBUNTU"
+          echo "macOS: $MACOS"
+          echo "Windows: $WINDOWS"
+
+          if [ "$UBUNTU" = 'true' ] || \
+             [ "$MACOS" = 'true' ] || \
+             [ "$WINDOWS" = 'true' ]; then
+
+            echo 'TGE pobrano i zapisano.'
+
+          else
+
+            echo 'TGE nie odpowiada z zadnego z trzech runnerow.'
+            exit 1
+
+          fi
