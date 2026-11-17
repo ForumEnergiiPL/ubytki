@@ -1,0 +1,149 @@
+
+name: Analityka PSE i TGE
+
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '17 9 * * *'
+      timezone: 'Europe/Warsaw'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ubytki-zapis-do-repo
+  cancel-in-progress: false
+
+jobs:
+  analityka:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+
+      # 1. Pobierz aktualne pliki z repozytorium
+      - name: Pobierz repozytorium
+        uses: actions/checkout@v4
+
+      # 2. Python
+      - name: Zainstaluj Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # 3. Biblioteki - bez requirements.txt
+      - name: Zainstaluj biblioteki
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install "pandas>=2.2,<3"
+
+      # 4. Sprawdz, czy PSE i TGE pobrano dzisiaj
+      - name: Sprawdz status danych
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+
+          dzis = datetime.now(
+              ZoneInfo("Europe/Warsaw")
+          ).date().isoformat()
+
+          statusy = {}
+
+          for nazwa in ["pse", "tge"]:
+              plik = Path(f"stan_{nazwa}.json")
+
+              if plik.exists():
+                  try:
+                      dane = json.loads(
+                          plik.read_text(
+                              encoding="utf-8"
+                          )
+                      )
+                  except Exception:
+                      dane = {}
+              else:
+                  dane = {}
+
+              if (
+                  dane.get("data") == dzis
+                  and dane.get("status") == "OK"
+              ):
+                  statusy[nazwa] = "OK"
+              else:
+                  statusy[nazwa] = "BRAK_LUB_BLAD"
+
+          calosc = (
+              "OK"
+              if all(
+                  s == "OK"
+                  for s in statusy.values()
+              )
+              else "CZESCIOWO_NIEUDANE"
+          )
+
+          wynik = {
+              "data_uruchomienia": dzis,
+              "status": calosc,
+              "pse": statusy["pse"],
+              "tge": statusy["tge"],
+              "liczba_bledow": sum(
+                  s != "OK"
+                  for s in statusy.values()
+              )
+          }
+
+          Path(
+              "stan_aktualizacji.json"
+          ).write_text(
+              json.dumps(
+                  wynik,
+                  ensure_ascii=False,
+                  indent=2
+              ) + "\n",
+              encoding="utf-8"
+          )
+
+          print("Status PSE:", statusy["pse"])
+          print("Status TGE:", statusy["tge"])
+          PY
+
+      # 5. Scal unikalne zdarzenia
+      - name: Scal zdarzenia TGE i PSE
+        run: |
+          python kody/scal_zdarzenia.py
+
+      # 6. Wykonaj analityke dzienna i historyczna
+      - name: Wykonaj analityke
+        run: |
+          python kody/analityka.py
+
+      # 7. Zapisz wyniki do GitHuba
+      - name: Zapisz wyniki w repozytorium
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          for file in \
+            stan_aktualizacji.json \
+            zdarzenia_unikalne.csv \
+            zdarzenia_do_weryfikacji.csv \
+            porownanie_pse_tge.csv \
+            analityka_dzienna.csv \
+            historia_analityki.csv
+          do
+            if [ -f "$file" ]; then
+              git add -- "$file"
+            fi
+          done
+
+          if ! git diff --cached --quiet; then
+            git commit -m "Automatyczna analityka PSE i TGE"
+            git pull --rebase origin "${GITHUB_REF_NAME}"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          else
+            echo "Brak zmian do zapisania"
+          fi
