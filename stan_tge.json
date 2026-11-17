@@ -1,6 +1,6 @@
 {
   "data": "2026-11-17",
   "status": "BLAD",
-  "blad": "ConnectTimeout: HTTPSConnectionPool(host='gpi.tge.pl', port=443): Max retries exceeded with url: /pl/zestawienie-ubytkow (Caused by ConnectTimeoutError(<HTTPSConnection(host='gpi.tge.pl', port=443) at 0x7a518039b170>, 'Connection to gpi.tge.pl timed out. (connect timeout=8)'))",
-  "moment_utc": "2026-11-17T08:59:50+00:00"
+  "blad": "ConnectTimeout: HTTPSConnectionPool(host='gpi.tge.pl', port=443): Max retries exceeded with url: /pl/zestawienie-ubytkow (Caused by ConnectTimeoutError(<HTTPSConnection(host='gpi.tge.pl', port=443) at 0x21a037874d0>, 'Connection to gpi.tge.pl timed out. (connect timeout=8)'))",
+  "moment_utc": "2026-11-17T09:04:35+00:00"
 }
