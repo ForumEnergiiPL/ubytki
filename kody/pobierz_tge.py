@@ -1,7 +1,10 @@
 
+"""Jednorazowe pobieranie ubytków GPI TGE."""
+
 import csv
 import hashlib
 import json
+import os
 import re
 import sys
 
@@ -19,35 +22,49 @@ from bs4 import BeautifulSoup
 
 ROOT = Path(__file__).resolve().parents[1]
 
-URL = (
-    "https://r.jina.ai/"
-    "https://gpi.tge.pl/pl/zestawienie-ubytkow"
-)
-
-DZIS = datetime.now(
+TODAY = datetime.now(
     ZoneInfo("Europe/Warsaw")
 ).date()
 
-POLA = [
-    "jednostka", "moc", "ubytek",
-    "typ", "poczatek", "koniec"
+URL = os.environ.get(
+    "TGE_URL",
+    "https://gpi.tge.pl/pl/zestawienie-ubytkow"
+)
+
+FIELDS = [
+    "jednostka",
+    "moc",
+    "ubytek",
+    "typ",
+    "poczatek",
+    "koniec"
 ]
 
-KOLUMNY = POLA + [
-    "widok_od", "zrodlo", "id_wersji",
+COLUMNS = FIELDS + [
+    "widok_od",
+    "zrodlo",
+    "id_wersji",
     "pierwszy_odczyt_utc",
-    "ostatni_odczyt_utc", "pobrano_utc"
+    "ostatni_odczyt_utc",
+    "pobrano_utc"
 ]
 
-MIESIACE = {
-    "styczeń": 1, "luty": 2, "marzec": 3,
-    "kwiecień": 4, "maj": 5, "czerwiec": 6,
-    "lipiec": 7, "sierpień": 8, "wrzesień": 9,
-    "październik": 10, "listopad": 11,
+MONTHS = {
+    "styczeń": 1,
+    "luty": 2,
+    "marzec": 3,
+    "kwiecień": 4,
+    "maj": 5,
+    "czerwiec": 6,
+    "lipiec": 7,
+    "sierpień": 8,
+    "wrzesień": 9,
+    "październik": 10,
+    "listopad": 11,
     "grudzień": 12
 }
 
-WZOR = re.compile(
+DETAIL = re.compile(
     r"Jednostka\s+(?P<jednostka>.*?)\s+"
     r"Moc Osiągalna:\s*(?P<moc>[\d.,]+)\s*MW\s+"
     r"Wielkość ubytku:\s*(?P<ubytek>[\d.,]+)\s*MW\s+"
@@ -65,379 +82,437 @@ WZOR = re.compile(
 # FUNKCJE POMOCNICZE
 # ============================================
 
-def teraz():
+def utc_now():
     return datetime.now(
         timezone.utc
     ).isoformat(timespec="seconds")
 
 
-def data_iso(wartosc):
-    for fmt in (
+def iso(value):
+    formats = (
         "%Y-%m-%d %H:%M:%S",
         "%Y-%m-%d %H:%M",
         "%d-%m-%Y %H:%M"
-    ):
+    )
+
+    for fmt in formats:
         try:
             return datetime.strptime(
-                str(wartosc).strip(), fmt
+                str(value).strip(),
+                fmt
             ).strftime("%Y-%m-%d %H:%M:%S")
+
         except ValueError:
             pass
 
     raise ValueError(
-        f"Niepoprawna data: {wartosc}"
+        f"Nieprawidłowa data: {value}"
     )
 
 
-def klucz(r):
+def key(row):
     return (
-        str(r["jednostka"]).strip(),
-        str(float(str(r["moc"]).replace(",", "."))),
-        str(float(str(r["ubytek"]).replace(",", "."))),
-        str(r["typ"]).strip().lower(),
-        data_iso(r["poczatek"]),
-        data_iso(r["koniec"])
+        str(row["jednostka"]).strip(),
+        str(float(
+            str(row["moc"]).replace(",", ".")
+        )),
+        str(float(
+            str(row["ubytek"]).replace(",", ".")
+        )),
+        str(row["typ"]).strip().lower(),
+        iso(row["poczatek"]),
+        iso(row["koniec"])
     )
 
 
-def identyfikator(r):
-    tekst = "\x1f".join(klucz(r))
-
-    return hashlib.sha256(
-        tekst.encode()
-    ).hexdigest()[:24]
-
-
-def czytaj_csv(sciezka):
+def read_csv(path):
     if (
-        not sciezka.exists()
-        or sciezka.stat().st_size == 0
+        not path.exists()
+        or path.stat().st_size == 0
     ):
         return [], []
 
-    with sciezka.open(
+    with path.open(
         encoding="utf-8-sig",
         newline=""
-    ) as f:
+    ) as file:
+
         reader = csv.DictReader(
-            f, delimiter=";"
+            file,
+            delimiter=";"
         )
-        return list(reader), list(reader.fieldnames or [])
+
+        return (
+            list(reader),
+            list(reader.fieldnames or [])
+        )
 
 
-def zapisz_csv(sciezka, wiersze, kolumny):
-    sciezka.parent.mkdir(
-        parents=True, exist_ok=True
+def save_csv(path, rows, cols):
+    path.parent.mkdir(
+        parents=True,
+        exist_ok=True
     )
 
-    temp = sciezka.with_name(
-        sciezka.name + ".tmp"
+    tmp = path.with_name(
+        path.name + ".tmp"
     )
 
-    with temp.open(
+    with tmp.open(
         "w",
         encoding="utf-8-sig",
         newline=""
-    ) as f:
+    ) as file:
+
         writer = csv.DictWriter(
-            f,
-            fieldnames=kolumny,
+            file,
+            fieldnames=cols,
             delimiter=";",
             extrasaction="ignore"
         )
+
         writer.writeheader()
-        writer.writerows(wiersze)
+        writer.writerows(rows)
 
-    temp.replace(sciezka)
+    tmp.replace(path)
 
 
 # ============================================
-# PARSOWANIE STRONY GPI
+# PARSOWANIE GPI
 # ============================================
 
-def parsuj(html):
-    tekst = BeautifulSoup(
-        html, "html.parser"
+def parse(html):
+    text = BeautifulSoup(
+        html,
+        "html.parser"
     ).get_text(" ", strip=True)
 
-    fragmenty = re.split(
+    parts = re.split(
         r"Informacje o ubytku",
-        tekst,
+        text,
         flags=re.IGNORECASE
     )
 
-    if len(fragmenty) < 2:
-        raise RuntimeError(
-            "Brak szczegółów ubytków "
-            "w odpowiedzi pośrednika."
+    if len(parts) < 2:
+        raise ValueError(
+            "Brak szczegółów zgłoszeń GPI. "
+            "Nie zapisuję danych."
         )
 
-    # Weryfikacja daty 14-dniowego widoku
-    wzor_daty = re.compile(
+    # Sprawdzenie, czy widok obejmuje dzisiejszy dzień.
+    header_re = re.compile(
         r"Moc\s+Osiągalna.*?\b("
-        + "|".join(MIESIACE)
+        + "|".join(MONTHS)
         + r")\s+(20\d{2})\s+"
         r"(?:Pn|Wt|Śr|Cz|Pt|So|N)\s+"
         r"(\d{1,2})\b",
         re.IGNORECASE | re.DOTALL
     )
 
-    m = wzor_daty.search(fragmenty[0])
+    m = header_re.search(parts[0])
 
     if not m:
-        raise RuntimeError(
-            "Nie udało się potwierdzić daty widoku GPI."
+        raise ValueError(
+            "Nie potwierdzono daty widoku TGE."
         )
 
-    widok_od = datetime(
+    view_start = datetime(
         int(m.group(2)),
-        MIESIACE[m.group(1).lower()],
+        MONTHS[m.group(1).lower()],
         int(m.group(3))
     ).date()
 
     if not (
-        widok_od <= DZIS
-        <= widok_od + timedelta(days=13)
+        view_start <= TODAY
+        <= view_start + timedelta(days=13)
     ):
-        raise RuntimeError(
-            f"Nieaktualny widok: {widok_od}, "
-            f"dzisiaj {DZIS}"
-        )
-
-    poczatek_dnia = datetime.combine(
-        DZIS, datetime.min.time()
-    )
-    koniec_dnia = poczatek_dnia + timedelta(days=1)
-
-    wyniki = []
-    moment = teraz()
-
-    for fragment in fragmenty[1:]:
-        dopasowanie = WZOR.search(fragment)
-
-        if not dopasowanie:
-            raise RuntimeError(
-                "Nieznany format zgłoszenia: "
-                + fragment[:150]
-            )
-
-        r = dopasowanie.groupdict()
-
-        r["poczatek"] = data_iso(r["poczatek"])
-        r["koniec"] = data_iso(r["koniec"])
-        r["moc"] = str(float(r["moc"].replace(",", ".")))
-        r["ubytek"] = str(float(r["ubytek"].replace(",", ".")))
-
-        start = datetime.fromisoformat(r["poczatek"])
-        end = datetime.fromisoformat(r["koniec"])
-
-        if end <= start:
-            raise ValueError(
-                "Koniec wyłączenia przed początkiem"
-            )
-
-        # Zachowujemy tylko aktywne dzisiaj
-        if not (
-            start < koniec_dnia
-            and end > poczatek_dnia
-        ):
-            continue
-
-        r.update({
-            "widok_od": DZIS.isoformat(),
-            "zrodlo": "",
-            "id_wersji": identyfikator(r),
-            "pierwszy_odczyt_utc": moment,
-            "ostatni_odczyt_utc": moment,
-            "pobrano_utc": moment
-        })
-
-        wyniki.append(r)
-
-    print(
-        f"Zgłoszeń w widoku: {len(fragmenty)-1}",
-        flush=True
-    )
-    print(
-        f"Aktywnych dzisiaj: {len(wyniki)}",
-        flush=True
-    )
-
-    return wyniki
-
-
-# ============================================
-# POBIERANIE - JEDNO ZAPYTANIE
-# ============================================
-
-def pobierz_tge():
-    print(
-        "Pobieram GPI przez Jina Reader...",
-        flush=True
-    )
-
-    response = requests.get(
-        URL,
-        headers={
-            "X-Respond-With": "html",
-            "X-No-Cache": "true",
-            "Accept": "text/html,text/plain,*/*"
-        },
-        timeout=(15, 90)
-    )
-
-    response.raise_for_status()
-
-    return parsuj(response.content)
-
-
-# ============================================
-# AKTUALIZACJA PLIKÓW
-# ============================================
-
-def aktualizuj():
-
-    # Faktycznie uruchamiamy pobieranie
-    nowe = pobierz_tge()
-
-    baza = ROOT / "tge_ubytki.csv"
-    stare, kolumny = czytaj_csv(baza)
-
-    if stare and not set(POLA).issubset(kolumny):
         raise ValueError(
-            "Istniejący CSV ma niezgodne kolumny"
+            f"Nieaktualny widok: {view_start}. "
+            f"Dzisiaj: {TODAY}"
         )
 
-    znane = {klucz(r) for r in stare}
-    dopisane = []
+    start_day = datetime.combine(
+        TODAY,
+        datetime.min.time()
+    )
 
-    for r in nowe:
-        k = klucz(r)
+    end_day = start_day + timedelta(days=1)
 
-        if k not in znane:
-            znane.add(k)
-            dopisane.append(r)
+    retrieved = utc_now()
+    result = []
 
-    if dopisane or not kolumny:
-        pelne_kolumny = kolumny + [
-            c for c in KOLUMNY if c not in kolumny
+    for part in parts[1:]:
+        m = DETAIL.search(part)
+
+        if not m:
+            raise ValueError(
+                "Nieznany format zgłoszenia: "
+                + part[:150]
+            )
+
+        row = m.groupdict()
+
+        row["poczatek"] = iso(row["poczatek"])
+        row["koniec"] = iso(row["koniec"])
+
+        row["moc"] = str(
+            float(row["moc"].replace(",", "."))
+        )
+
+        row["ubytek"] = str(
+            float(row["ubytek"].replace(",", "."))
+        )
+
+        a = datetime.fromisoformat(
+            row["poczatek"]
+        )
+
+        b = datetime.fromisoformat(
+            row["koniec"]
+        )
+
+        if b <= a:
+            raise ValueError(
+                "Niepoprawny okres zdarzenia."
+            )
+
+        # Tylko zdarzenia aktywne dzisiaj
+        if a < end_day and b > start_day:
+
+            identity = "\x1f".join(key(row))
+
+            row.update({
+                "widok_od": TODAY.isoformat(),
+                "zrodlo": "",
+                "id_wersji": hashlib.sha256(
+                    identity.encode()
+                ).hexdigest()[:24],
+                "pierwszy_odczyt_utc": retrieved,
+                "ostatni_odczyt_utc": retrieved,
+                "pobrano_utc": retrieved
+            })
+
+            result.append(row)
+
+    print(
+        f"Zgłoszenia w widoku: {len(parts) - 1}",
+        flush=True
+    )
+
+    print(
+        f"Aktywne dzisiaj: {len(result)}",
+        flush=True
+    )
+
+    return result
+
+
+# ============================================
+# POBIERANIE JEDNEGO WIDOKU
+# ============================================
+
+def fetch():
+    print(
+        f"Pobieram {URL}",
+        flush=True
+    )
+
+    with requests.Session() as session:
+
+        response = session.get(
+            URL,
+            headers={
+                "User-Agent": "Mozilla/5.0",
+                "Accept-Language": "pl-PL,pl;q=0.9",
+                "Accept": (
+                    "text/html,application/xhtml+xml"
+                )
+            },
+            timeout=(30, 90),
+            allow_redirects=True
+        )
+
+        response.raise_for_status()
+
+        if "gpi.tge.pl" not in response.url:
+            raise ValueError(
+                "Nieoczekiwany adres docelowy: "
+                + response.url
+            )
+
+        return parse(response.content)
+
+
+# ============================================
+# AKTUALIZACJA CSV
+# ============================================
+
+def update():
+
+    # Najpierw pobierz i sprawdź odpowiedź.
+    # Przy błędzie istniejące CSV pozostają bez zmian.
+    fresh = fetch()
+
+    target = ROOT / "tge_ubytki.csv"
+    old, old_cols = read_csv(target)
+
+    if (
+        old_cols
+        and not set(FIELDS).issubset(old_cols)
+    ):
+        raise ValueError(
+            "Stary tge_ubytki.csv "
+            "ma niezgodne kolumny."
+        )
+
+    seen = {
+        key(row)
+        for row in old
+    }
+
+    added = []
+
+    for row in fresh:
+        identity = key(row)
+
+        if identity not in seen:
+            seen.add(identity)
+            added.append(row)
+
+    # Dopisanie bez duplikatów
+    if added or not old_cols:
+
+        cols = old_cols + [
+            c for c in COLUMNS
+            if c not in old_cols
         ]
 
-        zapisz_csv(
-            baza,
-            stare + dopisane,
-            pelne_kolumny
+        save_csv(
+            target,
+            old + added,
+            cols
         )
 
-    # Historia poprawnie pobranych widoków
-    widoki = ROOT / "tge_widoki.csv"
-    stare_widoki, kol_widoki = czytaj_csv(widoki)
+    # Historia udanych pobrań
+    views = ROOT / "tge_widoki.csv"
 
-    stare_widoki = [
-        r for r in stare_widoki
-        if r.get("widok_od") != DZIS.isoformat()
+    existing, cols = read_csv(views)
+
+    existing = [
+        r for r in existing
+        if r.get("widok_od") != TODAY.isoformat()
     ]
 
-    stare_widoki.append({
-        "widok_od": DZIS.isoformat(),
-        "widok_do": DZIS.isoformat(),
-        "liczba_zgloszen": str(len(nowe)),
-        "pobrano_utc": teraz()
+    existing.append({
+        "widok_od": TODAY.isoformat(),
+        "widok_do": TODAY.isoformat(),
+        "liczba_zgloszen": str(len(fresh)),
+        "pobrano_utc": utc_now()
     })
 
-    potrzebne = [
-        "widok_od", "widok_do",
-        "liczba_zgloszen", "pobrano_utc"
+    standard = [
+        "widok_od",
+        "widok_do",
+        "liczba_zgloszen",
+        "pobrano_utc"
     ]
 
-    zapisz_csv(
-        widoki,
-        stare_widoki,
-        kol_widoki + [
-            c for c in potrzebne if c not in kol_widoki
+    save_csv(
+        views,
+        existing,
+        cols + [
+            c for c in standard
+            if c not in cols
         ]
     )
 
-    # Dzienna migawka
-    migawka = (
+    # Migawka dzienna
+    snapshot = (
         ROOT / "tge_migawki"
-        / f"{DZIS:%Y-%m}.csv"
+        / f"{TODAY:%Y-%m}.csv"
     )
 
-    stare_migawki, kol_migawki = czytaj_csv(migawka)
+    previous, cols = read_csv(snapshot)
 
-    stare_migawki = [
-        r for r in stare_migawki
-        if r.get("data_obserwacji") != DZIS.isoformat()
+    previous = [
+        r for r in previous
+        if r.get("data_obserwacji")
+        != TODAY.isoformat()
     ]
 
-    moment = teraz()
-
-    snapshot = [
-        dict(
-            r,
-            data_obserwacji=DZIS.isoformat(),
-            moment_odczytu_utc=moment
-        )
-        for r in nowe
+    snapshot_rows = [
+        {
+            **r,
+            "data_obserwacji": TODAY.isoformat(),
+            "moment_odczytu_utc": utc_now()
+        }
+        for r in fresh
     ]
 
-    potrzebne = KOLUMNY + [
+    standard = COLUMNS + [
         "data_obserwacji",
         "moment_odczytu_utc"
     ]
 
-    zapisz_csv(
-        migawka,
-        stare_migawki + snapshot,
-        kol_migawki + [
-            c for c in potrzebne if c not in kol_migawki
+    save_csv(
+        snapshot,
+        previous + snapshot_rows,
+        cols + [
+            c for c in standard
+            if c not in cols
         ]
     )
 
     print(
-        f"Dopisano nowych: {len(dopisane)}",
-        flush=True
-    )
-    print(
-        f"Łącznie w bazie: {len(stare)+len(dopisane)}",
+        f"Dopisano: {len(added)} nowych. "
+        f"Łącznie: {len(old) + len(added)}",
         flush=True
     )
 
 
 # ============================================
-# URUCHOMIENIE PROGRAMU
+# URUCHOMIENIE
 # ============================================
 
 def main():
+
     try:
-        aktualizuj()
-        status = "OK"
-        blad = ""
+        update()
+        state = "OK"
+        error = ""
 
     except (
         requests.RequestException,
-        RuntimeError,
         ValueError,
-        KeyError,
-        OSError
-    ) as e:
-        status = "BLAD"
-        blad = f"{type(e).__name__}: {e}"
+        OSError,
+        RuntimeError
+    ) as exc:
 
-        print("BŁĄD TGE:", blad, flush=True)
+        state = "BLAD"
+        error = f"{type(exc).__name__}: {exc}"
+
+        print(
+            "BŁĄD TGE:",
+            error,
+            flush=True
+        )
 
     (ROOT / "stan_tge.json").write_text(
-        json.dumps({
-            "data": DZIS.isoformat(),
-            "status": status,
-            "blad": blad,
-            "moment_utc": teraz()
-        }, ensure_ascii=False, indent=2) + "\n",
+        json.dumps(
+            {
+                "data": TODAY.isoformat(),
+                "status": state,
+                "blad": error,
+                "moment_utc": utc_now(),
+                "url": URL
+            },
+            ensure_ascii=False,
+            indent=2
+        ) + "\n",
         encoding="utf-8"
     )
 
-    return 0 if status == "OK" else 1
+    return 0 if state == "OK" else 1
 
 
 if __name__ == "__main__":
