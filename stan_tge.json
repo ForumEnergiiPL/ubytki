@@ -1,6 +1,7 @@
 {
   "data": "2026-11-17",
-  "status": "BLAD",
-  "blad": "HTTPError: 422 Client Error: Unprocessable Entity for url: https://r.jina.ai/https://gpi.tge.pl/pl/zestawienie-ubytkow",
-  "moment_utc": "2026-11-17T09:48:14+00:00"
+  "status": "OK",
+  "blad": "",
+  "moment_utc": "2026-11-17T10:29:05+00:00",
+  "url": "https://gpi.tge.pl/pl/zestawienie-ubytkow"
 }
