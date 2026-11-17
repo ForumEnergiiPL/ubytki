@@ -32,39 +32,49 @@ jobs:
         run: |
           python -m pip install "requests>=2.32,<3" "beautifulsoup4>=4.12,<5" tzdata
 
-      - name: Pobierz dane TGE
+      - name: Pokaz informacje o sieci
+        run: |
+          python -c "import socket; print('Adresy TGE:', socket.getaddrinfo('gpi.tge.pl', 443, type=socket.SOCK_STREAM))"
+
+      - name: Pobierz TGE
         id: pobieranie
         continue-on-error: true
         run: python kody/pobierz_tge.py
 
-      - name: Zapisz dane do GitHub
+      - name: Zapisz zmiany do repozytorium
         if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add -A -- tge_ubytki.csv tge_widoki.csv stan_tge.json
+          for file in tge_ubytki.csv tge_widoki.csv stan_tge.json; do
+            if [ -f "$file" ]; then
+              git add -- "$file"
+            fi
+          done
 
           if [ -d tge_migawki ]; then
             git add -A -- tge_migawki
           fi
 
           if ! git diff --cached --quiet; then
-            git commit -m "TGE: codzienna aktualizacja"
+            git commit -m "TGE: aktualizacja danych"
             git pull --rebase origin "${GITHUB_REF_NAME}"
             git push origin "HEAD:${GITHUB_REF_NAME}"
           else
-            echo "Brak nowych danych"
+            echo "Brak zmian"
           fi
 
-      - name: Sprawdz wynik
+      - name: Sprawdz wynik pobierania
         if: always()
         env:
           WYNIK: ${{ steps.pobieranie.outcome }}
         run: |
+          echo "Wynik pobierania: $WYNIK"
+
           if [ "$WYNIK" != "success" ]; then
-            echo "Nie udalo sie pobrac TGE"
+            echo "Blad pobierania TGE"
             exit 1
           fi
 
-          echo "TGE pobrano poprawnie"
+          echo "TGE zaktualizowane poprawnie"
