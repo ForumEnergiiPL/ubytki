@@ -3,7 +3,6 @@ name: TGE - codzienna aktualizacja
 
 on:
   workflow_dispatch:
-
   schedule:
     - cron: '17 8 * * *'
       timezone: 'Europe/Warsaw'
@@ -31,18 +30,15 @@ jobs:
 
       - name: Zainstaluj biblioteki
         run: |
-          python -m pip install \
-            "requests>=2.32,<3" \
-            "beautifulsoup4>=4.12,<5" \
-            tzdata
+          python -m pip install "requests>=2.32,<3" "beautifulsoup4>=4.12,<5" tzdata
 
       - name: Pobierz dane TGE
         id: pobieranie
         continue-on-error: true
-        run: |
-          python kody/pobierz_tge.py
+        run: python kody/pobierz_tge.py
 
-      - name: Zapisz dane w GitHub
+      - name: Zapisz dane do GitHub
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -54,7 +50,7 @@ jobs:
           fi
 
           if ! git diff --cached --quiet; then
-            git commit -m "TGE: aktualizacja danych"
+            git commit -m "TGE: codzienna aktualizacja"
             git pull --rebase origin "${GITHUB_REF_NAME}"
             git push origin "HEAD:${GITHUB_REF_NAME}"
           else
@@ -70,28 +66,5 @@ jobs:
             echo "Nie udalo sie pobrac TGE"
             exit 1
           fi
-```
 
-Uruchom go ręcznie przez **Actions → TGE - codzienna aktualizacja → Run workflow**.
-
-## Jeśli macOS też nie zadziała?
-
-Wtedy mamy następującą sytuację:
-
-| Środowisko | Wynik |
-|---|---|
-| Lokalny Windows | <icon name="check-circle" color="success" inline/> Działa |
-| GitHub Ubuntu | <icon name="x-circle" color="danger" inline/> Timeout |
-| GitHub Windows | <icon name="x-circle" color="danger" inline/> Timeout |
-| GitHub macOS | Do sprawdzenia |
-
-Jeżeli macOS również zwróci `ConnectTimeout`, nie będziemy już zmieniać systemów operacyjnych w nieskończoność.
-
-Wtedy pozostają dwie sensowne drogi, nadal z GitHub Actions jako miejscem automatyzacji:
-
-- **Uzyskać od TGE oficjalny sposób automatycznego pobierania danych** (API, udostępniony plik lub autoryzowany dostęp z infrastruktury chmurowej).
-- **Użyć GitHub-hosted runnera ze stałym adresem IP**, który TGE zgodzi się dopuścić. To jednak rozwiązanie płatne i z ograniczeniami dostępności dla kont organizacyjnych. <Cite ref="turn744207search1"/>
-
-PSE i analityka mogą cały czas pozostawać na obecnych workflowach.
-
-**Najpierw sprawdźmy macOS.** To ostatni prosty test innej infrastruktury GitHuba, bez dodatkowych usług i bez korzystania z Twojego komputera.
+          echo "TGE pobrano poprawnie"
