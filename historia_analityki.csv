@@ -1,3 +1,4 @@
 ﻿data_aktualizacji;moment_odczytu_utc;status_pobierania;bledy_pobierania;tge_pelna_migawka_dzis;tge_liczba_roznych_wersji_lacznie;tge_nowe_wersje_zarejestrowane_dzis;zdarzenia_kandydaci_lacznie;zdarzenia_tge_aktywne_teraz_kandydaci;ostatni_dzien_bilansu_pse;pse_sr_ubytki_mw;pse_sw_ubytki_mw;tge_sr_ubytki_mw;tge_sw_ubytki_mw;tge_pobrane_dzis;tge_wersje_lacznie;tge_nowe_wersje_dzis;tge_zdarzenia_aktywne_teraz
 2026-11-16;2026-11-16T15:52:08+00:00;CZESCIOWO_NIEUDANE;1;;;;761;;2026-11-15;43111.264;45332.586;10254.0;10342.0;NIE;1012.0;109.0;
 2026-11-18;2026-11-18T17:20:37+00:00;CZESCIOWO_NIEUDANE;1;NIE;1065;0;777;;2026-11-17;46290.619;48890.122;9516.0;9050.0;;;;
+2026-11-19;2026-11-19T17:27:08+00:00;CZESCIOWO_NIEUDANE;1;NIE;1065;0;790;;2026-11-18;44047.141;45600.705;10287.0;9742.0;;;;
