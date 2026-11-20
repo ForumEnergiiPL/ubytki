@@ -1,9 +1,11 @@
 ﻿id_tge;id_pse;jednostka;kod_jednostki;poczatek_tge;koniec_tge;poczatek_pse;koniec_pse;typ_tge;przyczyna_pse;wspolczynnik_nakladania;powod
 TGE-0ea57086e315d480ad;PSE-079a02e385e879f80e;Pątnów B9;PAT24S09;2026-07-03 00:00:00;2027-01-01 00:00:00;2026-11-20 00:15:00;2027-01-01 00:00:00;nieplanowane;WE;0.231;rozne przyczyny lub niezgodne terminy
+TGE-0ea57086e315d480ad;PSE-8d8f925b5ff7cb7d2e;Pątnów B9;PAT24S09;2026-07-03 00:00:00;2027-01-01 00:00:00;2026-11-20 00:16:00;2027-01-01 00:00:00;nieplanowane;WE;0.231;rozne przyczyny lub niezgodne terminy
 TGE-26d4cb52d390b378e3;PSE-ddb31fc1024816dec5;Opole B2;OPL 1-02;2026-09-15 03:25:00;2026-12-15 00:00:00;2026-11-16 00:00:00;2026-12-01 00:00:00;planowane;WE;0.165;rozne przyczyny lub niezgodne terminy
 TGE-26d4cb52d390b378e3;PSE-3179dae23ac38dfa5f;Opole B2;OPL 1-02;2026-09-15 03:25:00;2026-12-15 00:00:00;2026-11-16 00:00:00;2026-11-18 18:00:00;planowane;WE;0.03;rozne przyczyny lub niezgodne terminy
 TGE-26d4cb52d390b378e3;PSE-5c837defdb2289cdf5;Opole B2;OPL 1-02;2026-09-15 03:25:00;2026-12-15 00:00:00;2026-11-20 00:00:00;2026-11-21 00:00:00;planowane;WE;0.011;rozne przyczyny lub niezgodne terminy
 TGE-6944ec21cd91838997;PSE-8feb12dc9ea7721fab;Opole B1;OPL 1-01;2026-11-13 09:00:00;2026-11-13 11:00:00;2026-11-13 00:00:00;2026-11-19 00:00:00;planowane;WE;0.014;rozne przyczyny lub niezgodne terminy
+TGE-74252f0ce3527e5e45;PSE-75431dfcfb6ef9dc64;Opole B1;OPL 1-01;2026-11-16 18:00:00;2026-12-01 00:00:00;2026-11-21 00:00:00;2026-12-01 00:00:00;planowane;WE;0.702;rozne przyczyny lub niezgodne terminy
 TGE-74252f0ce3527e5e45;PSE-8feb12dc9ea7721fab;Opole B1;OPL 1-01;2026-11-16 18:00:00;2026-12-01 00:00:00;2026-11-13 00:00:00;2026-11-19 00:00:00;planowane;WE;0.125;rozne przyczyny lub niezgodne terminy
 TGE-74252f0ce3527e5e45;PSE-a3548a9711e1ed3fe1;Opole B1;OPL 1-01;2026-11-16 18:00:00;2026-12-01 00:00:00;2026-11-16 18:00:00;2026-11-19 00:00:00;planowane;WE;0.158;rozne przyczyny lub niezgodne terminy
 TGE-74252f0ce3527e5e45;PSE-c257fcd90de3e38c1d;Opole B1;OPL 1-01;2026-11-16 18:00:00;2026-12-01 00:00:00;2026-11-16 20:00:00;2026-11-19 00:00:00;planowane;WE;0.152;rozne przyczyny lub niezgodne terminy
@@ -13,11 +15,15 @@ TGE-2d50bef5a8ad863643;PSE-a77fef9a17f5dcaa29;Opole B3;OPL 4-03;2026-11-13 00:00
 TGE-2d50bef5a8ad863643;PSE-d204199eb8a1761c36;Opole B3;OPL 4-03;2026-11-13 00:00:00;2026-12-01 00:00:00;2026-11-17 00:00:00;2026-11-18 00:00:00;planowane;WE;0.056;rozne przyczyny lub niezgodne terminy
 TGE-2d50bef5a8ad863643;PSE-590c3682415cbedafc;Opole B3;OPL 4-03;2026-11-13 00:00:00;2026-12-01 00:00:00;2026-11-17 00:00:00;2026-12-01 00:00:00;planowane;WE;0.778;rozne przyczyny lub niezgodne terminy
 TGE-3f7dcd34327b9027f4;PSE-28ac9b23eb38c6a7ae;Opole B6;OPL 4-06;2026-11-19 23:00:00;2026-11-20 06:00:00;2026-11-20 00:00:00;2026-11-23 00:00:00;nieplanowane;WE;0.082;rozne przyczyny lub niezgodne terminy
+TGE-3f7dcd34327b9027f4;PSE-af12533dfe53be94fd;Opole B6;OPL 4-06;2026-11-19 23:00:00;2026-11-20 06:00:00;2026-11-20 00:12:00;2026-11-23 00:00:00;nieplanowane;WE;0.079;rozne przyczyny lub niezgodne terminy
 TGE-61a89ed01b18d61f8d;PSE-28ac9b23eb38c6a7ae;Opole B6;OPL 4-06;2026-11-20 11:00:00;2026-11-20 16:00:00;2026-11-20 00:00:00;2026-11-23 00:00:00;nieplanowane;WE;0.069;rozne przyczyny lub niezgodne terminy
+TGE-61a89ed01b18d61f8d;PSE-af12533dfe53be94fd;Opole B6;OPL 4-06;2026-11-20 11:00:00;2026-11-20 16:00:00;2026-11-20 00:12:00;2026-11-23 00:00:00;nieplanowane;WE;0.07;rozne przyczyny lub niezgodne terminy
 TGE-a5878412e55c96ebe1;PSE-28ac9b23eb38c6a7ae;Opole B6;OPL 4-06;2026-11-20 23:00:00;2026-11-21 00:00:00;2026-11-20 00:00:00;2026-11-23 00:00:00;nieplanowane;WE;0.014;rozne przyczyny lub niezgodne terminy
+TGE-a5878412e55c96ebe1;PSE-af12533dfe53be94fd;Opole B6;OPL 4-06;2026-11-20 23:00:00;2026-11-21 00:00:00;2026-11-20 00:12:00;2026-11-23 00:00:00;nieplanowane;WE;0.014;rozne przyczyny lub niezgodne terminy
 TGE-b16d668949c2638cc8;PSE-bf4a35f3facd8cfaf2;Jaworzno 3 B4;JW3_2S04;2026-11-13 00:00:00;2026-11-23 00:00:00;2026-11-13 00:00:00;2026-11-27 00:00:00;planowane;RB;0.714;rozne przyczyny lub niezgodne terminy
 TGE-d3bade61ef0e63d116;PSE-89cca2308742bd2022;PGE Gryfino Dolna Odra Sp. z o.o. Gryfino blok 10;EGF_4S10;2026-11-17 00:00:00;2026-11-19 00:00:00;2026-11-17 04:30:00;2026-11-20 00:00:00;nieplanowane;RA;0.604;rozne przyczyny lub niezgodne terminy
 TGE-d3bade61ef0e63d116;PSE-19eaf85a767d517d4d;PGE Gryfino Dolna Odra Sp. z o.o. Gryfino blok 10;EGF_4S10;2026-11-17 00:00:00;2026-11-19 00:00:00;2026-11-17 04:30:00;2026-11-21 00:00:00;nieplanowane;RA;0.453;rozne przyczyny lub niezgodne terminy
+TGE-d3bade61ef0e63d116;PSE-1d430e08f1bd14464b;PGE Gryfino Dolna Odra Sp. z o.o. Gryfino blok 10;EGF_4S10;2026-11-17 00:00:00;2026-11-19 00:00:00;2026-11-17 04:30:00;2026-11-22 00:00:00;nieplanowane;RA;0.362;rozne przyczyny lub niezgodne terminy
 TGE-fadf2623a4e1eb914a;PSE-462f4f9e4c1f3b0c54;Kozienice 1 B5;KOZ12S05;2026-11-09 21:28:00;2026-11-13 18:00:00;2026-11-09 21:28:00;2026-11-13 18:00:00;nieplanowane;RA;1.0;wiele mozliwych dopasowan
 TGE-fadf2623a4e1eb914a;PSE-34143e4184b983be61;Kozienice 1 B5;KOZ12S05;2026-11-09 21:28:00;2026-11-13 18:00:00;2026-11-09 21:28:00;2026-11-13 13:00:00;nieplanowane;RA;0.946;wiele mozliwych dopasowan
 TGE-46d77b934db1887553;PSE-cabb95af5443255d77;Opole B3;OPL 4-03;2026-11-09 23:00:00;2026-11-10 06:00:00;2026-11-09 22:00:00;2026-11-10 15:00:00;nieplanowane;WE;0.412;rozne przyczyny lub niezgodne terminy
@@ -35,6 +41,7 @@ TGE-069dbdf095f90b6993;PSE-ce61940c4c30d4a9ce;Opole B5;OPL 4-05;2026-11-11 00:00
 TGE-4a8dc1ca120858fafb;PSE-e2e6e6c9089003af6a;Rybnik B7;RYB 4-07;2026-11-11 00:00:00;2026-11-21 00:00:00;2026-11-11 00:00:00;2026-11-17 00:00:00;planowane;WE;0.6;rozne przyczyny lub niezgodne terminy
 TGE-4a8dc1ca120858fafb;PSE-cf676206b7989fbc91;Rybnik B7;RYB 4-07;2026-11-11 00:00:00;2026-11-21 00:00:00;2026-11-11 00:00:00;2026-11-18 00:00:00;planowane;WE;0.7;rozne przyczyny lub niezgodne terminy
 TGE-4a8dc1ca120858fafb;PSE-91618afec6c800802b;Rybnik B7;RYB 4-07;2026-11-11 00:00:00;2026-11-21 00:00:00;2026-11-11 00:00:00;2026-11-20 00:00:00;planowane;WE;0.9;rozne przyczyny lub niezgodne terminy
+TGE-4a8dc1ca120858fafb;PSE-e27866e0d2660acf4e;Rybnik B7;RYB 4-07;2026-11-11 00:00:00;2026-11-21 00:00:00;2026-11-11 00:00:00;2026-11-19 23:40:00;planowane;WE;0.899;rozne przyczyny lub niezgodne terminy
 TGE-5a681f57328552e203;PSE-8feb12dc9ea7721fab;Opole B1;OPL 1-01;2026-11-13 12:30:00;2026-11-13 16:00:00;2026-11-13 00:00:00;2026-11-19 00:00:00;nieplanowane;WE;0.024;rozne przyczyny lub niezgodne terminy
 TGE-7bfcc1151c527bda7b;PSE-8feb12dc9ea7721fab;Opole B1;OPL 1-01;2026-11-13 23:00:00;2026-11-14 16:00:00;2026-11-13 00:00:00;2026-11-19 00:00:00;nieplanowane;WE;0.118;rozne przyczyny lub niezgodne terminy
 TGE-5851563291ad8f6922;PSE-8feb12dc9ea7721fab;Opole B1;OPL 1-01;2026-11-14 23:00:00;2026-11-16 06:00:00;2026-11-13 00:00:00;2026-11-19 00:00:00;nieplanowane;WE;0.215;rozne przyczyny lub niezgodne terminy
@@ -51,3 +58,4 @@ TGE-81524ced0dd5576752;PSE-9086073abd56a75246;Turów B01;TUR 1-01;2026-11-14 00:
 TGE-81524ced0dd5576752;PSE-4c58bde848dffd18ff;Turów B01;TUR 1-01;2026-11-14 00:00:00;2026-11-29 00:00:00;2026-11-14 00:32:00;2026-11-29 00:00:00;planowane;RS;0.999;wiele mozliwych dopasowan
 TGE-e9f19102cca31966f9;PSE-89cca2308742bd2022;PGE Gryfino Dolna Odra Sp. z o.o. Gryfino blok 10;EGF_4S10;2026-11-19 16:00:00;2026-11-19 22:00:00;2026-11-17 04:30:00;2026-11-20 00:00:00;planowane;RA;0.089;rozne przyczyny lub niezgodne terminy
 TGE-e9f19102cca31966f9;PSE-19eaf85a767d517d4d;PGE Gryfino Dolna Odra Sp. z o.o. Gryfino blok 10;EGF_4S10;2026-11-19 16:00:00;2026-11-19 22:00:00;2026-11-17 04:30:00;2026-11-21 00:00:00;planowane;RA;0.066;rozne przyczyny lub niezgodne terminy
+TGE-e9f19102cca31966f9;PSE-1d430e08f1bd14464b;PGE Gryfino Dolna Odra Sp. z o.o. Gryfino blok 10;EGF_4S10;2026-11-19 16:00:00;2026-11-19 22:00:00;2026-11-17 04:30:00;2026-11-22 00:00:00;planowane;RA;0.052;rozne przyczyny lub niezgodne terminy
