@@ -1,6 +1,7 @@
 ﻿id_tge;id_pse;jednostka;kod_jednostki;poczatek_tge;koniec_tge;poczatek_pse;koniec_pse;typ_tge;przyczyna_pse;wspolczynnik_nakladania;powod
 TGE-0ea57086e315d480ad;PSE-079a02e385e879f80e;Pątnów B9;PAT24S09;2026-07-03 00:00:00;2027-01-01 00:00:00;2026-11-20 00:15:00;2027-01-01 00:00:00;nieplanowane;WE;0.231;rozne przyczyny lub niezgodne terminy
 TGE-0ea57086e315d480ad;PSE-8d8f925b5ff7cb7d2e;Pątnów B9;PAT24S09;2026-07-03 00:00:00;2027-01-01 00:00:00;2026-11-20 00:16:00;2027-01-01 00:00:00;nieplanowane;WE;0.231;rozne przyczyny lub niezgodne terminy
+TGE-0ea57086e315d480ad;PSE-5b72e0fc577d1859ef;Pątnów B9;PAT24S09;2026-07-03 00:00:00;2027-01-01 00:00:00;2026-11-20 00:16:00;2026-11-23 16:15:00;nieplanowane;WE;0.02;rozne przyczyny lub niezgodne terminy
 TGE-26d4cb52d390b378e3;PSE-ddb31fc1024816dec5;Opole B2;OPL 1-02;2026-09-15 03:25:00;2026-12-15 00:00:00;2026-11-16 00:00:00;2026-12-01 00:00:00;planowane;WE;0.165;rozne przyczyny lub niezgodne terminy
 TGE-26d4cb52d390b378e3;PSE-3179dae23ac38dfa5f;Opole B2;OPL 1-02;2026-09-15 03:25:00;2026-12-15 00:00:00;2026-11-16 00:00:00;2026-11-18 18:00:00;planowane;WE;0.03;rozne przyczyny lub niezgodne terminy
 TGE-26d4cb52d390b378e3;PSE-5c837defdb2289cdf5;Opole B2;OPL 1-02;2026-09-15 03:25:00;2026-12-15 00:00:00;2026-11-20 00:00:00;2026-11-21 00:00:00;planowane;WE;0.011;rozne przyczyny lub niezgodne terminy
